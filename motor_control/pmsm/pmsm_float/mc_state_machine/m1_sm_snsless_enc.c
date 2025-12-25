@@ -796,6 +796,9 @@ static void M1_TransRunStop(void)
 {
     /* Type the code to do when going from the RUN to the STOP state */
     /* Disable PWM outputs */
+    g_sM1Drive.sFocPMSM.sDutyABC.f16A = FRAC16(0.0);
+    g_sM1Drive.sFocPMSM.sDutyABC.f16B = FRAC16(0.0);
+    g_sM1Drive.sFocPMSM.sDutyABC.f16C = FRAC16(0.0);
     M1_MCDRV_PWM3PH_DIS(&g_sM1Pwm3ph);
 
     g_sM1Drive.sSpeed.fltSpeedCmd         = 0.0F;

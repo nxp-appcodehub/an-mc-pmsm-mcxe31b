@@ -1,0 +1,6291 @@
+{
+	"ImportFonts": {
+		"simsun": "font\\simsun.woff",
+		"montserratMedium": "font\\Montserrat-medium.ttf",
+		"arial": "font\\ARIAL.TTF",
+		"Abel_regular": "font\\abel-regular.ttf",
+		"Acme_Regular": "font\\Acme-Regular.ttf",
+		"Adventpro_regular": "font\\adventpro-regular.ttf",
+		"AguafinaScript_Regular": "font\\AguafinaScript-Regular.ttf",
+		"Alatsi_Regular": "font\\Alatsi-Regular.ttf",
+		"AlexBrush_Regular": "font\\AlexBrush-Regular.ttf",
+		"AmaticSC_Regular": "font\\AmaticSC-Regular.ttf",
+		"Amiko_Regular": "font\\Amiko-Regular.ttf",
+		"Antonio_Regular": "font\\Antonio-Regular.ttf",
+		"ArchitectsDaughter": "font\\ArchitectsDaughter.ttf"
+	},
+	"FrontJson": [
+		{
+			"name": "control",
+			"id": "bpwbyo0v",
+			"type": "scr",
+			"version": 180,
+			"scrollbar_mode": "OFF",
+			"customer_code": {
+				"code_c": "lv_obj_clear_flag(ui->control_slider_1, LV_OBJ_FLAG_CLICKABLE);",
+				"inc_c": "",
+				"code_py": "",
+				"inc_py": ""
+			},
+			"width": 800,
+			"height": 480,
+			"visible": true,
+			"flag": [],
+			"list": [
+				{
+					"name": "label_title",
+					"id": "dveerifn",
+					"type": "label",
+					"left": 150,
+					"top": 31,
+					"visible": true,
+					"isLock": false,
+					"flag": [],
+					"width": 513,
+					"height": 37,
+					"default_style": false,
+					"text": "FRDM-MCXE31B PMSM Moter Demo",
+					"long_mode": "LV_LABEL_LONG_WRAP",
+					"custom_attribute": [],
+					"attribute_type": "",
+					"style": [
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"border_side": [
+								"LV_BORDER_SIDE_FULL"
+							],
+							"border_width": 0,
+							"border_opa": 255,
+							"border_color": "#2195f6",
+							"radius": 0,
+							"text_color": "#ffffff",
+							"text_opa": 255,
+							"font": 24,
+							"text_align": "LV_TEXT_ALIGN_CENTER",
+							"font_family": "montserratMedium",
+							"letter_space": 0,
+							"line_space": 0,
+							"bg_color": "#2195f6",
+							"bg_grad_color": "#2195f6",
+							"bg_opa": 0,
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"padding_top": 0,
+							"padding_right": 0,
+							"padding_bottom": 0,
+							"padding_left": 0,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0
+						},
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_DISABLED",
+							"disable": true,
+							"border_side": [
+								"LV_BORDER_SIDE_FULL"
+							],
+							"border_width": 0,
+							"border_opa": 255,
+							"border_color": "#2195f6",
+							"radius": 0,
+							"text_color": "#000000",
+							"text_opa": 255,
+							"font": 26,
+							"font_family": "montserratMedium",
+							"text_align": "LV_TEXT_ALIGN_CENTER",
+							"letter_space": 2,
+							"line_space": 0,
+							"bg_color": "#2195f6",
+							"bg_grad_color": "#2195f6",
+							"bg_opa": 0,
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"padding_top": 0,
+							"padding_right": 0,
+							"padding_bottom": 0,
+							"padding_left": 0,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0
+						}
+					]
+				},
+				{
+					"name": "label_value",
+					"id": "umbgkypk",
+					"type": "label",
+					"left": 127,
+					"top": 342,
+					"visible": true,
+					"isLock": false,
+					"flag": [],
+					"width": 107,
+					"height": 22,
+					"default_style": false,
+					"text": "000r/s",
+					"long_mode": "LV_LABEL_LONG_WRAP",
+					"custom_attribute": [
+						"speed_flt"
+					],
+					"attribute_type": "freemaster",
+					"style": [
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"border_side": [
+								"LV_BORDER_SIDE_FULL"
+							],
+							"border_width": 0,
+							"border_opa": 255,
+							"border_color": "#2195f6",
+							"radius": 0,
+							"text_color": "#ffffff",
+							"text_opa": 255,
+							"font": 16,
+							"text_align": "LV_TEXT_ALIGN_CENTER",
+							"font_family": "arial",
+							"letter_space": 2,
+							"line_space": 0,
+							"bg_color": "#2195f6",
+							"bg_grad_color": "#2195f6",
+							"bg_opa": 0,
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"padding_top": 0,
+							"padding_right": 0,
+							"padding_bottom": 0,
+							"padding_left": 0,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0
+						},
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_DISABLED",
+							"disable": true,
+							"border_side": [
+								"LV_BORDER_SIDE_FULL"
+							],
+							"border_width": 0,
+							"border_opa": 255,
+							"border_color": "#2195f6",
+							"radius": 0,
+							"text_color": "#000000",
+							"text_opa": 255,
+							"font": 26,
+							"font_family": "montserratMedium",
+							"text_align": "LV_TEXT_ALIGN_CENTER",
+							"letter_space": 2,
+							"line_space": 0,
+							"bg_color": "#2195f6",
+							"bg_grad_color": "#2195f6",
+							"bg_opa": 0,
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"padding_top": 0,
+							"padding_right": 0,
+							"padding_bottom": 0,
+							"padding_left": 0,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0
+						}
+					]
+				},
+				{
+					"name": "img_fan",
+					"id": "mvrpi3wc",
+					"type": "img",
+					"left": 95,
+					"top": 163,
+					"visible": true,
+					"isLock": false,
+					"flag": [],
+					"width": 166,
+					"height": 166,
+					"default_style": false,
+					"use_fs": false,
+					"fs_type": "flash",
+					"sd_path": "",
+					"img_path": "C:\\Users\\yandld\\Desktop\\an-mc-pmsm-mcxe31b\\gui_guilder\\import\\image\\fan.png",
+					"rotate": 0,
+					"x": 83,
+					"y": 83,
+					"color_format": "true-color-alpha",
+					"style": [
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255,
+							"radius": 0
+						}
+					],
+					"event": {
+						"widget": {}
+					}
+				},
+				{
+					"name": "cont_1",
+					"id": "lepf9124",
+					"type": "cont",
+					"left": 3,
+					"top": -4,
+					"visible": true,
+					"isLock": false,
+					"flag": [],
+					"width": 800,
+					"height": 480,
+					"default_style": false,
+					"scrollbar_mode": "OFF",
+					"child": [
+						{
+							"name": "sw_1",
+							"id": "8czmcl4b",
+							"type": "sw",
+							"left": 34,
+							"top": 409,
+							"visible": true,
+							"isLock": false,
+							"flag": [],
+							"width": 69,
+							"height": 32,
+							"default_style": false,
+							"attribute_type": "freemaster",
+							"custom_attribute": [],
+							"style": [
+								{
+									"part": "LV_PART_MAIN",
+									"state": "LV_STATE_DEFAULT",
+									"disable": false,
+									"bg_color": "#005A9E",
+									"bg_grad_color": "#e6e2e6",
+									"bg_grad_dir": "LV_GRAD_DIR_NONE",
+									"bg_dither_mode": "LV_DITHER_NONE",
+									"bg_main_stop": 0,
+									"bg_grad_stop": 255,
+									"bg_opa": 255,
+									"border_side": [
+										"LV_BORDER_SIDE_FULL"
+									],
+									"border_width": 0,
+									"border_opa": 255,
+									"border_color": "#2195f6",
+									"radius": 10,
+									"shadow_color": "#2195f6",
+									"shadow_opa": 255,
+									"shadow_width": 0,
+									"shadow_spread": 0,
+									"shadow_ofs_x": 0,
+									"shadow_ofs_y": 0,
+									"bg_img_src": "",
+									"bg_img_opa": 255,
+									"bg_img_recolor": "#ffffff",
+									"bg_img_recolor_opa": 0
+								},
+								{
+									"part": "LV_PART_MAIN",
+									"state": "LV_STATE_FOCUSED",
+									"disable": true,
+									"bg_color": "#e6e2e6",
+									"bg_grad_color": "#e6e2e6",
+									"bg_grad_dir": "LV_GRAD_DIR_NONE",
+									"bg_dither_mode": "LV_DITHER_NONE",
+									"bg_main_stop": 0,
+									"bg_grad_stop": 255,
+									"bg_opa": 255,
+									"border_side": [
+										"LV_BORDER_SIDE_FULL"
+									],
+									"border_width": 0,
+									"border_opa": 255,
+									"border_color": "#2195f6",
+									"radius": 10,
+									"shadow_color": "#2195f6",
+									"shadow_opa": 255,
+									"shadow_width": 0,
+									"shadow_spread": 0,
+									"shadow_ofs_x": 0,
+									"shadow_ofs_y": 0,
+									"bg_img_src": "",
+									"bg_img_opa": 255,
+									"bg_img_recolor": "#ffffff",
+									"bg_img_recolor_opa": 0
+								},
+								{
+									"part": "LV_PART_MAIN",
+									"state": "LV_STATE_DISABLED",
+									"disable": true,
+									"bg_color": "#e6e2e6",
+									"bg_grad_color": "#e6e2e6",
+									"bg_grad_dir": "LV_GRAD_DIR_NONE",
+									"bg_dither_mode": "LV_DITHER_NONE",
+									"bg_main_stop": 0,
+									"bg_grad_stop": 255,
+									"bg_opa": 255,
+									"border_side": [
+										"LV_BORDER_SIDE_FULL"
+									],
+									"border_width": 0,
+									"border_opa": 255,
+									"border_color": "#2195f6",
+									"radius": 10,
+									"shadow_color": "#2195f6",
+									"shadow_opa": 255,
+									"shadow_width": 0,
+									"shadow_spread": 0,
+									"shadow_ofs_x": 0,
+									"shadow_ofs_y": 0,
+									"bg_img_src": "",
+									"bg_img_opa": 255,
+									"bg_img_recolor": "#ffffff",
+									"bg_img_recolor_opa": 0
+								},
+								{
+									"part": "LV_PART_INDICATOR",
+									"state": "LV_STATE_CHECKED",
+									"disable": false,
+									"bg_color": "#2195f6",
+									"bg_grad_color": "#2195f6",
+									"bg_grad_dir": "LV_GRAD_DIR_NONE",
+									"bg_dither_mode": "LV_DITHER_NONE",
+									"bg_main_stop": 0,
+									"bg_grad_stop": 255,
+									"bg_opa": 255,
+									"border_side": [
+										"LV_BORDER_SIDE_FULL"
+									],
+									"border_width": 0,
+									"border_opa": 255,
+									"border_color": "#2195f6",
+									"bg_img_src": "",
+									"bg_img_opa": 255,
+									"bg_img_recolor": "#ffffff",
+									"bg_img_recolor_opa": 0
+								},
+								{
+									"part": "LV_PART_INDICATOR",
+									"state": "LV_STATE_FOCUSED",
+									"disable": true,
+									"bg_color": "#2195f6",
+									"bg_grad_color": "#2195f6",
+									"bg_grad_dir": "LV_GRAD_DIR_NONE",
+									"bg_dither_mode": "LV_DITHER_NONE",
+									"bg_main_stop": 0,
+									"bg_grad_stop": 255,
+									"bg_opa": 255,
+									"border_side": [
+										"LV_BORDER_SIDE_FULL"
+									],
+									"border_width": 0,
+									"border_opa": 255,
+									"border_color": "#2195f6",
+									"bg_img_src": "",
+									"bg_img_opa": 255,
+									"bg_img_recolor": "#ffffff",
+									"bg_img_recolor_opa": 0
+								},
+								{
+									"part": "LV_PART_INDICATOR",
+									"state": "LV_STATE_DISABLED",
+									"disable": true,
+									"bg_color": "#2195f6",
+									"bg_grad_color": "#2195f6",
+									"bg_grad_dir": "LV_GRAD_DIR_NONE",
+									"bg_dither_mode": "LV_DITHER_NONE",
+									"bg_main_stop": 0,
+									"bg_grad_stop": 255,
+									"bg_opa": 255,
+									"border_side": [
+										"LV_BORDER_SIDE_FULL"
+									],
+									"border_width": 0,
+									"border_opa": 255,
+									"border_color": "#2195f6",
+									"bg_img_src": "",
+									"bg_img_opa": 255,
+									"bg_img_recolor": "#ffffff",
+									"bg_img_recolor_opa": 0
+								},
+								{
+									"part": "LV_PART_KNOB",
+									"state": "LV_STATE_DEFAULT",
+									"disable": false,
+									"bg_color": "#ffffff",
+									"bg_grad_color": "#ffffff",
+									"bg_grad_dir": "LV_GRAD_DIR_NONE",
+									"bg_dither_mode": "LV_DITHER_NONE",
+									"bg_main_stop": 0,
+									"bg_grad_stop": 255,
+									"bg_opa": 255,
+									"border_side": [
+										"LV_BORDER_SIDE_FULL"
+									],
+									"border_width": 0,
+									"border_opa": 255,
+									"border_color": "#2195f6",
+									"radius": 10
+								},
+								{
+									"part": "LV_PART_KNOB",
+									"state": "LV_STATE_FOCUSED",
+									"disable": true,
+									"bg_color": "#ffffff",
+									"bg_grad_color": "#ffffff",
+									"bg_grad_dir": "LV_GRAD_DIR_NONE",
+									"bg_dither_mode": "LV_DITHER_NONE",
+									"bg_main_stop": 0,
+									"bg_grad_stop": 255,
+									"bg_opa": 255,
+									"border_side": [
+										"LV_BORDER_SIDE_FULL"
+									],
+									"border_width": 0,
+									"border_opa": 255,
+									"border_color": "#2195f6",
+									"radius": 10
+								},
+								{
+									"part": "LV_PART_KNOB",
+									"state": "LV_STATE_DISABLED",
+									"disable": true,
+									"bg_color": "#ffffff",
+									"bg_grad_color": "#ffffff",
+									"bg_grad_dir": "LV_GRAD_DIR_NONE",
+									"bg_dither_mode": "LV_DITHER_NONE",
+									"bg_main_stop": 0,
+									"bg_grad_stop": 255,
+									"bg_opa": 255,
+									"border_side": [
+										"LV_BORDER_SIDE_FULL"
+									],
+									"border_width": 0,
+									"border_opa": 255,
+									"border_color": "#2195f6",
+									"radius": 10
+								}
+							],
+							"event": {
+								"widget": {
+									"value_changed": {
+										"condition": [
+											{
+												"type": "switch",
+												"value": "status",
+												"id": "8czmcl4b",
+												"isSystem": true,
+												"children": [
+													{
+														"type": "case",
+														"id": "8czmcl4b_1",
+														"isSystem": true,
+														"value": "true"
+													},
+													{
+														"type": "case",
+														"id": "8czmcl4b_0",
+														"isSystem": true,
+														"value": "false"
+													}
+												]
+											}
+										],
+										"action": [
+											{
+												"dst": "custom_code",
+												"bindCondi": "8czmcl4b_0",
+												"actionList": {
+													"custom_code": {
+														"inc_c": "",
+														"code_c": "if(lv_anim_get(guider_ui.control_img_fan, NULL) != NULL) {\n        lv_anim_t *anim_status = lv_anim_get(guider_ui.control_img_fan, NULL);\n        lv_anim_del(guider_ui.control_img_fan, NULL);\n    }\n    lv_slider_set_value(guider_ui.control_slider_1, 0, false);\n    lv_meter_set_indicator_value(guider_ui.control_meter_speed, guider_ui.control_meter_speed_scale_0_ndline_0, 0);",
+														"inc_py": "",
+														"code_py": ""
+													}
+												}
+											},
+											{
+												"dst": "umbgkypk",
+												"bindCondi": "8czmcl4b_0",
+												"actionList": {
+													"text": {
+														"value": "0"
+													},
+													"font": {
+														"value": 16,
+														"font_family": "arial"
+													}
+												}
+											},
+											{
+												"dst": "lepf9124",
+												"bindCondi": "8czmcl4b_0",
+												"actionList": {
+													"bg_opa": {
+														"value": 167
+													}
+												}
+											},
+											{
+												"dst": "jzfd64y1",
+												"bindCondi": "8czmcl4b_0",
+												"actionList": {
+													"isVisible": {
+														"value": false
+													}
+												}
+											},
+											{
+												"dst": "1cb2xezb",
+												"bindCondi": "8czmcl4b_0",
+												"actionList": {
+													"clear_flag": {
+														"value": [
+															"LV_OBJ_FLAG_CLICKABLE"
+														]
+													}
+												}
+											},
+											{
+												"dst": "custom_code",
+												"bindCondi": "8czmcl4b_1",
+												"actionList": {
+													"custom_code": {
+														"inc_c": "#include \"custom.h\"",
+														"code_c": "image_fan_rotate(0);",
+														"inc_py": "",
+														"code_py": ""
+													}
+												}
+											},
+											{
+												"dst": "lepf9124",
+												"bindCondi": "8czmcl4b_1",
+												"actionList": {
+													"bg_opa": {
+														"value": 0
+													}
+												}
+											},
+											{
+												"dst": "jzfd64y1",
+												"bindCondi": "8czmcl4b_1",
+												"actionList": {
+													"isVisible": {
+														"value": true
+													}
+												}
+											},
+											{
+												"dst": "1cb2xezb",
+												"bindCondi": "8czmcl4b_1",
+												"actionList": {
+													"add_flag": {
+														"value": [
+															"LV_OBJ_FLAG_CLICKABLE"
+														]
+													}
+												}
+											},
+											{
+												"dst": "freemaster",
+												"bindCondi": "8czmcl4b_1",
+												"actionList": {
+													"freemaster": {
+														"variable": "M1 Application Switch",
+														"address": "g_bM1SwitchAppOnOff",
+														"type": "",
+														"value": 1,
+														"isOrigin": false,
+														"size": 2,
+														"period": 1000
+													}
+												}
+											},
+											{
+												"dst": "freemaster",
+												"bindCondi": "8czmcl4b_0",
+												"actionList": {
+													"freemaster": {
+														"variable": "M1 Application Switch",
+														"address": "g_bM1SwitchAppOnOff",
+														"type": "",
+														"value": 0,
+														"isOrigin": false,
+														"size": 2,
+														"period": 1000
+													}
+												}
+											}
+										]
+									}
+								}
+							}
+						},
+						{
+							"name": "imgbtn_1",
+							"id": "n6ohtbq4",
+							"type": "imgbtn",
+							"left": 732,
+							"top": 21,
+							"visible": true,
+							"isLock": false,
+							"flag": [],
+							"width": 41,
+							"height": 41,
+							"default_style": false,
+							"use_fs": false,
+							"fs_type": "flash",
+							"sd_path": "",
+							"text": "",
+							"toggle": true,
+							"src_released": "C:\\Users\\yandld\\Desktop\\an-mc-pmsm-mcxe31b\\gui_guilder\\import\\image\\go.png",
+							"src_pressed": "",
+							"src_checked_released": "",
+							"src_checked_pressed": "",
+							"color_format": "true-color-alpha",
+							"style": [
+								{
+									"part": "LV_PART_MAIN",
+									"state": "LV_STATE_DEFAULT",
+									"disable": false,
+									"font_family": "montserratMedium",
+									"text_color": "#000000",
+									"text_align": "LV_TEXT_ALIGN_CENTER",
+									"font": 20,
+									"radius": 0,
+									"shadow_color": "#2195f6",
+									"shadow_opa": 255,
+									"shadow_width": 0,
+									"shadow_spread": 0,
+									"shadow_ofs_x": 0,
+									"shadow_ofs_y": 0
+								},
+								{
+									"part": "LV_PART_MAIN",
+									"state": "LV_STATE_PRESSED",
+									"disable": false,
+									"image_recolor": "#000000",
+									"image_recolor_opa": 0,
+									"image_opa": 255,
+									"text_color": "#FF33FF",
+									"font_family": "montserratMedium",
+									"font": 20,
+									"shadow_color": "#2195f6",
+									"shadow_opa": 255,
+									"shadow_width": 0,
+									"shadow_spread": 0,
+									"shadow_ofs_x": 0,
+									"shadow_ofs_y": 0
+								},
+								{
+									"part": "LV_PART_MAIN",
+									"state": "LV_STATE_CHECKED",
+									"disable": false,
+									"image_recolor": "#000000",
+									"image_recolor_opa": 0,
+									"text_color": "#FF33FF",
+									"image_opa": 255,
+									"font_family": "montserratMedium",
+									"font": 20,
+									"shadow_color": "#2195f6",
+									"shadow_opa": 255,
+									"shadow_width": 0,
+									"shadow_spread": 0,
+									"shadow_ofs_x": 0,
+									"shadow_ofs_y": 0
+								},
+								{
+									"part": "LV_PART_MAIN",
+									"state": "LV_IMGBTN_STATE_RELEASED",
+									"desc": "released",
+									"disable": false,
+									"image_recolor": "#000000",
+									"image_recolor_opa": 0,
+									"image_opa": 255
+								}
+							],
+							"event": {
+								"widget": {
+									"clicked": {
+										"condition": [],
+										"action": [
+											{
+												"dst": "load_screen",
+												"bindCondi": "",
+												"actionList": {
+													"load_screen": {
+														"duration": 200,
+														"delay": 200,
+														"scrId": "nmty00z0",
+														"anim_type": "LV_SCR_LOAD_ANIM_FADE_ON",
+														"is_clean": false,
+														"is_del": false
+													}
+												}
+											}
+										]
+									}
+								}
+							}
+						},
+						{
+							"name": "slider_1",
+							"id": "1cb2xezb",
+							"type": "slider",
+							"left": 247,
+							"top": 415,
+							"visible": true,
+							"isLock": false,
+							"flag": [],
+							"width": 305,
+							"height": 11,
+							"default_style": false,
+							"range_s": 0,
+							"range_e": 2000,
+							"starting_value": 0,
+							"left_value": 0,
+							"slider_mode": "LV_SLIDER_MODE_NORMAL",
+							"attribute_type": "freemaster",
+							"custom_attribute": [],
+							"style": [
+								{
+									"part": "LV_PART_MAIN",
+									"state": "LV_STATE_DEFAULT",
+									"disable": false,
+									"bg_color": "#2195f6",
+									"bg_grad_color": "#2195f6",
+									"bg_opa": 60,
+									"bg_grad_dir": "LV_GRAD_DIR_NONE",
+									"bg_dither_mode": "LV_DITHER_NONE",
+									"bg_main_stop": 0,
+									"bg_grad_stop": 255,
+									"radius": 88,
+									"outline_width": 0,
+									"outline_color": "#2195f6",
+									"outline_opa": 0,
+									"bg_img_src": "",
+									"bg_img_opa": 255,
+									"bg_img_recolor": "#ffffff",
+									"bg_img_recolor_opa": 0,
+									"shadow_color": "#2195f6",
+									"shadow_opa": 255,
+									"shadow_width": 0,
+									"shadow_spread": 0,
+									"shadow_ofs_x": 0,
+									"shadow_ofs_y": 0
+								},
+								{
+									"part": "LV_PART_MAIN",
+									"state": "LV_STATE_FOCUSED",
+									"disable": true,
+									"outline_color": "#2195f6",
+									"outline_opa": 255,
+									"bg_img_src": "",
+									"bg_img_opa": 255,
+									"bg_img_recolor": "#ffffff",
+									"bg_img_recolor_opa": 0,
+									"shadow_color": "#2195f6",
+									"shadow_opa": 255,
+									"shadow_width": 0,
+									"shadow_spread": 0,
+									"shadow_ofs_x": 0,
+									"shadow_ofs_y": 0
+								},
+								{
+									"part": "LV_PART_MAIN",
+									"state": "LV_STATE_DISABLED",
+									"disable": true,
+									"outline_color": "#2195f6",
+									"outline_opa": 255,
+									"bg_img_src": "",
+									"bg_img_opa": 255,
+									"bg_img_recolor": "#ffffff",
+									"bg_img_recolor_opa": 0,
+									"shadow_color": "#2195f6",
+									"shadow_opa": 255,
+									"shadow_width": 0,
+									"shadow_spread": 0,
+									"shadow_ofs_x": 0,
+									"shadow_ofs_y": 0
+								},
+								{
+									"part": "LV_PART_INDICATOR",
+									"state": "LV_STATE_DEFAULT",
+									"disable": false,
+									"bg_color": "#2195f6",
+									"bg_grad_color": "#2195f6",
+									"bg_grad_dir": "LV_GRAD_DIR_NONE",
+									"bg_dither_mode": "LV_DITHER_NONE",
+									"bg_main_stop": 0,
+									"bg_grad_stop": 255,
+									"bg_opa": 255,
+									"bg_img_src": "",
+									"bg_img_opa": 255,
+									"bg_img_recolor": "#ffffff",
+									"bg_img_recolor_opa": 0,
+									"radius": 88
+								},
+								{
+									"part": "LV_PART_INDICATOR",
+									"state": "LV_STATE_FOCUSED",
+									"disable": true,
+									"bg_color": "#2195f6",
+									"bg_grad_color": "#2195f6",
+									"bg_grad_dir": "LV_GRAD_DIR_NONE",
+									"bg_dither_mode": "LV_DITHER_NONE",
+									"bg_main_stop": 0,
+									"bg_grad_stop": 255,
+									"bg_opa": 255,
+									"bg_img_src": "",
+									"bg_img_opa": 255,
+									"bg_img_recolor": "#ffffff",
+									"bg_img_recolor_opa": 0,
+									"radius": 88
+								},
+								{
+									"part": "LV_PART_INDICATOR",
+									"state": "LV_STATE_DISABLED",
+									"disable": true,
+									"bg_color": "#2195f6",
+									"bg_grad_color": "#2195f6",
+									"bg_grad_dir": "LV_GRAD_DIR_NONE",
+									"bg_dither_mode": "LV_DITHER_NONE",
+									"bg_main_stop": 0,
+									"bg_grad_stop": 255,
+									"bg_opa": 255,
+									"bg_img_src": "",
+									"bg_img_opa": 255,
+									"bg_img_recolor": "#ffffff",
+									"bg_img_recolor_opa": 0,
+									"radius": 88
+								},
+								{
+									"part": "LV_PART_KNOB",
+									"state": "LV_STATE_DEFAULT",
+									"disable": false,
+									"bg_color": "#2a65ff",
+									"bg_grad_color": "#2195f6",
+									"bg_opa": 255,
+									"bg_grad_dir": "LV_GRAD_DIR_NONE",
+									"bg_dither_mode": "LV_DITHER_NONE",
+									"bg_main_stop": 0,
+									"bg_grad_stop": 255,
+									"bg_img_src": "",
+									"bg_img_opa": 255,
+									"bg_img_recolor": "#e8e8ff",
+									"bg_img_recolor_opa": 246,
+									"radius": 88
+								},
+								{
+									"part": "LV_PART_KNOB",
+									"state": "LV_STATE_FOCUSED",
+									"disable": true,
+									"bg_color": "#2195f6",
+									"bg_grad_color": "#2195f6",
+									"bg_opa": 255,
+									"bg_grad_dir": "LV_GRAD_DIR_NONE",
+									"bg_dither_mode": "LV_DITHER_NONE",
+									"bg_main_stop": 0,
+									"bg_grad_stop": 255,
+									"bg_img_src": "",
+									"bg_img_opa": 255,
+									"bg_img_recolor": "#ffffff",
+									"bg_img_recolor_opa": 0,
+									"radius": 88
+								},
+								{
+									"part": "LV_PART_KNOB",
+									"state": "LV_STATE_DISABLED",
+									"disable": true,
+									"bg_color": "#2195f6",
+									"bg_grad_color": "#2195f6",
+									"bg_opa": 255,
+									"bg_grad_dir": "LV_GRAD_DIR_NONE",
+									"bg_dither_mode": "LV_DITHER_NONE",
+									"bg_main_stop": 0,
+									"bg_grad_stop": 255,
+									"bg_img_src": "",
+									"bg_img_opa": 255,
+									"bg_img_recolor": "#ffffff",
+									"bg_img_recolor_opa": 0,
+									"radius": 88
+								}
+							],
+							"event": {
+								"widget": {
+									"value_changed": {
+										"condition": [],
+										"action": [
+											{
+												"dst": "freemaster",
+												"bindCondi": "",
+												"actionList": {
+													"freemaster": {
+														"variable": "M1 Speed Required",
+														"address": "g_sM1Drive.sSpeed.fltSpeedCmd",
+														"type": "",
+														"value": "",
+														"isOrigin": true,
+														"size": 4,
+														"period": 1000
+													}
+												}
+											},
+											{
+												"dst": "custom_code",
+												"bindCondi": "",
+												"actionList": {
+													"custom_code": {
+														"inc_c": "",
+														"code_c": "if(lv_anim_get(guider_ui.control_img_fan, NULL) != NULL) {\n          lv_anim_t *anim_status = lv_anim_get(guider_ui.control_img_fan, NULL);\n          anim_status->time = get_time_by_speed(value);\n          lv_anim_refr_now();\n      }",
+														"inc_py": "",
+														"code_py": ""
+													}
+												}
+											}
+										]
+									}
+								}
+							}
+						}
+					],
+					"style": [
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"border_side": [
+								"LV_BORDER_SIDE_FULL"
+							],
+							"border_width": 0,
+							"border_color": "#2195f6",
+							"border_opa": 255,
+							"radius": 0,
+							"bg_color": "#000000",
+							"bg_grad_color": "#ffffff",
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"bg_opa": 144,
+							"padding_top": 0,
+							"padding_bottom": 0,
+							"padding_left": 0,
+							"padding_right": 0,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0
+						}
+					]
+				},
+				{
+					"name": "meter_speed",
+					"id": "f8b4kdxf",
+					"type": "meter",
+					"left": 501,
+					"top": 116,
+					"visible": true,
+					"isLock": false,
+					"flag": [],
+					"width": 250,
+					"height": 250,
+					"default_style": false,
+					"attribute_type": "freemaster",
+					"custom_attribute": [
+						"M1 Speed Actual Filtered"
+					],
+					"scales": [
+						{
+							"tick_cnt": 41,
+							"tick_width": 2,
+							"tick_len": 7,
+							"tick_color": "#e8e9ea",
+							"label_gap": 20,
+							"major_tick_enable": true,
+							"major_tick_nth": 8,
+							"major_tick_width": 3,
+							"major_tick_len": 13,
+							"major_tick_color": "#008fce",
+							"range_enable": true,
+							"min_value": 0,
+							"max_value": 2000,
+							"angle_range": 280,
+							"rotation": 130,
+							"arcs": [
+								{
+									"width": 4,
+									"color": "#0d9401",
+									"r_mod": 2,
+									"start_value": 0,
+									"end_value": 800
+								},
+								{
+									"width": 4,
+									"color": "#7d8301",
+									"r_mod": 2,
+									"start_value": 800,
+									"end_value": 1600
+								},
+								{
+									"width": 4,
+									"color": "#830115",
+									"r_mod": 2,
+									"start_value": 1600,
+									"end_value": 2000
+								}
+							],
+							"scale_lines": [
+								{
+									"color_start": "#2effb2",
+									"color_end": "#af001b",
+									"start_value": 0,
+									"end_value": 2000,
+									"grad_color_local": true,
+									"width_mod": 0
+								}
+							],
+							"needles": [
+								{
+									"needle_type": "line",
+									"needle_width": 2,
+									"needle_color": "#ffffff",
+									"needle_r_mod": -21,
+									"img_path": "",
+									"img_width": 10,
+									"img_height": 10,
+									"pivot_x": 0,
+									"pivot_y": 0,
+									"value": 1
+								}
+							]
+						}
+					],
+					"style": [
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"object": "main",
+							"disable": false,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_opa": 0,
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"radius": 352,
+							"border_side": [
+								"LV_BORDER_SIDE_FULL"
+							],
+							"border_width": 0,
+							"border_color": "#2195f6",
+							"border_opa": 255,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0
+						},
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_FOCUSED",
+							"object": "main",
+							"disable": true,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_opa": 255,
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"radius": 352,
+							"border_side": [
+								"LV_BORDER_SIDE_FULL"
+							],
+							"border_width": 0,
+							"border_color": "#2195f6",
+							"border_opa": 255,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0
+						},
+						{
+							"part": "LV_PART_TICKS",
+							"state": "LV_STATE_DEFAULT",
+							"desc": "digit",
+							"object": "main",
+							"disable": false,
+							"font": 16,
+							"font_family": "montserratMedium",
+							"text_color": "#b8b8b8"
+						},
+						{
+							"part": "LV_PART_TICKS",
+							"state": "LV_STATE_FOCUSED",
+							"desc": "digit",
+							"object": "main",
+							"disable": true,
+							"font": 20,
+							"font_family": "montserratMedium",
+							"text_color": "#ff0000"
+						},
+						{
+							"part": "LV_PART_INDICATOR",
+							"state": "LV_STATE_DEFAULT",
+							"object": "main",
+							"disable": false,
+							"bg_color": "#000000",
+							"bg_opa": 255
+						}
+					],
+					"event": {
+						"widget": {}
+					}
+				},
+				{
+					"name": "speed_label",
+					"id": "49n19umh",
+					"type": "label",
+					"left": 311,
+					"top": 364,
+					"visible": true,
+					"isLock": false,
+					"flag": [],
+					"width": 177,
+					"height": 29,
+					"default_style": false,
+					"text": "Speed Control",
+					"long_mode": "LV_LABEL_LONG_WRAP",
+					"custom_attribute": [],
+					"attribute_type": "",
+					"style": [
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"border_side": [
+								"LV_BORDER_SIDE_FULL"
+							],
+							"border_width": 0,
+							"border_opa": 255,
+							"border_color": "#2195f6",
+							"radius": 0,
+							"text_color": "#ffffff",
+							"text_opa": 255,
+							"font": 20,
+							"text_align": "LV_TEXT_ALIGN_CENTER",
+							"font_family": "montserratMedium",
+							"letter_space": 1,
+							"line_space": 0,
+							"bg_color": "#2195f6",
+							"bg_grad_color": "#2195f6",
+							"bg_opa": 0,
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"padding_top": 0,
+							"padding_right": 0,
+							"padding_bottom": 0,
+							"padding_left": 0,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0
+						},
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_DISABLED",
+							"disable": true,
+							"border_side": [
+								"LV_BORDER_SIDE_FULL"
+							],
+							"border_width": 0,
+							"border_opa": 255,
+							"border_color": "#2195f6",
+							"radius": 0,
+							"text_color": "#000000",
+							"text_opa": 255,
+							"font": 26,
+							"font_family": "montserratMedium",
+							"text_align": "LV_TEXT_ALIGN_CENTER",
+							"letter_space": 2,
+							"line_space": 0,
+							"bg_color": "#2195f6",
+							"bg_grad_color": "#2195f6",
+							"bg_opa": 0,
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"padding_top": 0,
+							"padding_right": 0,
+							"padding_bottom": 0,
+							"padding_left": 0,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0
+						}
+					]
+				},
+				{
+					"name": "led_1",
+					"id": "jzfd64y1",
+					"type": "led",
+					"left": 724,
+					"top": 396,
+					"visible": false,
+					"isLock": false,
+					"flag": [],
+					"width": 50,
+					"height": 50,
+					"default_style": false,
+					"led_set_bright": 226,
+					"led_color": "#00922C"
+				}
+			],
+			"event": {},
+			"style": [
+				{
+					"part": "LV_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"bg_color": "#ffffff",
+					"bg_grad_dir": "LV_GRAD_DIR_NONE",
+					"bg_dither_mode": "LV_DITHER_NONE",
+					"bg_main_stop": 0,
+					"bg_grad_stop": 255,
+					"bg_grad_color": "#2195f6",
+					"bg_opa": 0,
+					"bg_img_src": "C:\\Users\\yandld\\Desktop\\an-mc-pmsm-mcxe31b\\gui_guilder\\import\\image\\monitor.png",
+					"bg_img_opa": 255,
+					"bg_img_recolor": "#ffffff",
+					"bg_img_recolor_opa": 0
+				}
+			]
+		},
+		{
+			"name": "monitor",
+			"id": "nmty00z0",
+			"type": "scr",
+			"version": 180,
+			"scrollbar_mode": "OFF",
+			"customer_code": {
+				"code_c": "lv_obj_set_style_size(ui->monitor_chart_1, 0, LV_PART_INDICATOR);\n  lv_chart_set_axis_tick(ui->monitor_chart_1, LV_CHART_AXIS_PRIMARY_Y, 10, 5, 10, 5, true, 100);\n  lv_chart_set_axis_tick(ui->monitor_chart_1, LV_CHART_AXIS_PRIMARY_X, 10, 5, 10, 1, true, 10);\n  lv_slider_set_range(ui->monitor_slider_1, LV_IMG_ZOOM_NONE, LV_IMG_ZOOM_NONE * 5);",
+				"inc_c": "",
+				"code_py": "",
+				"inc_py": ""
+			},
+			"width": 800,
+			"height": 480,
+			"visible": true,
+			"flag": [],
+			"list": [
+				{
+					"name": "slider_1",
+					"id": "ixqw6zvq",
+					"type": "slider",
+					"left": 771,
+					"top": 71,
+					"visible": true,
+					"isLock": false,
+					"flag": [],
+					"width": 5,
+					"height": 336,
+					"default_style": false,
+					"range_s": 0,
+					"range_e": 100,
+					"starting_value": 0,
+					"left_value": 0,
+					"slider_mode": "LV_SLIDER_MODE_NORMAL",
+					"attribute_type": "freemaster",
+					"custom_attribute": [],
+					"style": [
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"bg_color": "#e3e8ed",
+							"bg_grad_color": "#2195f6",
+							"bg_opa": 94,
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"radius": 58,
+							"outline_width": 0,
+							"outline_color": "#2195f6",
+							"outline_opa": 0,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0
+						},
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_FOCUSED",
+							"disable": true,
+							"outline_color": "#2195f6",
+							"outline_opa": 255,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0
+						},
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_DISABLED",
+							"disable": true,
+							"outline_color": "#2195f6",
+							"outline_opa": 255,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0
+						},
+						{
+							"part": "LV_PART_INDICATOR",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"bg_color": "#2195f6",
+							"bg_grad_color": "#2195f6",
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"bg_opa": 255,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"radius": 58
+						},
+						{
+							"part": "LV_PART_INDICATOR",
+							"state": "LV_STATE_FOCUSED",
+							"disable": true,
+							"bg_color": "#2195f6",
+							"bg_grad_color": "#2195f6",
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"bg_opa": 255,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"radius": 58
+						},
+						{
+							"part": "LV_PART_INDICATOR",
+							"state": "LV_STATE_DISABLED",
+							"disable": true,
+							"bg_color": "#2195f6",
+							"bg_grad_color": "#2195f6",
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"bg_opa": 255,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"radius": 58
+						},
+						{
+							"part": "LV_PART_KNOB",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"radius": 58
+						},
+						{
+							"part": "LV_PART_KNOB",
+							"state": "LV_STATE_FOCUSED",
+							"disable": true,
+							"bg_color": "#2195f6",
+							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"radius": 58
+						},
+						{
+							"part": "LV_PART_KNOB",
+							"state": "LV_STATE_DISABLED",
+							"disable": true,
+							"bg_color": "#2195f6",
+							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"radius": 58
+						}
+					],
+					"event": {
+						"widget": {
+							"released": {
+								"condition": [],
+								"action": [
+									{
+										"dst": "custom_code",
+										"bindCondi": "",
+										"actionList": {
+											"custom_code": {
+												"inc_c": "",
+												"code_c": "lv_obj_t * obj = lv_event_get_target(e);\n  int32_t v = lv_slider_get_value(obj);\n  lv_chart_set_zoom_y(guider_ui.monitor_chart_1, v);\n  break;",
+												"inc_py": "",
+												"code_py": ""
+											}
+										}
+									}
+								]
+							}
+						}
+					}
+				},
+				{
+					"name": "imgbtn_back",
+					"id": "gfgm519r",
+					"type": "imgbtn",
+					"left": 17,
+					"top": 7,
+					"visible": true,
+					"isLock": false,
+					"flag": [],
+					"width": 41,
+					"height": 41,
+					"default_style": false,
+					"use_fs": false,
+					"fs_type": "flash",
+					"sd_path": "",
+					"text": "",
+					"toggle": true,
+					"src_released": "C:\\Users\\yandld\\Desktop\\an-mc-pmsm-mcxe31b\\gui_guilder\\import\\image\\back.png",
+					"src_pressed": "",
+					"src_checked_released": "",
+					"src_checked_pressed": "",
+					"color_format": "true-color-alpha",
+					"style": [
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"font_family": "montserratMedium",
+							"text_color": "#000000",
+							"text_align": "LV_TEXT_ALIGN_CENTER",
+							"font": 20,
+							"radius": 0,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0
+						},
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_PRESSED",
+							"disable": false,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"image_opa": 255,
+							"text_color": "#FF33FF",
+							"font_family": "montserratMedium",
+							"font": 20,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0
+						},
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_CHECKED",
+							"disable": false,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"text_color": "#FF33FF",
+							"image_opa": 255,
+							"font_family": "montserratMedium",
+							"font": 20,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0
+						},
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_IMGBTN_STATE_RELEASED",
+							"desc": "released",
+							"disable": false,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"image_opa": 255
+						}
+					],
+					"event": {
+						"widget": {
+							"clicked": {
+								"condition": [],
+								"action": [
+									{
+										"dst": "load_screen",
+										"bindCondi": "",
+										"actionList": {
+											"load_screen": {
+												"duration": 200,
+												"delay": 200,
+												"scrId": "bpwbyo0v",
+												"anim_type": "LV_SCR_LOAD_ANIM_FADE_ON",
+												"is_clean": false,
+												"is_del": false
+											}
+										}
+									}
+								]
+							}
+						}
+					}
+				},
+				{
+					"name": "label_title",
+					"id": "9ih8q6h3",
+					"type": "label",
+					"left": 190,
+					"top": 15,
+					"visible": true,
+					"isLock": false,
+					"flag": [],
+					"width": 420,
+					"height": 42,
+					"default_style": false,
+					"text": "Speed monitoring chart",
+					"long_mode": "LV_LABEL_LONG_WRAP",
+					"custom_attribute": [],
+					"attribute_type": "",
+					"style": [
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"border_side": [
+								"LV_BORDER_SIDE_FULL"
+							],
+							"border_width": 0,
+							"border_opa": 255,
+							"border_color": "#2195f6",
+							"radius": 0,
+							"text_color": "#ffffff",
+							"text_opa": 255,
+							"font": 22,
+							"text_align": "LV_TEXT_ALIGN_CENTER",
+							"font_family": "montserratMedium",
+							"letter_space": 0,
+							"line_space": 0,
+							"bg_color": "#2195f6",
+							"bg_grad_color": "#2195f6",
+							"bg_opa": 0,
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"padding_top": 0,
+							"padding_right": 0,
+							"padding_bottom": 0,
+							"padding_left": 0,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0
+						},
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_DISABLED",
+							"disable": true,
+							"border_side": [
+								"LV_BORDER_SIDE_FULL"
+							],
+							"border_width": 0,
+							"border_opa": 255,
+							"border_color": "#2195f6",
+							"radius": 0,
+							"text_color": "#000000",
+							"text_opa": 255,
+							"font": 26,
+							"font_family": "montserratMedium",
+							"text_align": "LV_TEXT_ALIGN_CENTER",
+							"letter_space": 2,
+							"line_space": 0,
+							"bg_color": "#2195f6",
+							"bg_grad_color": "#2195f6",
+							"bg_opa": 0,
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"padding_top": 0,
+							"padding_right": 0,
+							"padding_bottom": 0,
+							"padding_left": 0,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0
+						}
+					]
+				},
+				{
+					"name": "chart_1",
+					"id": "gt8gd6ow",
+					"type": "chart",
+					"left": 93,
+					"top": 53,
+					"visible": true,
+					"isLock": false,
+					"flag": [
+						"LV_OBJ_FLAG_SCROLLABLE"
+					],
+					"width": 652,
+					"height": 374,
+					"default_style": false,
+					"scrollbar_mode": "AUTO",
+					"row": 10,
+					"col": 20,
+					"zoom_x": 256,
+					"zoom_y": 256,
+					"point_count": 5,
+					"chart_type": "LV_CHART_TYPE_LINE",
+					"hide_point": false,
+					"attribute_type": "freemaster",
+					"custom_attribute": [
+						"M1 Speed Actual",
+						"M1 Speed Required"
+					],
+					"axis_tick": [
+						{
+							"axis_name": "LV_CHART_AXIS_PRIMARY_Y",
+							"tick_en": false,
+							"major_len": 10,
+							"minor_len": 5,
+							"major_cnt": 5,
+							"minor_cnt": 4,
+							"label_en": true,
+							"draw_size": 40,
+							"min": 0,
+							"max": 2400
+						},
+						{
+							"axis_name": "LV_CHART_AXIS_SECONDARY_Y",
+							"tick_en": false,
+							"major_len": 10,
+							"minor_len": 5,
+							"major_cnt": 5,
+							"minor_cnt": 4,
+							"label_en": false,
+							"draw_size": 40,
+							"min": 0,
+							"max": 100
+						},
+						{
+							"axis_name": "LV_CHART_AXIS_PRIMARY_X",
+							"tick_en": false,
+							"major_len": 10,
+							"minor_len": 5,
+							"major_cnt": 5,
+							"minor_cnt": 4,
+							"label_en": false,
+							"draw_size": 40
+						},
+						{
+							"axis_name": "LV_CHART_AXIS_SECONDARY_X",
+							"tick_en": false,
+							"major_len": 10,
+							"minor_len": 5,
+							"major_cnt": 5,
+							"minor_cnt": 4,
+							"label_en": false,
+							"draw_size": 40
+						}
+					],
+					"chart_data": [
+						{
+							"chart_color": "#0055ff",
+							"chart_points": [
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0
+							],
+							"chart_axis": "LV_CHART_AXIS_PRIMARY_Y"
+						},
+						{
+							"chart_color": "#f00000",
+							"chart_points": [
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0,
+								0
+							],
+							"chart_axis": "LV_CHART_AXIS_PRIMARY_Y"
+						}
+					],
+					"style": [
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"bg_opa": 0,
+							"border_side": [
+								"LV_BORDER_SIDE_FULL"
+							],
+							"border_width": 2,
+							"border_color": "#313330",
+							"border_opa": 255,
+							"radius": 0,
+							"line_color": "#313330",
+							"line_width": 2,
+							"line_opa": 255,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0
+						},
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_FOCUSED",
+							"disable": true,
+							"border_side": [
+								"LV_BORDER_SIDE_FULL"
+							],
+							"border_width": 1,
+							"border_color": "#e8e8e8",
+							"border_opa": 255,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"bg_opa": 255,
+							"radius": 0,
+							"line_color": "#7d8490",
+							"line_width": 2,
+							"line_opa": 255,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0
+						},
+						{
+							"part": "LV_PART_TICKS",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"text_color": "#ffffff",
+							"font_family": "montserratMedium",
+							"font": 12,
+							"line_color": "#e8e8e8",
+							"line_width": 2,
+							"line_opa": 255
+						}
+					]
+				}
+			],
+			"event": {},
+			"style": [
+				{
+					"part": "LV_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"bg_color": "#00031d",
+					"bg_grad_dir": "LV_GRAD_DIR_NONE",
+					"bg_dither_mode": "LV_DITHER_NONE",
+					"bg_main_stop": 0,
+					"bg_grad_stop": 255,
+					"bg_grad_color": "#2195f6",
+					"bg_opa": 255,
+					"bg_img_src": "",
+					"bg_img_opa": 255,
+					"bg_img_recolor": "#ffffff",
+					"bg_img_recolor_opa": 0
+				}
+			]
+		}
+	],
+	"FrontStatus": {},
+	"version": "1.8.0-GA-RC1-Internal",
+	"projectSettings": {
+		"keyBoard": {
+			"display_kb": false,
+			"chinese_input": false,
+			"chinese_library": "mini",
+			"keyboard_font_type": "simsun",
+			"keyboard_font_size": 18
+		},
+		"board_radius": 0,
+		"resolution": {
+			"width": "800",
+			"height": "480"
+		},
+		"color_depth": 16,
+		"panel_name": "Simulator",
+		"display_part_number": "Simulator",
+		"OS": "Windows/Linux/Darwin",
+		"Processor": "Simulator",
+		"name": "Simulator",
+		"mcuxpresso_config": {
+			"CMAKE_BUILD_TYPE": "null"
+		},
+		"Optimizations": "Balance",
+		"frameBuffer_region": null
+	},
+	"projectName": "motor_control_v1",
+	"lvglVersion": "v8",
+	"boardPlatformSettings": {
+		"id": 245,
+		"name": "Simulator",
+		"version": "v1.0.0",
+		"description": "Simulator",
+		"lvgl_version_major": 8,
+		"lvgl_version_minor": 3,
+		"lvgl_version_micro": 10,
+		"author": "NXP",
+		"checksum": "c22e1ff41664a493bb734ad30de200d9",
+		"images": [
+			"C:\\Users\\nxf42513\\AppData\\Roaming\\gui-guider\\dev\\template\\board\\v8\\Simulator\\images\\simulator.png"
+		],
+		"type": "Simulator",
+		"core": "",
+		"disable_widgets": [],
+		"disable_toolchains": [],
+		"configuration": {
+			"OS": "Windows/Linux/MacOS",
+			"Processor": "Simulator",
+			"color_depth": [
+				16,
+				24,
+				1,
+				8
+			],
+			"export_code": [
+				"RT-Thread",
+				"Zephyr"
+			],
+			"Optimizations": "Balance",
+			"display_panels": [
+				{
+					"width": 480,
+					"height": 272,
+					"display_panel_name": "Simulator",
+					"display_part_number": "Simulator"
+				},
+				{
+					"width": 480,
+					"height": 320,
+					"display_panel_name": "Simulator",
+					"display_part_number": "Simulator"
+				},
+				{
+					"width": 296,
+					"height": 128,
+					"display_panel_name": "Simulator",
+					"display_part_number": "Simulator"
+				},
+				{
+					"width": 392,
+					"height": 392,
+					"display_panel_name": "Simulator",
+					"display_part_number": "Simulator"
+				},
+				{
+					"width": 320,
+					"height": 240,
+					"display_panel_name": "Simulator",
+					"display_part_number": "Simulator"
+				},
+				{
+					"width": 800,
+					"height": 480,
+					"display_panel_name": "Simulator",
+					"display_part_number": "Simulator"
+				},
+				{
+					"width": 720,
+					"height": 1280,
+					"display_panel_name": "Simulator",
+					"display_part_number": "Simulator"
+				},
+				{
+					"width": 1280,
+					"height": 720,
+					"display_panel_name": "Simulator",
+					"display_part_number": "Simulator"
+				},
+				{
+					"width": 1280,
+					"height": 800,
+					"display_panel_name": "Simulator",
+					"display_part_number": "Simulator"
+				}
+			],
+			"support_sdCard": true,
+			"mcuxpresso_config": {
+				"CMAKE_BUILD_TYPE": "null"
+			}
+		},
+		"lv_conf": {
+			"LV_MEM_ADR": 0,
+			"LV_USE_GPU": 1,
+			"LV_MEM_SIZE": 320,
+			"LV_MEM_CUSTOM": 0,
+			"LV_COLOR_DEPTH": 16,
+			"LV_HOR_RES_MAX": "(480)",
+			"LV_VER_RES_MAX": "(320)",
+			"LV_FS_RAWFS_XIP": 0,
+			"LV_COLOR_16_SWAP": 0,
+			"LV_MEM_AUTO_DEFRAG": 1,
+			"LV_MEM_CUSTOM_FREE": "free",
+			"LV_USE_GPU_NXP_PXP": "~~",
+			"LV_USE_MEM_MONITOR": 0,
+			"LV_MEM_CUSTOM_ALLOC": "malloc",
+			"LV_USE_PERF_MONITOR": 0,
+			"LV_MEM_CUSTOM_INCLUDE": "<stdlib.h>",
+			"LV_ATTRIBUTE_MEM_ALIGN": "~~",
+			"LV_USE_GPU_NXP_VG_LITE": "~~",
+			"LV_DISP_DEF_REFR_PERIOD": 30,
+			"LV_FS_RAWFS_XIP_BASE_ADDR": "",
+			"LV_ATTRIBUTE_MEM_ALIGN_SIZE": "~~",
+			"LV_USE_GPU_NXP_PXP_AUTO_INIT": "~~"
+		},
+		"old_name": null,
+		"origin_type": "download",
+		"uid": "Simulator_v1.0.0_v8",
+		"status": "normal",
+		"preview": "https://d28lg7mcfo5ft3.cloudfront.net/1.8.0/board/Simulator/v8/dev/images/simulator.png"
+	},
+	"demoTemplateSettings": {
+		"id": 9,
+		"name": "EmptyUI",
+		"version": "v1.0.0",
+		"description": "An empty UI template",
+		"lvgl_version_major": 8,
+		"lvgl_version_minor": 3,
+		"lvgl_version_micro": 5,
+		"author": "NXP",
+		"file": "https://gui-guider.s3.amazonaws.com/1.6.0/application/EmptyUI/v8/dev/EmptyUI_v1.0.0.zip?AWSAccessKeyId=ASIAT6W42VF3YK7ADY5N&Signature=s1CG7G0P9OKHjmpghB06X6nvJd8%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEEwaCWV1LXdlc3QtMSJHMEUCIHNWOORm06JdjB%2BMMKLJbUTBrXeCnfm55Rc0hqdwoFvhAiEAuiMeYOHBkYB5BxjsyOcqsYIfIDru%2Bn%2FiBwSzYy3EfAUq6wII5P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwyNzIxMTk4MDIyMzEiDNjOSPEmZZ%2BGFNq9NCq%2FApTh7xQTCjmm7lh4h6HqE64cNBY4AX7mERL3rONz0N3OtSPXlQuU9n131cmcWHxjHT3a6KfKuyXo0YHVDF64wox%2B7Kk7oDnmEtKbsOroOK61b2CYqnWDxHxm3Puk7kLQD7xMUO7XWJaF50aKEdQQeC3Y1ijTjPNCOP7KTYZVFOrNiTrS95bBtNYIK2SQf6bJrj3cIiuYY%2FT5dZan0tgK6XQ2dRkTOY9D1dwXTknlEWwOGi83DTTKCFPRKBFoO%2Bbs1QH09h9w5F8AQu7T9UPlDREkb%2BUOiRMUP44OqTQyMfLSVSOjJ7nkA%2FX5zT2K1%2B2OcwAKSsKRevCzoOoW7HWcAFddeI48HL4kJzE5vsVKxNc6W5iBuEttQnvmcSiTJyyV2Jgrf5%2FNTIABRx2BC6JZ7lKI06jUMNCTFsGtPLL8ge8whJOnpgY6ngGmBfl0dHV4HruoAnxAe%2BQzhoqoQuRCMrXJdX2bmFaRmM4K6Z95eH55OTgMMNzPjXUlHqDUGTqBEgVkoxlFW6L8nmY0lW5cK3ylhb4Qgig%2F8l47VMunfF9dnzlQ0tgKT1Gy1L9lb3ZfUMIBGoFCiytAVKsb%2B1DcTeUdZgv9FsxKjtARzatPS9ELvy1WtEK1dofffVWiP%2BEkhOK%2B9Rhseg%3D%3D&Expires=1690950307",
+		"checksum": "bce238098f630e445b68c3be49465ec0",
+		"images": [
+			"1.6.0/application/EmptyUI/v8/dev/images/simulator.png"
+		],
+		"support_board": [
+			"Simulator",
+			"MIMXRT1050-EVKB",
+			"MIMXRT1040-EVK",
+			"MIMXRT1060-EVK",
+			"MIMXRT1064-EVK",
+			"LPCXpresso54S018",
+			"LPCXpresso54S018M",
+			"LPCXpresso54628",
+			"LPCXpresso55S69",
+			"LPCXpresso55S28",
+			"LPCXpresso55S16",
+			"LPCXpresso55S06",
+			"MCX-N5XX-EVK",
+			"MCX-N9XX-BRK",
+			"MIMXRT595-EVK",
+			"MIMXRT1160-EVK",
+			"MIMXRT1170-EVK",
+			"MIMXRT1170-EVKB",
+			"MIMXRT1010-EVK",
+			"MIMXRT1020-EVK",
+			"MIMXRT1024-EVK",
+			"MIMXRT1015-EVK",
+			"MIMXRT1060-EVKB",
+			"MIMXRT1060-EVKC",
+			"RD-RW612-BGA",
+			"MCIMX93EVK",
+			"KW45B41Z-EVK"
+		],
+		"origin_type": "builtIn",
+		"uid": "EmptyUI_v1.0.0_v8"
+	},
+	"lvConf": {
+		"LV_MEM_ADR": false,
+		"LV_USE_GPU": true,
+		"LV_MEM_SIZE": 320,
+		"LV_MEM_CUSTOM": false,
+		"LV_COLOR_DEPTH": 16,
+		"LV_HOR_RES_MAX": "(800)",
+		"LV_VER_RES_MAX": "(480)",
+		"LV_FS_RAWFS_XIP": false,
+		"LV_COLOR_16_SWAP": false,
+		"LV_MEM_AUTO_DEFRAG": true,
+		"LV_MEM_CUSTOM_FREE": "free",
+		"LV_USE_GPU_NXP_PXP": "~~",
+		"LV_USE_MEM_MONITOR": false,
+		"LV_MEM_CUSTOM_ALLOC": "malloc",
+		"LV_USE_PERF_MONITOR": false,
+		"LV_MEM_CUSTOM_INCLUDE": "<stdlib.h>",
+		"LV_ATTRIBUTE_MEM_ALIGN": "~~",
+		"LV_USE_GPU_NXP_VG_LITE": "~~",
+		"LV_DISP_DEF_REFR_PERIOD": 30,
+		"LV_FS_RAWFS_XIP_BASE_ADDR": "",
+		"LV_ATTRIBUTE_MEM_ALIGN_SIZE": "~~",
+		"LV_USE_GPU_NXP_PXP_AUTO_INIT": "~~"
+	},
+	"customAttribute": {
+		"M1 Application State": {
+			"variable": "M1 Application State",
+			"address": "g_sM1Ctrl.eState",
+			"type_fmt": "Fixed point number",
+			"size": 1,
+			"period": 300
+		},
+		"M1 Application Switch": {
+			"variable": "M1 Application Switch",
+			"address": "g_bM1SwitchAppOnOff",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 DCB Voltage": {
+			"variable": "M1 DCB Voltage",
+			"address": "g_sM1Drive.sFocPMSM.fltUDcBus",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 State Run": {
+			"variable": "M1 State Run",
+			"address": "g_eM1StateRun",
+			"type_fmt": "Fixed point number",
+			"size": 1,
+			"period": 1000
+		},
+		"M1 Phase Current A": {
+			"variable": "M1 Phase Current A",
+			"address": "g_sM1Drive.sFocPMSM.sIABC.fltA",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 100
+		},
+		"M1 SVM Sector": {
+			"variable": "M1 SVM Sector",
+			"address": "g_sM1Drive.sFocPMSM.ui16SectorSVM",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 100
+		},
+		"M1 Position Electrical": {
+			"variable": "M1 Position Electrical",
+			"address": "g_sM1Drive.sFocPMSM.f16PosEl",
+			"type_fmt": "Q0.15 <-1,1)",
+			"size": 2,
+			"period": 100
+		},
+		"M1 Speed Ramp": {
+			"variable": "M1 Speed Ramp",
+			"address": "g_sM1Drive.sSpeed.fltSpeedRamp",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"FMSTR_M1_speedAngularScale": {
+			"variable": "FMSTR_M1_speedAngularScale",
+			"address": "g_fltM1speedAngularScale",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Speed Required": {
+			"variable": "M1 Speed Required",
+			"address": "g_sM1Drive.sSpeed.fltSpeedCmd",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Speed Loop Kp Gain": {
+			"variable": "M1 Speed Loop Kp Gain",
+			"address": "g_sM1Drive.sSpeed.sSpeedPiParams.fltPGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Speed Loop Ki Gain": {
+			"variable": "M1 Speed Loop Ki Gain",
+			"address": "g_sM1Drive.sSpeed.sSpeedPiParams.fltIGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Scalar Frequency Ramp": {
+			"variable": "M1 Scalar Frequency Ramp",
+			"address": "g_sM1Drive.sScalarCtrl.fltFreqRamp",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 100
+		},
+		"M1 Position Electrical Scalar": {
+			"variable": "M1 Position Electrical Scalar",
+			"address": "g_sM1Drive.sScalarCtrl.f16PosElScalar",
+			"type_fmt": "Q0.15 <-1,1)",
+			"size": 2,
+			"period": 100
+		},
+		"M1 MCAT Control": {
+			"variable": "M1 MCAT Control",
+			"address": "g_sM1Drive.eControl",
+			"type_fmt": "Fixed point number",
+			"size": 1,
+			"period": 1000
+		},
+		"M1 MCAT Uq Required": {
+			"variable": "M1 MCAT Uq Required",
+			"address": "g_sM1Drive.sMCATctrl.sUDQReqMCAT.fltQ",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"FMSTR_M1_speedScale": {
+			"variable": "FMSTR_M1_speedScale",
+			"address": "g_fltM1speedScale",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"FMSTR_M1_voltageScale": {
+			"variable": "FMSTR_M1_voltageScale",
+			"address": "g_fltM1voltageScale",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"FMSTR_M1_currentScale": {
+			"variable": "FMSTR_M1_currentScale",
+			"address": "g_fltM1currentScale",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Phase Current B": {
+			"variable": "M1 Phase Current B",
+			"address": "g_sM1Drive.sFocPMSM.sIABC.fltB",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 100
+		},
+		"M1 Phase Current C": {
+			"variable": "M1 Phase Current C",
+			"address": "g_sM1Drive.sFocPMSM.sIABC.fltC",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 100
+		},
+		"FMSTR_M1_DCBvoltageScale": {
+			"variable": "FMSTR_M1_DCBvoltageScale",
+			"address": "g_fltM1DCBvoltageScale",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 DCB Voltage Filtered": {
+			"variable": "M1 DCB Voltage Filtered",
+			"address": "g_sM1Drive.sFocPMSM.fltUDcBusFilt",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 100
+		},
+		"M1 Speed Actual": {
+			"variable": "M1 Speed Actual",
+			"address": "g_sM1Drive.sSpeed.fltSpeedFilt",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Scalar Freq Required": {
+			"variable": "M1 Scalar Freq Required",
+			"address": "g_sM1Drive.sScalarCtrl.fltFreqCmd",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 100
+		},
+		"M1 MCAT Iq Required": {
+			"variable": "M1 MCAT Iq Required",
+			"address": "g_sM1Drive.sMCATctrl.sIDQReqMCAT.fltQ",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 I alpha": {
+			"variable": "M1 I alpha",
+			"address": "g_sM1Drive.sFocPMSM.sIAlBe.fltAlpha",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 100
+		},
+		"M1 I beta": {
+			"variable": "M1 I beta",
+			"address": "g_sM1Drive.sFocPMSM.sIAlBe.fltBeta",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 100
+		},
+		"M1 Id": {
+			"variable": "M1 Id",
+			"address": "g_sM1Drive.sFocPMSM.sIDQ.fltD",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 100
+		},
+		"M1 Iq": {
+			"variable": "M1 Iq",
+			"address": "g_sM1Drive.sFocPMSM.sIDQ.fltQ",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 100
+		},
+		"M1 Alignment Voltage": {
+			"variable": "M1 Alignment Voltage",
+			"address": "g_sM1Drive.sAlignment.fltUdReq",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Alignment Duration": {
+			"variable": "M1 Alignment Duration",
+			"address": "g_sM1Drive.sAlignment.ui16Time",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 MCAT Id Required": {
+			"variable": "M1 MCAT Id Required",
+			"address": "g_sM1Drive.sMCATctrl.sIDQReqMCAT.fltD",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 MCAT Ud Required": {
+			"variable": "M1 MCAT Ud Required",
+			"address": "g_sM1Drive.sMCATctrl.sUDQReqMCAT.fltD",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Speed Loop Limit Low": {
+			"variable": "M1 Speed Loop Limit Low",
+			"address": "g_sM1Drive.sSpeed.sSpeedPiParams.fltLowerLim",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Speed Loop Limit High": {
+			"variable": "M1 Speed Loop Limit High",
+			"address": "g_sM1Drive.sSpeed.sSpeedPiParams.fltUpperLim",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Speed Ramp Up": {
+			"variable": "M1 Speed Ramp Up",
+			"address": "g_sM1Drive.sSpeed.sSpeedRampParams.fltRampUp",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Speed Ramp Down": {
+			"variable": "M1 Speed Ramp Down",
+			"address": "g_sM1Drive.sSpeed.sSpeedRampParams.fltRampDown",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Id Ki Gain": {
+			"variable": "M1 Id Ki Gain",
+			"address": "g_sM1Drive.sFocPMSM.sIdPiParams.fltIGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Id Kp Gain": {
+			"variable": "M1 Id Kp Gain",
+			"address": "g_sM1Drive.sFocPMSM.sIdPiParams.fltPGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Iq Ki Gain": {
+			"variable": "M1 Iq Ki Gain",
+			"address": "g_sM1Drive.sFocPMSM.sIqPiParams.fltIGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Iq Kp Gain": {
+			"variable": "M1 Iq Kp Gain",
+			"address": "g_sM1Drive.sFocPMSM.sIqPiParams.fltPGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Scalar VHz Factor Gain": {
+			"variable": "M1 Scalar VHz Factor Gain",
+			"address": "g_sM1Drive.sScalarCtrl.fltVHzGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 MCAT POSPE Sensor": {
+			"variable": "M1 MCAT POSPE Sensor",
+			"address": "g_sM1Drive.sMCATctrl.ui16PospeSensor",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Scalar Ramp Down": {
+			"variable": "M1 Scalar Ramp Down",
+			"address": "g_sM1Drive.sScalarCtrl.sFreqRampParams.fltRampDown",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Scalar Ramp Up": {
+			"variable": "M1 Scalar Ramp Up",
+			"address": "g_sM1Drive.sScalarCtrl.sFreqRampParams.fltRampUp",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Current Loop Limit": {
+			"variable": "M1 Current Loop Limit",
+			"address": "g_sM1Drive.sFocPMSM.fltDutyCycleLimit",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Startup Ramp Inc": {
+			"variable": "M1 Startup Ramp Inc",
+			"address": "g_sM1Drive.sStartUp.sSpeedRampOpenLoopParams.fltRampUp",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Startup Current": {
+			"variable": "M1 Startup Current",
+			"address": "g_sM1Drive.sStartUp.fltCurrentStartup",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Merging Coefficient": {
+			"variable": "M1 Merging Coefficient",
+			"address": "g_sM1Drive.sStartUp.f16CoeffMerging",
+			"type_fmt": "Q0.15 <-1,1)",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Speed Merging Catch Up": {
+			"variable": "M1 Speed Merging Catch Up",
+			"address": "g_sM1Drive.sStartUp.fltSpeedCatchUp",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Position Estimated": {
+			"variable": "M1 Position Estimated",
+			"address": "g_sM1Drive.sFocPMSM.f16PosElEst",
+			"type_fmt": "Q0.15 <-1,1)",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Merging Ratio": {
+			"variable": "M1 Merging Ratio",
+			"address": "g_sM1Drive.sStartUp.f16RatioMerging",
+			"type_fmt": "Q0.15 <-1,1)",
+			"size": 2,
+			"period": 100
+		},
+		"M1 Speed Ramp Open Loop": {
+			"variable": "M1 Speed Ramp Open Loop",
+			"address": "g_sM1Drive.sStartUp.fltSpeedRampOpenLoop",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Obsrv E gain": {
+			"variable": "M1 Obsrv E gain",
+			"address": "g_sM1Drive.sFocPMSM.sBemfObsrv.fltEGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Obsrv I gain": {
+			"variable": "M1 Obsrv I gain",
+			"address": "g_sM1Drive.sFocPMSM.sBemfObsrv.fltIGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Obsrv U gain": {
+			"variable": "M1 Obsrv U gain",
+			"address": "g_sM1Drive.sFocPMSM.sBemfObsrv.fltUGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Obsrv WI gain": {
+			"variable": "M1 Obsrv WI gain",
+			"address": "g_sM1Drive.sFocPMSM.sBemfObsrv.fltWIGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Obsrv Kp gain": {
+			"variable": "M1 Obsrv Kp gain",
+			"address": "g_sM1Drive.sFocPMSM.sBemfObsrv.sCtrl.fltPGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Obsrv Ki gain": {
+			"variable": "M1 Obsrv Ki gain",
+			"address": "g_sM1Drive.sFocPMSM.sBemfObsrv.sCtrl.fltIGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Merging Speed Catch Up": {
+			"variable": "M1 Merging Speed Catch Up",
+			"address": "g_sM1Drive.sStartUp.fltSpeedCatchUp",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Speed Filter B0": {
+			"variable": "M1 Speed Filter B0",
+			"address": "g_sM1Drive.sSpeed.sSpeedFilter.sFltCoeff.fltB0",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Speed Filter B1": {
+			"variable": "M1 Speed Filter B1",
+			"address": "g_sM1Drive.sSpeed.sSpeedFilter.sFltCoeff.fltB1",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Speed Filter A1": {
+			"variable": "M1 Speed Filter A1",
+			"address": "g_sM1Drive.sSpeed.sSpeedFilter.sFltCoeff.fltA1",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Startup Ramp Dec": {
+			"variable": "M1 Startup Ramp Dec",
+			"address": "g_sM1Drive.sStartUp.sSpeedRampOpenLoopParams.fltRampDown",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Fault Captured Over Current": {
+			"variable": "M1 Fault Captured Over Current",
+			"address": "g_sM1Drive.sFaultIdCaptured",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Fault Captured DCBus Undervoltage": {
+			"variable": "M1 Fault Captured DCBus Undervoltage",
+			"address": "g_sM1Drive.sFaultIdCaptured",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Fault Captured DCBus Overvoltage": {
+			"variable": "M1 Fault Captured DCBus Overvoltage",
+			"address": "g_sM1Drive.sFaultIdCaptured",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Fault Captured Overload": {
+			"variable": "M1 Fault Captured Overload",
+			"address": "g_sM1Drive.sFaultIdCaptured",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Fault Captured Overspeed": {
+			"variable": "M1 Fault Captured Overspeed",
+			"address": "g_sM1Drive.sFaultIdCaptured",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Fault Pending": {
+			"variable": "M1 Fault Pending",
+			"address": "g_sM1Drive.sFaultIdPending",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Speed Estimated": {
+			"variable": "M1 Speed Estimated",
+			"address": "g_sM1Drive.sFocPMSM.fltSpeedElEst",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 100
+		},
+		"M1 Uq req": {
+			"variable": "M1 Uq req",
+			"address": "g_sM1Drive.sFocPMSM.sUDQReq.fltQ",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 100
+		},
+		"M1 Iq Req": {
+			"variable": "M1 Iq Req",
+			"address": "g_sM1Drive.sFocPMSM.sIDQReq.fltQ",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 100
+		},
+		"M1 Position Open Loop": {
+			"variable": "M1 Position Open Loop",
+			"address": "g_sM1Drive.sStartUp.f16PosGen",
+			"type_fmt": "Q0.15 <-1,1)",
+			"size": 2,
+			"period": 100
+		},
+		"M1 Ud req": {
+			"variable": "M1 Ud req",
+			"address": "g_sM1Drive.sFocPMSM.sUDQReq.fltD",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 100
+		},
+		"M1 Fault Threshold SpeedMin": {
+			"variable": "M1 Fault Threshold SpeedMin",
+			"address": "g_sM1Drive.sFaultThresholds.fltSpeedMin",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Fault Threshold SpeedNom": {
+			"variable": "M1 Fault Threshold SpeedNom",
+			"address": "g_sM1Drive.sFaultThresholds.fltSpeedNom",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Fault Threshold SpeedOver": {
+			"variable": "M1 Fault Threshold SpeedOver",
+			"address": "g_sM1Drive.sFaultThresholds.fltSpeedOver",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Fault Threshold DcBusOver": {
+			"variable": "M1 Fault Threshold DcBusOver",
+			"address": "g_sM1Drive.sFaultThresholds.fltUDcBusOver",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Fault Threshold DcBusUnder": {
+			"variable": "M1 Fault Threshold DcBusUnder",
+			"address": "g_sM1Drive.sFaultThresholds.fltUDcBusUnder",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Position External": {
+			"variable": "M1 Position External",
+			"address": "g_sM1Drive.sFocPMSM.f16PosElExt",
+			"type_fmt": "Q0.15 <-1,1)",
+			"size": 2,
+			"period": 100
+		},
+		"M1 Id Req": {
+			"variable": "M1 Id Req",
+			"address": "g_sM1Drive.sFocPMSM.sIDQReq.fltD",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 100
+		},
+		"M1 Fault Clear": {
+			"variable": "M1 Fault Clear",
+			"address": "g_sM1Drive.bFaultClearMan",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Fault Captured Blocked Rotor": {
+			"variable": "M1 Fault Captured Blocked Rotor",
+			"address": "g_sM1Drive.sFaultIdCaptured",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Cycle Number": {
+			"variable": "M1 Cycle Number",
+			"address": "g_ui32NumberOfCycles",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 100
+		},
+		"M1 Cycle Number Maximum": {
+			"variable": "M1 Cycle Number Maximum",
+			"address": "g_ui32MaxNumberOfCycles",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 100
+		},
+		"Board ID": {
+			"variable": "Board ID",
+			"address": "g_sAppIdFM.cBoardID",
+			"type_fmt": "Fixed-length string",
+			"size": 20,
+			"period": -1
+		},
+		"Demo Mode Speed": {
+			"variable": "Demo Mode Speed",
+			"address": "bDemoModeSpeed",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Fast Control Loop Frequency": {
+			"variable": "M1 Fast Control Loop Frequency",
+			"address": "g_sM1Drive.ui16FastCtrlLoopFreq",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": -1
+		},
+		"M1 Slow Control Loop Frequency": {
+			"variable": "M1 Slow Control Loop Frequency",
+			"address": "g_sM1Drive.ui16SlowCtrlLoopFreq",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": -1
+		},
+		"M1 Fault Threshold BemfBlocked": {
+			"variable": "M1 Fault Threshold BemfBlocked",
+			"address": "g_sM1Drive.sFaultThresholds.fltUqBemf",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Obsrv To Ki gain": {
+			"variable": "M1 Obsrv To Ki gain",
+			"address": "g_sM1Drive.sFocPMSM.sTo.fltIGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Obsrv To Kp gain": {
+			"variable": "M1 Obsrv To Kp gain",
+			"address": "g_sM1Drive.sFocPMSM.sTo.fltPGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Obsrv To Theta gain": {
+			"variable": "M1 Obsrv To Theta gain",
+			"address": "g_sM1Drive.sFocPMSM.sTo.fltThGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"FMSTR_M1_frequencyScale": {
+			"variable": "FMSTR_M1_frequencyScale",
+			"address": "g_sM1Drive.sScalarCtrl.fltFreqMax",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Position Mechanical Encoder": {
+			"variable": "M1 Position Mechanical Encoder",
+			"address": "g_sM1Enc.f16PosMe",
+			"type_fmt": "Q0.15 <-1,1)",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Speed Mechanical Encoder": {
+			"variable": "M1 Speed Mechanical Encoder",
+			"address": "g_sM1Enc.fltSpdMeEst",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"FMSTR_M1_speedMechanicalScale": {
+			"variable": "FMSTR_M1_speedMechanicalScale",
+			"address": "g_fltM1speedMechanicalScale",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": -1
+		},
+		"M1 Position Required": {
+			"variable": "M1 Position Required",
+			"address": "g_sM1Drive.sPosition.a32PositionCmd",
+			"type_fmt": "Q16.15 <-65536,65536)",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Position Actual": {
+			"variable": "M1 Position Actual",
+			"address": "g_sM1Drive.sPosition.a32Position",
+			"type_fmt": "Q16.15 <-65536,65536)",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Speed PI params": {
+			"variable": "M1 Speed PI params",
+			"address": "g_sM1Drive.sSpeed.sSpeedPiParams.fltIGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Speed Actual Filtered": {
+			"variable": "M1 Speed Actual Filtered",
+			"address": "g_sM1Drive.sSpeed.fltSpeedFilt",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 100
+		},
+		"Demo Mode Position": {
+			"variable": "Demo Mode Position",
+			"address": "bDemoModePosition",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Fault Threshold DcBusTrip": {
+			"variable": "M1 Fault Threshold DcBusTrip",
+			"address": "g_sM1Drive.sFaultThresholds.fltUDcBusTrip",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"sAppIdFM.cAppVer": {
+			"variable": "sAppIdFM.cAppVer",
+			"address": "g_sAppIdFM.cAppVer",
+			"type_fmt": "Fixed-lenght string",
+			"size": 5,
+			"period": -1
+		},
+		"M1 Fault Captured": {
+			"variable": "M1 Fault Captured",
+			"address": "g_sM1Drive.sFaultIdCaptured",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Scalar Uq_min": {
+			"variable": "M1 Scalar Uq_min",
+			"address": "g_sM1Drive.sScalarCtrl.fltUqMin",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 CPU Frequency": {
+			"variable": "M1 CPU Frequency",
+			"address": "g_sM1Drive.ui32CpuFrequency",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": -1
+		},
+		"MID: Command": {
+			"variable": "MID: Command",
+			"address": "g_eMidCmd",
+			"type_fmt": "Fixed point number",
+			"size": 1,
+			"period": 1000
+		},
+		"MID: State": {
+			"variable": "MID: State",
+			"address": "sUserMIDStatus.eMIDState",
+			"type_fmt": "Fixed point number",
+			"size": 1,
+			"period": 1000
+		},
+		"DIAG: Fault Pending": {
+			"variable": "DIAG: Fault Pending",
+			"address": "g_sMidDrive.sFaultIdPending",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"DIAG: Fault Captured": {
+			"variable": "DIAG: Fault Captured",
+			"address": "g_sMidDrive.sFaultIdCaptured",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"DIAG: Fault DCBus Overvoltage": {
+			"variable": "DIAG: Fault DCBus Overvoltage",
+			"address": "g_sMidDrive.sFaultIdCaptured",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"DIAG: Fault DCBus Undervoltage": {
+			"variable": "DIAG: Fault DCBus Undervoltage",
+			"address": "g_sMidDrive.sFaultIdCaptured",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"DIAG: Fault Over Current": {
+			"variable": "DIAG: Fault Over Current",
+			"address": "g_sMidDrive.sFaultIdCaptured",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"DIAG: Fault clear": {
+			"variable": "DIAG: Fault clear",
+			"address": "g_sMidDrive.bFaultClearMan",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"MID: Faults": {
+			"variable": "MID: Faults",
+			"address": "sUserMIDStatus.ui16FaultMID",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"MID: Warnings": {
+			"variable": "MID: Warnings",
+			"address": "sUserMIDStatus.ui16WarnMID",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"MID: Measurement Type": {
+			"variable": "MID: Measurement Type",
+			"address": "eUserMIDMeasType",
+			"type_fmt": "Fixed point number",
+			"size": 1,
+			"period": 1000
+		},
+		"MID: Finished RS": {
+			"variable": "MID: Finished RS",
+			"address": "sUserMIDStatus.ui32FinishedMeas",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Finished LD": {
+			"variable": "MID: Finished LD",
+			"address": "sUserMIDStatus.ui32FinishedMeas",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Finished LQ": {
+			"variable": "MID: Finished LQ",
+			"address": "sUserMIDStatus.ui32FinishedMeas",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Finished KE": {
+			"variable": "MID: Finished KE",
+			"address": "sUserMIDStatus.ui32FinishedMeas",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Known Param Pp": {
+			"variable": "MID: Known Param Pp",
+			"address": "sUserMIDMotorParamsKnown.ui32Pp",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Known Param Rs": {
+			"variable": "MID: Known Param Rs",
+			"address": "sUserMIDMotorParamsKnown.fltRs",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Known Param Ld": {
+			"variable": "MID: Known Param Ld",
+			"address": "sUserMIDMotorParamsKnown.fltLd",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Known Param Lq": {
+			"variable": "MID: Known Param Lq",
+			"address": "sUserMIDMotorParamsKnown.fltLq",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Known Param Ke": {
+			"variable": "MID: Known Param Ke",
+			"address": "sUserMIDMotorParamsKnown.fltKe",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Known Param J": {
+			"variable": "MID: Known Param J",
+			"address": "sUserMIDMotorParamsKnown.fltJ",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Known Param B": {
+			"variable": "MID: Known Param B",
+			"address": "sUserMIDMotorParamsKnown.fltB",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Start Result": {
+			"variable": "MID: Start Result",
+			"address": "ui32UserMIDStartResult",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Measured Pp": {
+			"variable": "MID: Measured Pp",
+			"address": "sUserMIDMotorParamsMeas.ui32Pp",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Measured Rs": {
+			"variable": "MID: Measured Rs",
+			"address": "sUserMIDMotorParamsMeas.fltRs",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Measured Ld": {
+			"variable": "MID: Measured Ld",
+			"address": "sUserMIDMotorParamsMeas.fltLd",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Measured Lq": {
+			"variable": "MID: Measured Lq",
+			"address": "sUserMIDMotorParamsMeas.fltLq",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Measured Ke": {
+			"variable": "MID: Measured Ke",
+			"address": "sUserMIDMotorParamsMeas.fltKe",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Measured J": {
+			"variable": "MID: Measured J",
+			"address": "sUserMIDMotorParamsMeas.fltJ",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Measured B": {
+			"variable": "MID: Measured B",
+			"address": "sUserMIDMotorParamsMeas.fltB",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config Pp Id Meas": {
+			"variable": "MID: Config Pp Id Meas",
+			"address": "sUserMIDMeasConfig.fltPpIdReqOpenLoop",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config Pp Freq El. Required": {
+			"variable": "MID: Config Pp Freq El. Required",
+			"address": "sUserMIDMeasConfig.fltPpFreqElReq",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config Ke Id Required": {
+			"variable": "MID: Config Ke Id Required",
+			"address": "sUserMIDMeasConfig.fltKeIdReqOpenLoop",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config Ke Freq El. Required": {
+			"variable": "MID: Config Ke Freq El. Required",
+			"address": "sUserMIDMeasConfig.fltKeFreqElReq",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config Mech Kt": {
+			"variable": "MID: Config Mech Kt",
+			"address": "sUserMIDMeasConfig.fltMechKt",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config Mech Iq Startup": {
+			"variable": "MID: Config Mech Iq Startup",
+			"address": "sUserMIDMeasConfig.fltMechIqStartup",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config Mech Merging Coeff.": {
+			"variable": "MID: Config Mech Merging Coeff.",
+			"address": "sUserMIDMeasConfig.fltMechMergingCoeff",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config Mech Iq Accelerate": {
+			"variable": "MID: Config Mech Iq Accelerate",
+			"address": "sUserMIDMeasConfig.fltMechIqAccelerate",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config Mech Iq Decelerate": {
+			"variable": "MID: Config Mech Iq Decelerate",
+			"address": "sUserMIDMeasConfig.fltMechIqDecelerate",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config Mech Speed Accel. start": {
+			"variable": "MID: Config Mech Speed Accel. start",
+			"address": "sUserMIDMeasConfig.fltMechSpeedThrsAccel",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config Mech Speed Integ. start": {
+			"variable": "MID: Config Mech Speed Integ. start",
+			"address": "sUserMIDMeasConfig.fltMechSpeedThrsInteg",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config Mech Speed Decel. start": {
+			"variable": "MID: Config Mech Speed Decel. start",
+			"address": "sUserMIDMeasConfig.fltMechSpeedThrsDecel",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config El Mode Estim RL": {
+			"variable": "MID: Config El Mode Estim RL",
+			"address": "u8ModeEstimRL",
+			"type_fmt": "Fixed point number",
+			"size": 1,
+			"period": 1000
+		},
+		"MID: Config El DQ-switch": {
+			"variable": "MID: Config El DQ-switch",
+			"address": "g_sEstimRLCtrlRun.u8LdqSwitch",
+			"type_fmt": "Fixed point number",
+			"size": 1,
+			"period": 1000
+		},
+		"MID: Config El I DC req (d-axis)": {
+			"variable": "MID: Config El I DC req (d-axis)",
+			"address": "g_sEstimRLCtrlRun.fltIDcDReq",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config El I DC req (q-axis)": {
+			"variable": "MID: Config El I DC req (q-axis)",
+			"address": "g_sEstimRLCtrlRun.fltIDcQReq",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config El I AC req": {
+			"variable": "MID: Config El I AC req",
+			"address": "g_sEstimRLCtrlRun.fltIAcReq",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config El I AC frequency": {
+			"variable": "MID: Config El I AC frequency",
+			"address": "g_sEstimRLCtrlRun.u16FAc",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"g_sEstimRLStruct.pInnerState.fltIDcDReq": {
+			"variable": "g_sEstimRLStruct.pInnerState.fltIDcDReq",
+			"address": "g_sEstimRLStruct.pInnerState.fltIDcDReq",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"g_sEstimRLStruct.pInnerState.fltIDcD": {
+			"variable": "g_sEstimRLStruct.pInnerState.fltIDcD",
+			"address": "g_sEstimRLStruct.pInnerState.fltIDcD",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"g_sEstimRLStruct.pInnerState.fltIDcQReq": {
+			"variable": "g_sEstimRLStruct.pInnerState.fltIDcQReq",
+			"address": "g_sEstimRLStruct.pInnerState.fltIDcQReq",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"g_sEstimRLStruct.pInnerState.fltIDcQ": {
+			"variable": "g_sEstimRLStruct.pInnerState.fltIDcQ",
+			"address": "g_sEstimRLStruct.pInnerState.fltIDcQ",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"g_sEstimRLStruct.pInnerState.fltIAcReq": {
+			"variable": "g_sEstimRLStruct.pInnerState.fltIAcReq",
+			"address": "g_sEstimRLStruct.pInnerState.fltIAcReq",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"g_sEstimRLStruct.pInnerState.pIDQAcFilt.fltD": {
+			"variable": "g_sEstimRLStruct.pInnerState.pIDQAcFilt.fltD",
+			"address": "g_sEstimRLStruct.pInnerState.pIDQAcFilt.fltD",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"g_sEstimRLStruct.pInnerState.pIDQAcFilt.fltQ": {
+			"variable": "g_sEstimRLStruct.pInnerState.pIDQAcFilt.fltQ",
+			"address": "g_sEstimRLStruct.pInnerState.pIDQAcFilt.fltQ",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"g_sEstimRLStruct.pInnerState.fltUDcDAcc": {
+			"variable": "g_sEstimRLStruct.pInnerState.fltUDcDAcc",
+			"address": "g_sEstimRLStruct.pInnerState.fltUDcDAcc",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"g_sEstimRLStruct.fltLd": {
+			"variable": "g_sEstimRLStruct.fltLd",
+			"address": "g_sEstimRLStruct.fltLd",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"g_sEstimRLStruct.fltLq": {
+			"variable": "g_sEstimRLStruct.fltLq",
+			"address": "g_sEstimRLStruct.fltLq",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"fltIDcPlot": {
+			"variable": "fltIDcPlot",
+			"address": "fltIDcPlot",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"fltLdPlot": {
+			"variable": "fltLdPlot",
+			"address": "fltLdPlot",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"fltLqPlot": {
+			"variable": "fltLqPlot",
+			"address": "fltLqPlot",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"g_sEstimRLStruct.pInnerState.fltUDcQAcc": {
+			"variable": "g_sEstimRLStruct.pInnerState.fltUDcQAcc",
+			"address": "g_sEstimRLStruct.pInnerState.fltUDcQAcc",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config El I DC nominal": {
+			"variable": "MID: Config El I DC nominal",
+			"address": "g_sEstimRLInitFMSTR.fltIDcNom",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config El I DC positive max": {
+			"variable": "MID: Config El I DC positive max",
+			"address": "g_sEstimRLInitFMSTR.fltIDcPosMax",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config El I DC negative max": {
+			"variable": "MID: Config El I DC negative max",
+			"address": "g_sEstimRLInitFMSTR.fltIDcNegMax",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 V/Hz factor": {
+			"variable": "M1 V/Hz factor",
+			"address": "g_sM1Drive.sScalarCtrl.fltVHzGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"Example ID": {
+			"variable": "Example ID",
+			"address": "g_sAppIdFM.cExampleID",
+			"type_fmt": "Fixed-lenght string",
+			"size": 30,
+			"period": -1
+		},
+		"Feature Encoder": {
+			"variable": "Feature Encoder",
+			"address": "g_sAppIdFM.ui16FeatureSet",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": -1
+		},
+		"Feature Field Weakening": {
+			"variable": "Feature Field Weakening",
+			"address": "g_sAppIdFM.ui16FeatureSet",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": -1
+		},
+		"Feature S-ramp": {
+			"variable": "Feature S-ramp",
+			"address": "g_sAppIdFM.ui16FeatureSet",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": -1
+		},
+		"MID: Config El I DC (estim Ld)": {
+			"variable": "MID: Config El I DC (estim Ld)",
+			"address": "g_sEstimRLInitFMSTR.fltIDcLd",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID: Config El I DC (estim Lq)": {
+			"variable": "MID: Config El I DC (estim Lq)",
+			"address": "g_sEstimRLInitFMSTR.fltIDcLq",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"FMSTR_MID_speedScale": {
+			"variable": "FMSTR_MID_speedScale",
+			"address": "g_fltMIDspeedScale",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"FMSTR_MID_speedAngularScale": {
+			"variable": "FMSTR_MID_speedAngularScale",
+			"address": "g_fltMIDspeedAngularScale",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"FMSTR_MID_currentScale": {
+			"variable": "FMSTR_MID_currentScale",
+			"address": "g_fltMIDcurrentScale",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"FMSTR_MID_voltageScale": {
+			"variable": "FMSTR_MID_voltageScale",
+			"address": "g_fltMIDvoltageScale",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Current Loop Limit": {
+			"variable": "MID Current Loop Limit",
+			"address": "g_sMidDrive.sFocPMSM.fltDutyCycleLimit",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Fault Threshold BemgBlocked": {
+			"variable": "MID Fault Threshold BemgBlocked",
+			"address": "g_sMidDrive.sFaultThresholds.fltUqBemf",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Fault Threshold DcBusOver": {
+			"variable": "MID Fault Threshold DcBusOver",
+			"address": "g_sMidDrive.sFaultThresholds.fltUDcBusOver",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Fault Threshold DcBusTrip": {
+			"variable": "MID Fault Threshold DcBusTrip",
+			"address": "g_sMidDrive.sFaultThresholds.fltUDcBusTrip",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Fault Threshold DcBusUnder": {
+			"variable": "MID Fault Threshold DcBusUnder",
+			"address": "g_sMidDrive.sFaultThresholds.fltUDcBusUnder",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Fault Threshold SpeedMin": {
+			"variable": "MID Fault Threshold SpeedMin",
+			"address": "g_sMidDrive.sFaultThresholds.fltSpeedMin",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Fault Threshold SpeedNom": {
+			"variable": "MID Fault Threshold SpeedNom",
+			"address": "g_sMidDrive.sFaultThresholds.fltSpeedNom",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Fault Threshold SpeedOver": {
+			"variable": "MID Fault Threshold SpeedOver",
+			"address": "g_sMidDrive.sFaultThresholds.fltSpeedOver",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Id Kp Gain": {
+			"variable": "MID Id Kp Gain",
+			"address": "g_sMidDrive.sFocPMSM.sIdPiParams.fltPGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Id Ki Gain": {
+			"variable": "MID Id Ki Gain",
+			"address": "g_sMidDrive.sFocPMSM.sIdPiParams.fltIGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Iq Kp Gain": {
+			"variable": "MID Iq Kp Gain",
+			"address": "g_sMidDrive.sFocPMSM.sIqPiParams.fltPGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Iq Ki Gain": {
+			"variable": "MID Iq Ki Gain",
+			"address": "g_sMidDrive.sFocPMSM.sIqPiParams.fltIGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Obsrv E gain": {
+			"variable": "MID Obsrv E gain",
+			"address": "g_sMidDrive.sFocPMSM.sBemfObsrv.fltEGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Obsrv I gain": {
+			"variable": "MID Obsrv I gain",
+			"address": "g_sMidDrive.sFocPMSM.sBemfObsrv.fltIGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Obsrv Ki gain": {
+			"variable": "MID Obsrv Ki gain",
+			"address": "g_sMidDrive.sFocPMSM.sBemfObsrv.sCtrl.fltIGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Obsrv Kp gain": {
+			"variable": "MID Obsrv Kp gain",
+			"address": "g_sMidDrive.sFocPMSM.sBemfObsrv.sCtrl.fltPGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Obsrv To Ki gain": {
+			"variable": "MID Obsrv To Ki gain",
+			"address": "g_sMidDrive.sFocPMSM.sTo.fltIGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Obsrv To Kp gain": {
+			"variable": "MID Obsrv To Kp gain",
+			"address": "g_sMidDrive.sFocPMSM.sTo.fltPGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Obsrv To Theta gain": {
+			"variable": "MID Obsrv To Theta gain",
+			"address": "g_sMidDrive.sFocPMSM.sTo.fltThGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Obsrv To U gain": {
+			"variable": "MID Obsrv To U gain",
+			"address": "g_sMidDrive.sFocPMSM.sBemfObsrv.fltUGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"MID Obsrv To WI gain": {
+			"variable": "MID Obsrv To WI gain",
+			"address": "g_sMidDrive.sFocPMSM.sBemfObsrv.fltWIGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Freewheel duration": {
+			"variable": "M1 Freewheel duration",
+			"address": "g_sM1Drive.ui16TimeFullSpeedFreeWheel",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Calibration duration": {
+			"variable": "M1 Calibration duration",
+			"address": "g_sM1Drive.ui16TimeCalibration",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Fault state duration": {
+			"variable": "M1 Fault state duration",
+			"address": "g_sM1Drive.ui16TimeFaultRelease",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Fault Threshold Blocked rotor period": {
+			"variable": "M1 Fault Threshold Blocked rotor period",
+			"address": "g_sM1Drive.sFaultThresholds.ui16BlockedPerNum",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"MID Calibration duration": {
+			"variable": "MID Calibration duration",
+			"address": "g_sMidDrive.ui16TimeCalibration",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 StartUp Integ Ki": {
+			"variable": "M1 StartUp Integ Ki",
+			"address": "g_sM1Drive.sStartUp.sSpeedIntegrator.a32Gain",
+			"type_fmt": "Q16.15 <-65536,65536)",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Scalar Integ Gain": {
+			"variable": "M1 Scalar Integ Gain",
+			"address": "g_sM1Drive.sScalarCtrl.sFreqIntegrator.a32Gain",
+			"type_fmt": "Q16.15 <-65536,65536)",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 DcBus IIR B0": {
+			"variable": "M1 DcBus IIR B0",
+			"address": "g_sM1Drive.sFocPMSM.sUDcBusFilter.sFltCoeff.fltB0",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 DcBus IIR B1": {
+			"variable": "M1 DcBus IIR B1",
+			"address": "g_sM1Drive.sFocPMSM.sUDcBusFilter.sFltCoeff.fltB1",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 DcBus IIR A1": {
+			"variable": "M1 DcBus IIR A1",
+			"address": "g_sM1Drive.sFocPMSM.sUDcBusFilter.sFltCoeff.fltA1",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Obsrv To IIR B0": {
+			"variable": "M1 Obsrv To IIR B0",
+			"address": "g_sM1Drive.sFocPMSM.sSpeedElEstFilt.sFltCoeff.fltB0",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Obsrv To IIR B1": {
+			"variable": "M1 Obsrv To IIR B1",
+			"address": "g_sM1Drive.sFocPMSM.sSpeedElEstFilt.sFltCoeff.fltB1",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Obsrv To IIR A1": {
+			"variable": "M1 Obsrv To IIR A1",
+			"address": "g_sM1Drive.sFocPMSM.sSpeedElEstFilt.sFltCoeff.fltA1",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Duty Cycle A": {
+			"variable": "M1 Duty Cycle A",
+			"address": "g_sM1Drive.sFocPMSM.sDutyABC.f16A",
+			"type_fmt": "Q0.15 <-1,1)",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Duty Cycle B": {
+			"variable": "M1 Duty Cycle B",
+			"address": "g_sM1Drive.sFocPMSM.sDutyABC.f16B",
+			"type_fmt": "Q0.15 <-1,1)",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Duty Cycle C": {
+			"variable": "M1 Duty Cycle C",
+			"address": "g_sM1Drive.sFocPMSM.sDutyABC.f16C",
+			"type_fmt": "Q0.15 <-1,1)",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Pole pairs": {
+			"variable": "M1 Pole pairs",
+			"address": "g_sM1Enc.ui16Pp",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Openloop Required Frequency Electrical": {
+			"variable": "M1 Openloop Required Frequency Electrical",
+			"address": "g_sM1Drive.sOpenloop.fltFreqReq",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Openloop Required Id": {
+			"variable": "M1 Openloop Required Id",
+			"address": "g_sM1Drive.sOpenloop.sIDQReq.fltD",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Openloop Required Ud": {
+			"variable": "M1 Openloop Required Ud",
+			"address": "g_sM1Drive.sOpenloop.sUDQReq.fltD",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Openloop Theta Electrical": {
+			"variable": "M1 Openloop Theta Electrical",
+			"address": "g_sM1Drive.sOpenloop.f16Theta",
+			"type_fmt": "Q0.15 <-1,1)",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Openloop Use I Control": {
+			"variable": "M1 Openloop Use I Control",
+			"address": "g_sM1Drive.sOpenloop.bCurrentControl",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Openloop Required Iq": {
+			"variable": "M1 Openloop Required Iq",
+			"address": "g_sM1Drive.sOpenloop.sIDQReq.fltQ",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Openloop Required Uq": {
+			"variable": "M1 Openloop Required Uq",
+			"address": "g_sM1Drive.sOpenloop.sUDQReq.fltQ",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Fault Enable DCBus Undervoltage": {
+			"variable": "M1 Fault Enable DCBus Undervoltage",
+			"address": "g_sM1Drive.sFaultIdEnable",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Fault Enable DCBus Overvoltage": {
+			"variable": "M1 Fault Enable DCBus Overvoltage",
+			"address": "g_sM1Drive.sFaultIdEnable",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Fault Enable Overload": {
+			"variable": "M1 Fault Enable Overload",
+			"address": "g_sM1Drive.sFaultIdEnable",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Fault Enable Overspeed": {
+			"variable": "M1 Fault Enable Overspeed",
+			"address": "g_sM1Drive.sFaultIdEnable",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Fault Enable Blocked Rotor": {
+			"variable": "M1 Fault Enable Blocked Rotor",
+			"address": "g_sM1Drive.sFaultIdEnable",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"User Path 1": {
+			"variable": "User Path 1",
+			"address": "g_sAppIdFM.cUserPath1",
+			"type_fmt": "Fixed-length string",
+			"size": 90,
+			"period": 1000
+		},
+		"User Path 2": {
+			"variable": "User Path 2",
+			"address": "g_sAppIdFM.cUserPath2",
+			"type_fmt": "Fixed-length string",
+			"size": 90,
+			"period": 1000
+		},
+		"Flash Error Captured": {
+			"variable": "Flash Error Captured",
+			"address": "g_sFlashDrv.ui32FlashErr",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"Flash configuration index": {
+			"variable": "Flash configuration index",
+			"address": "g_sM1FlashCtrl.ui32CfgIndex",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"Flash configuration available": {
+			"variable": "Flash configuration available",
+			"address": "g_sFlashDrv.ui32ConfigAvailable",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"Flash operation select": {
+			"variable": "Flash operation select",
+			"address": "g_sM1FlashCtrl.eOperation",
+			"type_fmt": "Fixed point number",
+			"size": 1,
+			"period": 1000
+		},
+		"Flash operation start": {
+			"variable": "Flash operation start",
+			"address": "g_sM1FlashCtrl.bStart",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"Flash configuration description": {
+			"variable": "Flash configuration description",
+			"address": "g_sFlashDrv.cDescription",
+			"type_fmt": "Fixed-length string",
+			"size": 20,
+			"period": 1000
+		},
+		"Flash Error Init": {
+			"variable": "Flash Error Init",
+			"address": "g_sFlashDrv.ui32FlashErr",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"Flash Error Read": {
+			"variable": "Flash Error Read",
+			"address": "g_sFlashDrv.ui32FlashErr",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"Flash Error Write": {
+			"variable": "Flash Error Write",
+			"address": "g_sFlashDrv.ui32FlashErr",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"Flash Error Clear": {
+			"variable": "Flash Error Clear",
+			"address": "g_sFlashDrv.ui32FlashErr",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"Flash Error Config Exceeded": {
+			"variable": "Flash Error Config Exceeded",
+			"address": "g_sFlashDrv.ui32FlashErr",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"Flash Error Config N/A": {
+			"variable": "Flash Error Config N/A",
+			"address": "g_sFlashDrv.ui32FlashErr",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"Flash Error Config Exist": {
+			"variable": "Flash Error Config Exist",
+			"address": "g_sFlashDrv.ui32FlashErr",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"Flash Error Config Checksum": {
+			"variable": "Flash Error Config Checksum",
+			"address": "g_sFlashDrv.ui32FlashErr",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 1000
+		},
+		"Flash operation status": {
+			"variable": "Flash operation status",
+			"address": "g_sM1FlashCtrl.eStatus",
+			"type_fmt": "Fixed point number",
+			"size": 1,
+			"period": 1000
+		},
+		"M1 Speed ZC Filter Switch": {
+			"variable": "M1 Speed ZC Filter Switch",
+			"address": "g_sM1Drive.sSpeed.bSpeedZCOn",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Servo Control - Feed Forward Switch": {
+			"variable": "M1 Servo Control - Feed Forward Switch",
+			"address": "g_sM1Drive.sPosition.bFeedFrwdOn",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Iq ZC B0": {
+			"variable": "M1 Iq ZC B0",
+			"address": "g_sM1Drive.sFocPMSM.sIqReqZCFilter.sFltCoeff.fltB0",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Iq ZC B1": {
+			"variable": "M1 Iq ZC B1",
+			"address": "g_sM1Drive.sFocPMSM.sIqReqZCFilter.sFltCoeff.fltB1",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Iq ZC A1": {
+			"variable": "M1 Iq ZC A1",
+			"address": "g_sM1Drive.sFocPMSM.sIqReqZCFilter.sFltCoeff.fltA1",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Speed ZC Filter B0": {
+			"variable": "M1 Speed ZC Filter B0",
+			"address": "g_sM1Drive.sSpeed.sSpeedCmdZCFilter.sFltCoeff.fltB0",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Speed ZC Filter B1": {
+			"variable": "M1 Speed ZC Filter B1",
+			"address": "g_sM1Drive.sSpeed.sSpeedCmdZCFilter.sFltCoeff.fltB1",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Speed ZC Filter A1": {
+			"variable": "M1 Speed ZC Filter A1",
+			"address": "g_sM1Drive.sSpeed.sSpeedCmdZCFilter.sFltCoeff.fltA1",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Servo Control - Feed Forward K1 Gain": {
+			"variable": "M1 Servo Control - Feed Forward K1 Gain",
+			"address": "g_sM1Drive.sPosition.fltFeedFrwdK1",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Servo Control - Feed Forward K2 Gain": {
+			"variable": "M1 Servo Control - Feed Forward K2 Gain",
+			"address": "g_sM1Drive.sPosition.fltFeedFrwdK2",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Servo Control - Speed PI controller Kp Gain": {
+			"variable": "M1 Servo Control - Speed PI controller Kp Gain",
+			"address": "g_sM1Drive.sPosition.sSpeedPiParams.fltPGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Servo Control - Speed PI controller Ki Gain": {
+			"variable": "M1 Servo Control - Speed PI controller Ki Gain",
+			"address": "g_sM1Drive.sPosition.sSpeedPiParams.fltIGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Servo Control - Speed PI controller High Limit": {
+			"variable": "M1 Servo Control - Speed PI controller High Limit",
+			"address": "g_sM1Drive.sPosition.sSpeedPiParams.fltUpperLim",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Servo Control - Speed PI controller Low Limit": {
+			"variable": "M1 Servo Control - Speed PI controller Low Limit",
+			"address": "g_sM1Drive.sPosition.sSpeedPiParams.fltLowerLim",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Servo Control - Speed ZC Filter B0": {
+			"variable": "M1 Servo Control - Speed ZC Filter B0",
+			"address": "g_sM1Drive.sPosition.sSpeedReqZCFilter.sFltCoeff.fltB0",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Servo Control - Speed ZC Filter B1": {
+			"variable": "M1 Servo Control - Speed ZC Filter B1",
+			"address": "g_sM1Drive.sPosition.sSpeedReqZCFilter.sFltCoeff.fltB1",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Servo Control - Speed ZC Filter A1": {
+			"variable": "M1 Servo Control - Speed ZC Filter A1",
+			"address": "g_sM1Drive.sPosition.sSpeedReqZCFilter.sFltCoeff.fltA1",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Servo Control - Position P controller Kp Gain": {
+			"variable": "M1 Servo Control - Position P controller Kp Gain",
+			"address": "g_sM1Drive.sPosition.sPositionPiParams.fltPGain",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Servo Control - Position P controller High Limit": {
+			"variable": "M1 Servo Control - Position P controller High Limit",
+			"address": "g_sM1Drive.sPosition.sPositionPiParams.fltUpperLim",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Servo Control - Position P controller Low Limit": {
+			"variable": "M1 Servo Control - Position P controller Low Limit",
+			"address": "g_sM1Drive.sPosition.sPositionPiParams.fltLowerLim",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Speed Ramp Abs": {
+			"variable": "M1 Speed Ramp Abs",
+			"address": "fltSpeedRampAbs",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"M1 Speed Actual Filtered Abs": {
+			"variable": "M1 Speed Actual Filtered Abs",
+			"address": "fltSpeedFiltAbs",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 100
+		},
+		"M1 Bemf Uq Avg": {
+			"variable": "M1 Bemf Uq Avg",
+			"address": "g_sM1Drive.fltBemfUqAvg",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		},
+		"Speed Loop Stop saturated": {
+			"variable": "Speed Loop Stop saturated",
+			"address": "SpeedLoopsaturated",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"CLO": {
+			"variable": "CLO",
+			"address": "g_sM1Drive.sFocPMSM.bCurrentLoopOn",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"QdcA": {
+			"variable": "QdcA",
+			"address": "QdcA",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"QdcB": {
+			"variable": "QdcB",
+			"address": "QdcB",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"QdcCnt": {
+			"variable": "QdcCnt",
+			"address": "QdcCnt",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"QdcDir": {
+			"variable": "QdcDir",
+			"address": "QdcDir",
+			"type_fmt": "Fixed point number",
+			"size": 2,
+			"period": 1000
+		},
+		"M1 Cycle Number Slow": {
+			"variable": "M1 Cycle Number Slow",
+			"address": "g_ui32NumberOfCycles_slow",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 100
+		},
+		"M1 Cycle Number Slow Maximum": {
+			"variable": "M1 Cycle Number Slow Maximum",
+			"address": "g_ui32MaxNumberOfCycles_slow",
+			"type_fmt": "Fixed point number",
+			"size": 4,
+			"period": 100
+		},
+		"cpu_loading_rt": {
+			"variable": "cpu_loading_rt",
+			"address": "cpu_loading_rt",
+			"type_fmt": "IEEE floating point",
+			"size": 4,
+			"period": 1000
+		}
+	},
+	"Application": {
+		"name": "testingJson",
+		"size": {
+			"width": "800",
+			"height": "480"
+		},
+		"freemasterConfig": {
+			"enable": true,
+			"host": "localhost:41000"
+		},
+		"version": "test_v1",
+		"keyBoard": {
+			"display_kb": false,
+			"chinese_input": false,
+			"chinese_library": "mini",
+			"keyboard_font_type": "simsun",
+			"keyboard_font_size": 18
+		},
+		"default_scr": "control",
+		"theme": "LV_THEME_MATERIAL_FLAG_LIGHT",
+		"screen": [
+			{
+				"name": "control",
+				"id": "bpwbyo0v",
+				"type": "scr",
+				"version": 180,
+				"scrollbar_mode": "OFF",
+				"customer_code": {
+					"code_c": "lv_obj_clear_flag(ui->control_slider_1, LV_OBJ_FLAG_CLICKABLE);",
+					"inc_c": "",
+					"code_py": "",
+					"inc_py": ""
+				},
+				"width": 800,
+				"height": 480,
+				"visible": true,
+				"flag": [],
+				"event": {},
+				"style": [
+					{
+						"part": "LV_PART_MAIN",
+						"state": "LV_STATE_DEFAULT",
+						"disable": false,
+						"bg_color": "#ffffff",
+						"bg_grad_dir": "LV_GRAD_DIR_NONE",
+						"bg_dither_mode": "LV_DITHER_NONE",
+						"bg_main_stop": 0,
+						"bg_grad_stop": 255,
+						"bg_grad_color": "#2195f6",
+						"bg_opa": 0,
+						"bg_img_src": "C:\\Users\\yandld\\Desktop\\an-mc-pmsm-mcxe31b\\gui_guilder\\import\\image\\monitor.png",
+						"bg_img_opa": 255,
+						"bg_img_recolor": "#ffffff",
+						"bg_img_recolor_opa": 0
+					}
+				],
+				"size": [
+					800,
+					480
+				],
+				"widgets": [
+					{
+						"name": "control_led_1",
+						"id": "jzfd64y1",
+						"type": "led",
+						"visible": false,
+						"flag": [],
+						"pos": [
+							724,
+							396
+						],
+						"size": [
+							50,
+							50
+						],
+						"default_style": false,
+						"led_set_bright": 226,
+						"led_color": "#00922C"
+					},
+					{
+						"name": "control_speed_label",
+						"id": "49n19umh",
+						"type": "label",
+						"visible": true,
+						"flag": [],
+						"pos": [
+							311,
+							364
+						],
+						"size": [
+							177,
+							29
+						],
+						"default_style": false,
+						"attribute_type": "",
+						"custom_attribute": [],
+						"text": "Speed Control",
+						"long_mode": "LV_LABEL_LONG_WRAP",
+						"style": [
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"border_side": [
+									"LV_BORDER_SIDE_FULL"
+								],
+								"border_width": 0,
+								"border_opa": 255,
+								"border_color": "#2195f6",
+								"radius": 0,
+								"text_color": "#ffffff",
+								"text_opa": 255,
+								"font": 20,
+								"text_align": "LV_TEXT_ALIGN_CENTER",
+								"font_family": "montserratMedium",
+								"letter_space": 1,
+								"line_space": 0,
+								"bg_color": "#2195f6",
+								"bg_grad_color": "#2195f6",
+								"bg_opa": 0,
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"padding_top": 0,
+								"padding_right": 0,
+								"padding_bottom": 0,
+								"padding_left": 0,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0
+							},
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"border_side": [
+									"LV_BORDER_SIDE_FULL"
+								],
+								"border_width": 0,
+								"border_opa": 255,
+								"border_color": "#2195f6",
+								"radius": 0,
+								"text_color": "#000000",
+								"text_opa": 255,
+								"font": 26,
+								"font_family": "montserratMedium",
+								"text_align": "LV_TEXT_ALIGN_CENTER",
+								"letter_space": 2,
+								"line_space": 0,
+								"bg_color": "#2195f6",
+								"bg_grad_color": "#2195f6",
+								"bg_opa": 0,
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"padding_top": 0,
+								"padding_right": 0,
+								"padding_bottom": 0,
+								"padding_left": 0,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0
+							}
+						]
+					},
+					{
+						"name": "control_meter_speed",
+						"id": "f8b4kdxf",
+						"type": "meter",
+						"visible": true,
+						"flag": [],
+						"pos": [
+							501,
+							116
+						],
+						"size": [
+							250,
+							250
+						],
+						"default_style": false,
+						"attribute_type": "freemaster",
+						"custom_attribute": [
+							{
+								"variable": "M1 Speed Actual Filtered",
+								"address": "g_sM1Drive.sSpeed.fltSpeedFilt",
+								"type_fmt": "IEEE floating point",
+								"size": 4,
+								"period": 100
+							}
+						],
+						"event": {
+							"widget": {}
+						},
+						"scales": [
+							{
+								"tick_cnt": 41,
+								"tick_width": 2,
+								"tick_len": 7,
+								"tick_color": "#e8e9ea",
+								"label_gap": 20,
+								"major_tick_enable": true,
+								"major_tick_nth": 8,
+								"major_tick_width": 3,
+								"major_tick_len": 13,
+								"major_tick_color": "#008fce",
+								"range_enable": true,
+								"min_value": 0,
+								"max_value": 2000,
+								"angle_range": 280,
+								"rotation": 130,
+								"arcs": [
+									{
+										"width": 4,
+										"color": "#0d9401",
+										"r_mod": 2,
+										"start_value": 0,
+										"end_value": 800
+									},
+									{
+										"width": 4,
+										"color": "#7d8301",
+										"r_mod": 2,
+										"start_value": 800,
+										"end_value": 1600
+									},
+									{
+										"width": 4,
+										"color": "#830115",
+										"r_mod": 2,
+										"start_value": 1600,
+										"end_value": 2000
+									}
+								],
+								"scale_lines": [
+									{
+										"color_start": "#2effb2",
+										"color_end": "#af001b",
+										"start_value": 0,
+										"end_value": 2000,
+										"grad_color_local": true,
+										"width_mod": 0
+									}
+								],
+								"needles": [
+									{
+										"needle_type": "line",
+										"needle_width": 2,
+										"needle_color": "#ffffff",
+										"needle_r_mod": -21,
+										"img_path": "",
+										"img_width": 10,
+										"img_height": 10,
+										"pivot_x": 0,
+										"pivot_y": 0,
+										"value": 1
+									}
+								]
+							}
+						],
+						"style": [
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"object": "main",
+								"disable": false,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_opa": 0,
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"radius": 352,
+								"border_side": [
+									"LV_BORDER_SIDE_FULL"
+								],
+								"border_width": 0,
+								"border_color": "#2195f6",
+								"border_opa": 255,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0
+							},
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_FOCUSED",
+								"object": "main",
+								"disable": true,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_opa": 255,
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"radius": 352,
+								"border_side": [
+									"LV_BORDER_SIDE_FULL"
+								],
+								"border_width": 0,
+								"border_color": "#2195f6",
+								"border_opa": 255,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0
+							},
+							{
+								"part": "LV_PART_TICKS",
+								"state": "LV_STATE_DEFAULT",
+								"desc": "digit",
+								"object": "main",
+								"disable": false,
+								"font": 16,
+								"font_family": "montserratMedium",
+								"text_color": "#b8b8b8"
+							},
+							{
+								"part": "LV_PART_TICKS",
+								"state": "LV_STATE_FOCUSED",
+								"desc": "digit",
+								"object": "main",
+								"disable": true,
+								"font": 20,
+								"font_family": "montserratMedium",
+								"text_color": "#ff0000"
+							},
+							{
+								"part": "LV_PART_INDICATOR",
+								"state": "LV_STATE_DEFAULT",
+								"object": "main",
+								"disable": false,
+								"bg_color": "#000000",
+								"bg_opa": 255
+							}
+						]
+					},
+					{
+						"name": "control_cont_1",
+						"id": "lepf9124",
+						"type": "cont",
+						"visible": true,
+						"scrollbar_mode": "OFF",
+						"flag": [],
+						"pos": [
+							3,
+							-4
+						],
+						"size": [
+							800,
+							480
+						],
+						"default_style": false,
+						"child": [
+							{
+								"name": "control_slider_1",
+								"id": "1cb2xezb",
+								"type": "slider",
+								"visible": true,
+								"flag": [],
+								"pos": [
+									247,
+									415
+								],
+								"size": [
+									305,
+									11
+								],
+								"default_style": false,
+								"attribute_type": "freemaster",
+								"custom_attribute": [],
+								"event": {
+									"widget": {
+										"value_changed": {
+											"condition": [],
+											"action": [
+												{
+													"dst": "freemaster",
+													"bindCondi": "",
+													"actionList": {
+														"freemaster": {
+															"variable": "M1 Speed Required",
+															"address": "g_sM1Drive.sSpeed.fltSpeedCmd",
+															"type": "",
+															"value": "",
+															"isOrigin": true,
+															"size": 4,
+															"period": 1000
+														}
+													}
+												},
+												{
+													"dst": "custom_code",
+													"bindCondi": "",
+													"actionList": {
+														"custom_code": {
+															"inc_c": "",
+															"code_c": "if(lv_anim_get(guider_ui.control_img_fan, NULL) != NULL) {\n          lv_anim_t *anim_status = lv_anim_get(guider_ui.control_img_fan, NULL);\n          anim_status->time = get_time_by_speed(value);\n          lv_anim_refr_now();\n      }",
+															"inc_py": "",
+															"code_py": ""
+														}
+													}
+												}
+											]
+										}
+									}
+								},
+								"range_s": 0,
+								"range_e": 2000,
+								"slider_mode": "LV_SLIDER_MODE_NORMAL",
+								"starting_value": 0,
+								"left_value": 0,
+								"style": [
+									{
+										"part": "LV_PART_MAIN",
+										"state": "LV_STATE_DEFAULT",
+										"disable": false,
+										"bg_color": "#2195f6",
+										"bg_grad_color": "#2195f6",
+										"bg_opa": 60,
+										"bg_grad_dir": "LV_GRAD_DIR_NONE",
+										"bg_dither_mode": "LV_DITHER_NONE",
+										"bg_main_stop": 0,
+										"bg_grad_stop": 255,
+										"radius": 88,
+										"outline_width": 0,
+										"outline_color": "#2195f6",
+										"outline_opa": 0,
+										"bg_img_src": "",
+										"bg_img_opa": 255,
+										"bg_img_recolor": "#ffffff",
+										"bg_img_recolor_opa": 0,
+										"shadow_color": "#2195f6",
+										"shadow_opa": 255,
+										"shadow_width": 0,
+										"shadow_spread": 0,
+										"shadow_ofs_x": 0,
+										"shadow_ofs_y": 0
+									},
+									{
+										"part": "LV_PART_MAIN",
+										"state": "LV_STATE_FOCUSED",
+										"disable": true,
+										"outline_color": "#2195f6",
+										"outline_opa": 255,
+										"bg_img_src": "",
+										"bg_img_opa": 255,
+										"bg_img_recolor": "#ffffff",
+										"bg_img_recolor_opa": 0,
+										"shadow_color": "#2195f6",
+										"shadow_opa": 255,
+										"shadow_width": 0,
+										"shadow_spread": 0,
+										"shadow_ofs_x": 0,
+										"shadow_ofs_y": 0
+									},
+									{
+										"part": "LV_PART_MAIN",
+										"state": "LV_STATE_DISABLED",
+										"disable": true,
+										"outline_color": "#2195f6",
+										"outline_opa": 255,
+										"bg_img_src": "",
+										"bg_img_opa": 255,
+										"bg_img_recolor": "#ffffff",
+										"bg_img_recolor_opa": 0,
+										"shadow_color": "#2195f6",
+										"shadow_opa": 255,
+										"shadow_width": 0,
+										"shadow_spread": 0,
+										"shadow_ofs_x": 0,
+										"shadow_ofs_y": 0
+									},
+									{
+										"part": "LV_PART_INDICATOR",
+										"state": "LV_STATE_DEFAULT",
+										"disable": false,
+										"bg_color": "#2195f6",
+										"bg_grad_color": "#2195f6",
+										"bg_grad_dir": "LV_GRAD_DIR_NONE",
+										"bg_dither_mode": "LV_DITHER_NONE",
+										"bg_main_stop": 0,
+										"bg_grad_stop": 255,
+										"bg_opa": 255,
+										"bg_img_src": "",
+										"bg_img_opa": 255,
+										"bg_img_recolor": "#ffffff",
+										"bg_img_recolor_opa": 0,
+										"radius": 88
+									},
+									{
+										"part": "LV_PART_INDICATOR",
+										"state": "LV_STATE_FOCUSED",
+										"disable": true,
+										"bg_color": "#2195f6",
+										"bg_grad_color": "#2195f6",
+										"bg_grad_dir": "LV_GRAD_DIR_NONE",
+										"bg_dither_mode": "LV_DITHER_NONE",
+										"bg_main_stop": 0,
+										"bg_grad_stop": 255,
+										"bg_opa": 255,
+										"bg_img_src": "",
+										"bg_img_opa": 255,
+										"bg_img_recolor": "#ffffff",
+										"bg_img_recolor_opa": 0,
+										"radius": 88
+									},
+									{
+										"part": "LV_PART_INDICATOR",
+										"state": "LV_STATE_DISABLED",
+										"disable": true,
+										"bg_color": "#2195f6",
+										"bg_grad_color": "#2195f6",
+										"bg_grad_dir": "LV_GRAD_DIR_NONE",
+										"bg_dither_mode": "LV_DITHER_NONE",
+										"bg_main_stop": 0,
+										"bg_grad_stop": 255,
+										"bg_opa": 255,
+										"bg_img_src": "",
+										"bg_img_opa": 255,
+										"bg_img_recolor": "#ffffff",
+										"bg_img_recolor_opa": 0,
+										"radius": 88
+									},
+									{
+										"part": "LV_PART_KNOB",
+										"state": "LV_STATE_DEFAULT",
+										"disable": false,
+										"bg_color": "#2a65ff",
+										"bg_grad_color": "#2195f6",
+										"bg_opa": 255,
+										"bg_grad_dir": "LV_GRAD_DIR_NONE",
+										"bg_dither_mode": "LV_DITHER_NONE",
+										"bg_main_stop": 0,
+										"bg_grad_stop": 255,
+										"bg_img_src": "",
+										"bg_img_opa": 255,
+										"bg_img_recolor": "#e8e8ff",
+										"bg_img_recolor_opa": 246,
+										"radius": 88
+									},
+									{
+										"part": "LV_PART_KNOB",
+										"state": "LV_STATE_FOCUSED",
+										"disable": true,
+										"bg_color": "#2195f6",
+										"bg_grad_color": "#2195f6",
+										"bg_opa": 255,
+										"bg_grad_dir": "LV_GRAD_DIR_NONE",
+										"bg_dither_mode": "LV_DITHER_NONE",
+										"bg_main_stop": 0,
+										"bg_grad_stop": 255,
+										"bg_img_src": "",
+										"bg_img_opa": 255,
+										"bg_img_recolor": "#ffffff",
+										"bg_img_recolor_opa": 0,
+										"radius": 88
+									},
+									{
+										"part": "LV_PART_KNOB",
+										"state": "LV_STATE_DISABLED",
+										"disable": true,
+										"bg_color": "#2195f6",
+										"bg_grad_color": "#2195f6",
+										"bg_opa": 255,
+										"bg_grad_dir": "LV_GRAD_DIR_NONE",
+										"bg_dither_mode": "LV_DITHER_NONE",
+										"bg_main_stop": 0,
+										"bg_grad_stop": 255,
+										"bg_img_src": "",
+										"bg_img_opa": 255,
+										"bg_img_recolor": "#ffffff",
+										"bg_img_recolor_opa": 0,
+										"radius": 88
+									}
+								],
+								"knob_size": [
+									21,
+									21
+								]
+							},
+							{
+								"name": "control_imgbtn_1",
+								"id": "n6ohtbq4",
+								"type": "imgbtn",
+								"visible": true,
+								"flag": [],
+								"pos": [
+									732,
+									21
+								],
+								"size": [
+									41,
+									41
+								],
+								"default_style": false,
+								"event": {
+									"widget": {
+										"clicked": {
+											"condition": [],
+											"action": [
+												{
+													"dst": "monitor",
+													"bindCondi": "",
+													"actionList": {
+														"load_screen": {
+															"duration": 200,
+															"delay": 200,
+															"scrId": "nmty00z0",
+															"anim_type": "LV_SCR_LOAD_ANIM_FADE_ON",
+															"is_clean": false,
+															"is_del": false
+														}
+													},
+													"dst_type": "scr"
+												}
+											]
+										}
+									}
+								},
+								"toggle": true,
+								"text_align": "center",
+								"text": "",
+								"color_format": "true-color-alpha",
+								"src_released": "C:\\Users\\yandld\\Desktop\\an-mc-pmsm-mcxe31b\\gui_guilder\\import\\image\\go.png",
+								"src_pressed": "",
+								"src_checked_released": "",
+								"src_checked_pressed": "",
+								"use_fs": false,
+								"fs_type": "flash",
+								"src_sd_released": "S:/go.png",
+								"src_sd_pressed": "S:/",
+								"src_sd_checked_released": "S:/",
+								"src_sd_checked_pressed": "S:/",
+								"src_flash_released": "F:/go.png",
+								"src_flash_pressed": "F:/",
+								"src_flash_checked_released": "F:/",
+								"src_flash_checked_pressed": "F:/",
+								"style": [
+									{
+										"part": "LV_PART_MAIN",
+										"state": "LV_STATE_DEFAULT",
+										"disable": false,
+										"font_family": "montserratMedium",
+										"text_color": "#000000",
+										"text_align": "LV_TEXT_ALIGN_CENTER",
+										"font": 20,
+										"radius": 0,
+										"shadow_color": "#2195f6",
+										"shadow_opa": 255,
+										"shadow_width": 0,
+										"shadow_spread": 0,
+										"shadow_ofs_x": 0,
+										"shadow_ofs_y": 0
+									},
+									{
+										"part": "LV_PART_MAIN",
+										"state": "LV_STATE_PRESSED",
+										"disable": false,
+										"image_recolor": "#000000",
+										"image_recolor_opa": 0,
+										"image_opa": 255,
+										"text_color": "#FF33FF",
+										"font_family": "montserratMedium",
+										"font": 20,
+										"shadow_color": "#2195f6",
+										"shadow_opa": 255,
+										"shadow_width": 0,
+										"shadow_spread": 0,
+										"shadow_ofs_x": 0,
+										"shadow_ofs_y": 0
+									},
+									{
+										"part": "LV_PART_MAIN",
+										"state": "LV_STATE_CHECKED",
+										"disable": false,
+										"image_recolor": "#000000",
+										"image_recolor_opa": 0,
+										"text_color": "#FF33FF",
+										"image_opa": 255,
+										"font_family": "montserratMedium",
+										"font": 20,
+										"shadow_color": "#2195f6",
+										"shadow_opa": 255,
+										"shadow_width": 0,
+										"shadow_spread": 0,
+										"shadow_ofs_x": 0,
+										"shadow_ofs_y": 0
+									},
+									{
+										"part": "LV_PART_MAIN",
+										"state": "LV_IMGBTN_STATE_RELEASED",
+										"desc": "released",
+										"disable": false,
+										"image_recolor": "#000000",
+										"image_recolor_opa": 0,
+										"image_opa": 255
+									}
+								]
+							},
+							{
+								"name": "control_sw_1",
+								"id": "8czmcl4b",
+								"type": "sw",
+								"visible": true,
+								"flag": [],
+								"pos": [
+									34,
+									409
+								],
+								"size": [
+									69,
+									32
+								],
+								"default_style": false,
+								"attribute_type": "freemaster",
+								"custom_attribute": [],
+								"event": {
+									"widget": {
+										"value_changed": {
+											"condition": [
+												{
+													"type": "switch",
+													"value": "status",
+													"id": "8czmcl4b",
+													"isSystem": true,
+													"children": [
+														{
+															"type": "case",
+															"id": "8czmcl4b_1",
+															"isSystem": true,
+															"value": "true"
+														},
+														{
+															"type": "case",
+															"id": "8czmcl4b_0",
+															"isSystem": true,
+															"value": "false"
+														}
+													]
+												}
+											],
+											"action": [
+												{
+													"dst": "custom_code",
+													"bindCondi": "8czmcl4b_0",
+													"actionList": {
+														"custom_code": {
+															"inc_c": "",
+															"code_c": "if(lv_anim_get(guider_ui.control_img_fan, NULL) != NULL) {\n        lv_anim_t *anim_status = lv_anim_get(guider_ui.control_img_fan, NULL);\n        lv_anim_del(guider_ui.control_img_fan, NULL);\n    }\n    lv_slider_set_value(guider_ui.control_slider_1, 0, false);\n    lv_meter_set_indicator_value(guider_ui.control_meter_speed, guider_ui.control_meter_speed_scale_0_ndline_0, 0);",
+															"inc_py": "",
+															"code_py": ""
+														}
+													}
+												},
+												{
+													"dst": "control_label_value",
+													"bindCondi": "8czmcl4b_0",
+													"actionList": {
+														"text": {
+															"value": "0"
+														},
+														"font": {
+															"value": 16,
+															"font_family": "arial"
+														}
+													},
+													"dst_type": "label"
+												},
+												{
+													"dst": "control_cont_1",
+													"bindCondi": "8czmcl4b_0",
+													"actionList": {
+														"bg_opa": {
+															"value": 167
+														}
+													},
+													"dst_type": "cont"
+												},
+												{
+													"dst": "control_led_1",
+													"bindCondi": "8czmcl4b_0",
+													"actionList": {
+														"isVisible": {
+															"value": false
+														}
+													},
+													"dst_type": "led"
+												},
+												{
+													"dst": "control_slider_1",
+													"bindCondi": "8czmcl4b_0",
+													"actionList": {
+														"clear_flag": {
+															"value": [
+																"LV_OBJ_FLAG_CLICKABLE"
+															]
+														}
+													},
+													"dst_type": "slider"
+												},
+												{
+													"dst": "custom_code",
+													"bindCondi": "8czmcl4b_1",
+													"actionList": {
+														"custom_code": {
+															"inc_c": "#include \"custom.h\"",
+															"code_c": "image_fan_rotate(0);",
+															"inc_py": "",
+															"code_py": ""
+														}
+													}
+												},
+												{
+													"dst": "control_cont_1",
+													"bindCondi": "8czmcl4b_1",
+													"actionList": {
+														"bg_opa": {
+															"value": 0
+														}
+													},
+													"dst_type": "cont"
+												},
+												{
+													"dst": "control_led_1",
+													"bindCondi": "8czmcl4b_1",
+													"actionList": {
+														"isVisible": {
+															"value": true
+														}
+													},
+													"dst_type": "led"
+												},
+												{
+													"dst": "control_slider_1",
+													"bindCondi": "8czmcl4b_1",
+													"actionList": {
+														"add_flag": {
+															"value": [
+																"LV_OBJ_FLAG_CLICKABLE"
+															]
+														}
+													},
+													"dst_type": "slider"
+												},
+												{
+													"dst": "freemaster",
+													"bindCondi": "8czmcl4b_1",
+													"actionList": {
+														"freemaster": {
+															"variable": "M1 Application Switch",
+															"address": "g_bM1SwitchAppOnOff",
+															"type": "",
+															"value": 1,
+															"isOrigin": false,
+															"size": 2,
+															"period": 1000
+														}
+													}
+												},
+												{
+													"dst": "freemaster",
+													"bindCondi": "8czmcl4b_0",
+													"actionList": {
+														"freemaster": {
+															"variable": "M1 Application Switch",
+															"address": "g_bM1SwitchAppOnOff",
+															"type": "",
+															"value": 0,
+															"isOrigin": false,
+															"size": 2,
+															"period": 1000
+														}
+													}
+												}
+											]
+										}
+									}
+								},
+								"style": [
+									{
+										"part": "LV_PART_MAIN",
+										"state": "LV_STATE_DEFAULT",
+										"disable": false,
+										"bg_color": "#005A9E",
+										"bg_grad_color": "#e6e2e6",
+										"bg_grad_dir": "LV_GRAD_DIR_NONE",
+										"bg_dither_mode": "LV_DITHER_NONE",
+										"bg_main_stop": 0,
+										"bg_grad_stop": 255,
+										"bg_opa": 255,
+										"border_side": [
+											"LV_BORDER_SIDE_FULL"
+										],
+										"border_width": 0,
+										"border_opa": 255,
+										"border_color": "#2195f6",
+										"radius": 10,
+										"shadow_color": "#2195f6",
+										"shadow_opa": 255,
+										"shadow_width": 0,
+										"shadow_spread": 0,
+										"shadow_ofs_x": 0,
+										"shadow_ofs_y": 0,
+										"bg_img_src": "",
+										"bg_img_opa": 255,
+										"bg_img_recolor": "#ffffff",
+										"bg_img_recolor_opa": 0
+									},
+									{
+										"part": "LV_PART_MAIN",
+										"state": "LV_STATE_FOCUSED",
+										"disable": true,
+										"bg_color": "#e6e2e6",
+										"bg_grad_color": "#e6e2e6",
+										"bg_grad_dir": "LV_GRAD_DIR_NONE",
+										"bg_dither_mode": "LV_DITHER_NONE",
+										"bg_main_stop": 0,
+										"bg_grad_stop": 255,
+										"bg_opa": 255,
+										"border_side": [
+											"LV_BORDER_SIDE_FULL"
+										],
+										"border_width": 0,
+										"border_opa": 255,
+										"border_color": "#2195f6",
+										"radius": 10,
+										"shadow_color": "#2195f6",
+										"shadow_opa": 255,
+										"shadow_width": 0,
+										"shadow_spread": 0,
+										"shadow_ofs_x": 0,
+										"shadow_ofs_y": 0,
+										"bg_img_src": "",
+										"bg_img_opa": 255,
+										"bg_img_recolor": "#ffffff",
+										"bg_img_recolor_opa": 0
+									},
+									{
+										"part": "LV_PART_MAIN",
+										"state": "LV_STATE_DISABLED",
+										"disable": true,
+										"bg_color": "#e6e2e6",
+										"bg_grad_color": "#e6e2e6",
+										"bg_grad_dir": "LV_GRAD_DIR_NONE",
+										"bg_dither_mode": "LV_DITHER_NONE",
+										"bg_main_stop": 0,
+										"bg_grad_stop": 255,
+										"bg_opa": 255,
+										"border_side": [
+											"LV_BORDER_SIDE_FULL"
+										],
+										"border_width": 0,
+										"border_opa": 255,
+										"border_color": "#2195f6",
+										"radius": 10,
+										"shadow_color": "#2195f6",
+										"shadow_opa": 255,
+										"shadow_width": 0,
+										"shadow_spread": 0,
+										"shadow_ofs_x": 0,
+										"shadow_ofs_y": 0,
+										"bg_img_src": "",
+										"bg_img_opa": 255,
+										"bg_img_recolor": "#ffffff",
+										"bg_img_recolor_opa": 0
+									},
+									{
+										"part": "LV_PART_INDICATOR",
+										"state": "LV_STATE_CHECKED",
+										"disable": false,
+										"bg_color": "#2195f6",
+										"bg_grad_color": "#2195f6",
+										"bg_grad_dir": "LV_GRAD_DIR_NONE",
+										"bg_dither_mode": "LV_DITHER_NONE",
+										"bg_main_stop": 0,
+										"bg_grad_stop": 255,
+										"bg_opa": 255,
+										"border_side": [
+											"LV_BORDER_SIDE_FULL"
+										],
+										"border_width": 0,
+										"border_opa": 255,
+										"border_color": "#2195f6",
+										"bg_img_src": "",
+										"bg_img_opa": 255,
+										"bg_img_recolor": "#ffffff",
+										"bg_img_recolor_opa": 0
+									},
+									{
+										"part": "LV_PART_INDICATOR",
+										"state": "LV_STATE_FOCUSED",
+										"disable": true,
+										"bg_color": "#2195f6",
+										"bg_grad_color": "#2195f6",
+										"bg_grad_dir": "LV_GRAD_DIR_NONE",
+										"bg_dither_mode": "LV_DITHER_NONE",
+										"bg_main_stop": 0,
+										"bg_grad_stop": 255,
+										"bg_opa": 255,
+										"border_side": [
+											"LV_BORDER_SIDE_FULL"
+										],
+										"border_width": 0,
+										"border_opa": 255,
+										"border_color": "#2195f6",
+										"bg_img_src": "",
+										"bg_img_opa": 255,
+										"bg_img_recolor": "#ffffff",
+										"bg_img_recolor_opa": 0
+									},
+									{
+										"part": "LV_PART_INDICATOR",
+										"state": "LV_STATE_DISABLED",
+										"disable": true,
+										"bg_color": "#2195f6",
+										"bg_grad_color": "#2195f6",
+										"bg_grad_dir": "LV_GRAD_DIR_NONE",
+										"bg_dither_mode": "LV_DITHER_NONE",
+										"bg_main_stop": 0,
+										"bg_grad_stop": 255,
+										"bg_opa": 255,
+										"border_side": [
+											"LV_BORDER_SIDE_FULL"
+										],
+										"border_width": 0,
+										"border_opa": 255,
+										"border_color": "#2195f6",
+										"bg_img_src": "",
+										"bg_img_opa": 255,
+										"bg_img_recolor": "#ffffff",
+										"bg_img_recolor_opa": 0
+									},
+									{
+										"part": "LV_PART_KNOB",
+										"state": "LV_STATE_DEFAULT",
+										"disable": false,
+										"bg_color": "#ffffff",
+										"bg_grad_color": "#ffffff",
+										"bg_grad_dir": "LV_GRAD_DIR_NONE",
+										"bg_dither_mode": "LV_DITHER_NONE",
+										"bg_main_stop": 0,
+										"bg_grad_stop": 255,
+										"bg_opa": 255,
+										"border_side": [
+											"LV_BORDER_SIDE_FULL"
+										],
+										"border_width": 0,
+										"border_opa": 255,
+										"border_color": "#2195f6",
+										"radius": 10
+									},
+									{
+										"part": "LV_PART_KNOB",
+										"state": "LV_STATE_FOCUSED",
+										"disable": true,
+										"bg_color": "#ffffff",
+										"bg_grad_color": "#ffffff",
+										"bg_grad_dir": "LV_GRAD_DIR_NONE",
+										"bg_dither_mode": "LV_DITHER_NONE",
+										"bg_main_stop": 0,
+										"bg_grad_stop": 255,
+										"bg_opa": 255,
+										"border_side": [
+											"LV_BORDER_SIDE_FULL"
+										],
+										"border_width": 0,
+										"border_opa": 255,
+										"border_color": "#2195f6",
+										"radius": 10
+									},
+									{
+										"part": "LV_PART_KNOB",
+										"state": "LV_STATE_DISABLED",
+										"disable": true,
+										"bg_color": "#ffffff",
+										"bg_grad_color": "#ffffff",
+										"bg_grad_dir": "LV_GRAD_DIR_NONE",
+										"bg_dither_mode": "LV_DITHER_NONE",
+										"bg_main_stop": 0,
+										"bg_grad_stop": 255,
+										"bg_opa": 255,
+										"border_side": [
+											"LV_BORDER_SIDE_FULL"
+										],
+										"border_width": 0,
+										"border_opa": 255,
+										"border_color": "#2195f6",
+										"radius": 10
+									}
+								]
+							}
+						],
+						"style": [
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"border_side": [
+									"LV_BORDER_SIDE_FULL"
+								],
+								"border_width": 0,
+								"border_color": "#2195f6",
+								"border_opa": 255,
+								"radius": 0,
+								"bg_color": "#000000",
+								"bg_grad_color": "#ffffff",
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"bg_opa": 144,
+								"padding_top": 0,
+								"padding_bottom": 0,
+								"padding_left": 0,
+								"padding_right": 0,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0
+							}
+						]
+					},
+					{
+						"name": "control_img_fan",
+						"id": "mvrpi3wc",
+						"type": "img",
+						"visible": true,
+						"flag": [],
+						"pos": [
+							95,
+							163
+						],
+						"size": [
+							166,
+							166
+						],
+						"default_style": false,
+						"event": {
+							"widget": {}
+						},
+						"img_path": "C:\\Users\\yandld\\Desktop\\an-mc-pmsm-mcxe31b\\gui_guilder\\import\\image\\fan.png",
+						"color_format": "true-color-alpha",
+						"rotate": 0,
+						"pivot": "83,83",
+						"use_fs": false,
+						"fs_type": "flash",
+						"img_flash_path": "F:/fan.png",
+						"img_sd_path": "S:/fan.png",
+						"style": [
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255,
+								"radius": 0
+							}
+						]
+					},
+					{
+						"name": "control_label_value",
+						"id": "umbgkypk",
+						"type": "label",
+						"visible": true,
+						"flag": [],
+						"pos": [
+							127,
+							342
+						],
+						"size": [
+							107,
+							22
+						],
+						"default_style": false,
+						"attribute_type": "freemaster",
+						"custom_attribute": [
+							null
+						],
+						"text": "000r/s",
+						"long_mode": "LV_LABEL_LONG_WRAP",
+						"style": [
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"border_side": [
+									"LV_BORDER_SIDE_FULL"
+								],
+								"border_width": 0,
+								"border_opa": 255,
+								"border_color": "#2195f6",
+								"radius": 0,
+								"text_color": "#ffffff",
+								"text_opa": 255,
+								"font": 16,
+								"text_align": "LV_TEXT_ALIGN_CENTER",
+								"font_family": "arial",
+								"letter_space": 2,
+								"line_space": 0,
+								"bg_color": "#2195f6",
+								"bg_grad_color": "#2195f6",
+								"bg_opa": 0,
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"padding_top": 0,
+								"padding_right": 0,
+								"padding_bottom": 0,
+								"padding_left": 0,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0
+							},
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"border_side": [
+									"LV_BORDER_SIDE_FULL"
+								],
+								"border_width": 0,
+								"border_opa": 255,
+								"border_color": "#2195f6",
+								"radius": 0,
+								"text_color": "#000000",
+								"text_opa": 255,
+								"font": 26,
+								"font_family": "montserratMedium",
+								"text_align": "LV_TEXT_ALIGN_CENTER",
+								"letter_space": 2,
+								"line_space": 0,
+								"bg_color": "#2195f6",
+								"bg_grad_color": "#2195f6",
+								"bg_opa": 0,
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"padding_top": 0,
+								"padding_right": 0,
+								"padding_bottom": 0,
+								"padding_left": 0,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0
+							}
+						]
+					},
+					{
+						"name": "control_label_title",
+						"id": "dveerifn",
+						"type": "label",
+						"visible": true,
+						"flag": [],
+						"pos": [
+							150,
+							31
+						],
+						"size": [
+							513,
+							37
+						],
+						"default_style": false,
+						"attribute_type": "",
+						"custom_attribute": [],
+						"text": "FRDM-MCXE31B PMSM Moter Demo",
+						"long_mode": "LV_LABEL_LONG_WRAP",
+						"style": [
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"border_side": [
+									"LV_BORDER_SIDE_FULL"
+								],
+								"border_width": 0,
+								"border_opa": 255,
+								"border_color": "#2195f6",
+								"radius": 0,
+								"text_color": "#ffffff",
+								"text_opa": 255,
+								"font": 24,
+								"text_align": "LV_TEXT_ALIGN_CENTER",
+								"font_family": "montserratMedium",
+								"letter_space": 0,
+								"line_space": 0,
+								"bg_color": "#2195f6",
+								"bg_grad_color": "#2195f6",
+								"bg_opa": 0,
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"padding_top": 0,
+								"padding_right": 0,
+								"padding_bottom": 0,
+								"padding_left": 0,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0
+							},
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"border_side": [
+									"LV_BORDER_SIDE_FULL"
+								],
+								"border_width": 0,
+								"border_opa": 255,
+								"border_color": "#2195f6",
+								"radius": 0,
+								"text_color": "#000000",
+								"text_opa": 255,
+								"font": 26,
+								"font_family": "montserratMedium",
+								"text_align": "LV_TEXT_ALIGN_CENTER",
+								"letter_space": 2,
+								"line_space": 0,
+								"bg_color": "#2195f6",
+								"bg_grad_color": "#2195f6",
+								"bg_opa": 0,
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"padding_top": 0,
+								"padding_right": 0,
+								"padding_bottom": 0,
+								"padding_left": 0,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "monitor",
+				"id": "nmty00z0",
+				"type": "scr",
+				"version": 180,
+				"scrollbar_mode": "OFF",
+				"customer_code": {
+					"code_c": "lv_obj_set_style_size(ui->monitor_chart_1, 0, LV_PART_INDICATOR);\n  lv_chart_set_axis_tick(ui->monitor_chart_1, LV_CHART_AXIS_PRIMARY_Y, 10, 5, 10, 5, true, 100);\n  lv_chart_set_axis_tick(ui->monitor_chart_1, LV_CHART_AXIS_PRIMARY_X, 10, 5, 10, 1, true, 10);\n  lv_slider_set_range(ui->monitor_slider_1, LV_IMG_ZOOM_NONE, LV_IMG_ZOOM_NONE * 5);",
+					"inc_c": "",
+					"code_py": "",
+					"inc_py": ""
+				},
+				"width": 800,
+				"height": 480,
+				"visible": true,
+				"flag": [],
+				"event": {},
+				"style": [
+					{
+						"part": "LV_PART_MAIN",
+						"state": "LV_STATE_DEFAULT",
+						"disable": false,
+						"bg_color": "#00031d",
+						"bg_grad_dir": "LV_GRAD_DIR_NONE",
+						"bg_dither_mode": "LV_DITHER_NONE",
+						"bg_main_stop": 0,
+						"bg_grad_stop": 255,
+						"bg_grad_color": "#2195f6",
+						"bg_opa": 255,
+						"bg_img_src": "",
+						"bg_img_opa": 255,
+						"bg_img_recolor": "#ffffff",
+						"bg_img_recolor_opa": 0
+					}
+				],
+				"layerName": "monitor",
+				"size": [
+					800,
+					480
+				],
+				"widgets": [
+					{
+						"name": "monitor_chart_1",
+						"id": "gt8gd6ow",
+						"type": "chart",
+						"visible": true,
+						"scrollbar_mode": "AUTO",
+						"flag": [
+							"LV_OBJ_FLAG_SCROLLABLE"
+						],
+						"pos": [
+							93,
+							53
+						],
+						"size": [
+							652,
+							374
+						],
+						"default_style": false,
+						"attribute_type": "freemaster",
+						"custom_attribute": [
+							{
+								"variable": "M1 Speed Actual",
+								"address": "g_sM1Drive.sSpeed.fltSpeedFilt",
+								"type_fmt": "IEEE floating point",
+								"size": 4,
+								"period": 1000
+							},
+							{
+								"variable": "M1 Speed Required",
+								"address": "g_sM1Drive.sSpeed.fltSpeedCmd",
+								"type_fmt": "IEEE floating point",
+								"size": 4,
+								"period": 1000
+							}
+						],
+						"chart_type": "LV_CHART_TYPE_LINE",
+						"div_line_count": [
+							10,
+							20
+						],
+						"chart_data": [
+							{
+								"chart_color": "#0055ff",
+								"chart_points": [
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0
+								],
+								"chart_axis": "LV_CHART_AXIS_PRIMARY_Y"
+							},
+							{
+								"chart_color": "#f00000",
+								"chart_points": [
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0
+								],
+								"chart_axis": "LV_CHART_AXIS_PRIMARY_Y"
+							}
+						],
+						"point_count": 20,
+						"hide_point": false,
+						"zoom_x": 256,
+						"zoom_y": 256,
+						"axis_tick": [
+							{
+								"axis_name": "LV_CHART_AXIS_PRIMARY_Y",
+								"tick_en": false,
+								"major_len": 10,
+								"minor_len": 5,
+								"major_cnt": 5,
+								"minor_cnt": 4,
+								"label_en": true,
+								"draw_size": 40,
+								"min": 0,
+								"max": 2400
+							},
+							{
+								"axis_name": "LV_CHART_AXIS_SECONDARY_Y",
+								"tick_en": false,
+								"major_len": 10,
+								"minor_len": 5,
+								"major_cnt": 5,
+								"minor_cnt": 4,
+								"label_en": false,
+								"draw_size": 40,
+								"min": 0,
+								"max": 100
+							},
+							{
+								"axis_name": "LV_CHART_AXIS_PRIMARY_X",
+								"tick_en": false,
+								"major_len": 10,
+								"minor_len": 5,
+								"major_cnt": 5,
+								"minor_cnt": 4,
+								"label_en": false,
+								"draw_size": 40
+							},
+							{
+								"axis_name": "LV_CHART_AXIS_SECONDARY_X",
+								"tick_en": false,
+								"major_len": 10,
+								"minor_len": 5,
+								"major_cnt": 5,
+								"minor_cnt": 4,
+								"label_en": false,
+								"draw_size": 40
+							}
+						],
+						"style": [
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"bg_opa": 0,
+								"border_side": [
+									"LV_BORDER_SIDE_FULL"
+								],
+								"border_width": 2,
+								"border_color": "#313330",
+								"border_opa": 255,
+								"radius": 0,
+								"line_color": "#313330",
+								"line_width": 2,
+								"line_opa": 255,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0
+							},
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_FOCUSED",
+								"disable": true,
+								"border_side": [
+									"LV_BORDER_SIDE_FULL"
+								],
+								"border_width": 1,
+								"border_color": "#e8e8e8",
+								"border_opa": 255,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"bg_opa": 255,
+								"radius": 0,
+								"line_color": "#7d8490",
+								"line_width": 2,
+								"line_opa": 255,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0
+							},
+							{
+								"part": "LV_PART_TICKS",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"text_color": "#ffffff",
+								"font_family": "montserratMedium",
+								"font": 12,
+								"line_color": "#e8e8e8",
+								"line_width": 2,
+								"line_opa": 255
+							}
+						]
+					},
+					{
+						"name": "monitor_label_title",
+						"id": "9ih8q6h3",
+						"type": "label",
+						"visible": true,
+						"flag": [],
+						"pos": [
+							190,
+							15
+						],
+						"size": [
+							420,
+							42
+						],
+						"default_style": false,
+						"attribute_type": "",
+						"custom_attribute": [],
+						"text": "Speed monitoring chart",
+						"long_mode": "LV_LABEL_LONG_WRAP",
+						"style": [
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"border_side": [
+									"LV_BORDER_SIDE_FULL"
+								],
+								"border_width": 0,
+								"border_opa": 255,
+								"border_color": "#2195f6",
+								"radius": 0,
+								"text_color": "#ffffff",
+								"text_opa": 255,
+								"font": 22,
+								"text_align": "LV_TEXT_ALIGN_CENTER",
+								"font_family": "montserratMedium",
+								"letter_space": 0,
+								"line_space": 0,
+								"bg_color": "#2195f6",
+								"bg_grad_color": "#2195f6",
+								"bg_opa": 0,
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"padding_top": 0,
+								"padding_right": 0,
+								"padding_bottom": 0,
+								"padding_left": 0,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0
+							},
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"border_side": [
+									"LV_BORDER_SIDE_FULL"
+								],
+								"border_width": 0,
+								"border_opa": 255,
+								"border_color": "#2195f6",
+								"radius": 0,
+								"text_color": "#000000",
+								"text_opa": 255,
+								"font": 26,
+								"font_family": "montserratMedium",
+								"text_align": "LV_TEXT_ALIGN_CENTER",
+								"letter_space": 2,
+								"line_space": 0,
+								"bg_color": "#2195f6",
+								"bg_grad_color": "#2195f6",
+								"bg_opa": 0,
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"padding_top": 0,
+								"padding_right": 0,
+								"padding_bottom": 0,
+								"padding_left": 0,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0
+							}
+						]
+					},
+					{
+						"name": "monitor_imgbtn_back",
+						"id": "gfgm519r",
+						"type": "imgbtn",
+						"visible": true,
+						"flag": [],
+						"pos": [
+							17,
+							7
+						],
+						"size": [
+							41,
+							41
+						],
+						"default_style": false,
+						"event": {
+							"widget": {
+								"clicked": {
+									"condition": [],
+									"action": [
+										{
+											"dst": "control",
+											"bindCondi": "",
+											"actionList": {
+												"load_screen": {
+													"duration": 200,
+													"delay": 200,
+													"scrId": "bpwbyo0v",
+													"anim_type": "LV_SCR_LOAD_ANIM_FADE_ON",
+													"is_clean": false,
+													"is_del": false
+												}
+											},
+											"dst_type": "scr"
+										}
+									]
+								}
+							}
+						},
+						"toggle": true,
+						"text_align": "center",
+						"text": "",
+						"color_format": "true-color-alpha",
+						"src_released": "C:\\Users\\yandld\\Desktop\\an-mc-pmsm-mcxe31b\\gui_guilder\\import\\image\\back.png",
+						"src_pressed": "",
+						"src_checked_released": "",
+						"src_checked_pressed": "",
+						"use_fs": false,
+						"fs_type": "flash",
+						"src_sd_released": "S:/back.png",
+						"src_sd_pressed": "S:/",
+						"src_sd_checked_released": "S:/",
+						"src_sd_checked_pressed": "S:/",
+						"src_flash_released": "F:/back.png",
+						"src_flash_pressed": "F:/",
+						"src_flash_checked_released": "F:/",
+						"src_flash_checked_pressed": "F:/",
+						"style": [
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"font_family": "montserratMedium",
+								"text_color": "#000000",
+								"text_align": "LV_TEXT_ALIGN_CENTER",
+								"font": 20,
+								"radius": 0,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0
+							},
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_PRESSED",
+								"disable": false,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"image_opa": 255,
+								"text_color": "#FF33FF",
+								"font_family": "montserratMedium",
+								"font": 20,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0
+							},
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_CHECKED",
+								"disable": false,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"text_color": "#FF33FF",
+								"image_opa": 255,
+								"font_family": "montserratMedium",
+								"font": 20,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0
+							},
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_IMGBTN_STATE_RELEASED",
+								"desc": "released",
+								"disable": false,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"image_opa": 255
+							}
+						]
+					},
+					{
+						"name": "monitor_slider_1",
+						"id": "ixqw6zvq",
+						"type": "slider",
+						"visible": true,
+						"flag": [],
+						"pos": [
+							771,
+							71
+						],
+						"size": [
+							5,
+							336
+						],
+						"default_style": false,
+						"attribute_type": "freemaster",
+						"custom_attribute": [],
+						"event": {
+							"widget": {
+								"released": {
+									"condition": [],
+									"action": [
+										{
+											"dst": "custom_code",
+											"bindCondi": "",
+											"actionList": {
+												"custom_code": {
+													"inc_c": "",
+													"code_c": "lv_obj_t * obj = lv_event_get_target(e);\n  int32_t v = lv_slider_get_value(obj);\n  lv_chart_set_zoom_y(guider_ui.monitor_chart_1, v);\n  break;",
+													"inc_py": "",
+													"code_py": ""
+												}
+											}
+										}
+									]
+								}
+							}
+						},
+						"range_s": 0,
+						"range_e": 100,
+						"slider_mode": "LV_SLIDER_MODE_NORMAL",
+						"starting_value": 0,
+						"left_value": 0,
+						"style": [
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"bg_color": "#e3e8ed",
+								"bg_grad_color": "#2195f6",
+								"bg_opa": 94,
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"radius": 58,
+								"outline_width": 0,
+								"outline_color": "#2195f6",
+								"outline_opa": 0,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0
+							},
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_FOCUSED",
+								"disable": true,
+								"outline_color": "#2195f6",
+								"outline_opa": 255,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0
+							},
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"outline_color": "#2195f6",
+								"outline_opa": 255,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0
+							},
+							{
+								"part": "LV_PART_INDICATOR",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"bg_color": "#2195f6",
+								"bg_grad_color": "#2195f6",
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"bg_opa": 255,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"radius": 58
+							},
+							{
+								"part": "LV_PART_INDICATOR",
+								"state": "LV_STATE_FOCUSED",
+								"disable": true,
+								"bg_color": "#2195f6",
+								"bg_grad_color": "#2195f6",
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"bg_opa": 255,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"radius": 58
+							},
+							{
+								"part": "LV_PART_INDICATOR",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"bg_color": "#2195f6",
+								"bg_grad_color": "#2195f6",
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"bg_opa": 255,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"radius": 58
+							},
+							{
+								"part": "LV_PART_KNOB",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"radius": 58
+							},
+							{
+								"part": "LV_PART_KNOB",
+								"state": "LV_STATE_FOCUSED",
+								"disable": true,
+								"bg_color": "#2195f6",
+								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"radius": 58
+							},
+							{
+								"part": "LV_PART_KNOB",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"bg_color": "#2195f6",
+								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"radius": 58
+							}
+						],
+						"knob_size": [
+							15,
+							15
+						]
+					}
+				]
+			}
+		]
+	}
+}

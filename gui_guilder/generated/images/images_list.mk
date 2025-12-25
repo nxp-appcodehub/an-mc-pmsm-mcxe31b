@@ -1,0 +1,1 @@
+GEN_CSRCS += _monitor_800x480.c _go_alpha_41x41.c _fan_alpha_166x166.c _back_alpha_41x41.c

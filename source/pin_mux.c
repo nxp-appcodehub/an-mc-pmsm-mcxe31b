@@ -18,14 +18,14 @@ package_id: MCXE31BMPB
 mcu_data: ksdk2_0
 processor_version: 0.2506.30
 pin_labels:
-- {pin_num: '4', pin_signal: PTE16, label: TP0, identifier: TP0}
-- {pin_num: '5', pin_signal: PTE15, label: TP1, identifier: TP1}
+- {pin_num: '4', pin_signal: PTE16, label: PWM_CT, identifier: TP0;pte15;pte16}
+- {pin_num: '5', pin_signal: PTE15, label: PWM_CB, identifier: TP1;pte16;pte12;pte15}
 - {pin_num: '66', pin_signal: PTC16, label: LED1, identifier: LED1}
 - {pin_num: '67', pin_signal: PTB22, label: LED2, identifier: LED2}
 - {pin_num: '71', pin_signal: PTC14, label: LED3, identifier: LED3}
-- {pin_num: '7', pin_signal: PTD1, label: PWM_AT, identifier: PWM_AT}
-- {pin_num: '8', pin_signal: PTD0, label: PWM_AB, identifier: PWM_AB}
-- {pin_num: '9', pin_signal: PTE11, label: PWM_BT, identifier: PWM_BT}
+- {pin_num: '7', pin_signal: PTD1, label: PWM_AT, identifier: PWM_AT;ptd1}
+- {pin_num: '8', pin_signal: PTD0, label: PWM_AB, identifier: PWM_AB;ptd0}
+- {pin_num: '9', pin_signal: PTE11, label: PWM_BT, identifier: PWM_BT;pte11}
 - {pin_num: '112', pin_signal: PTB16, label: PWM_BB, identifier: PWM_BB}
 - {pin_num: '110', pin_signal: PTB17, label: PWM_CT, identifier: PWM_CT}
 - {pin_num: '109', pin_signal: PTA17, label: PWM_CB, identifier: PWM_CB}
@@ -39,6 +39,7 @@ pin_labels:
 - {pin_num: '53', pin_signal: PTD5, label: SW3, identifier: SW3}
 - {pin_num: '26', pin_signal: PTE14, label: TX, identifier: TX;pte14}
 - {pin_num: '27', pin_signal: PTE3, label: RX, identifier: RX;pte3}
+- {pin_num: '39', pin_signal: PTA31, label: PWM_CB}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
@@ -58,8 +59,8 @@ void BOARD_InitBootPins(void)
 {
     BOARD_InitPins_Debug();
     BOARD_InitPins_GPIO();
-    BOARD_InitPins_LCU();
-    BOARD_InitPins_TRGIN();
+    BOARD_eMIOSPins();
+    BOARD_InitPins_ADC();
 }
 
 /* clang-format off */
@@ -173,12 +174,10 @@ void BOARD_InitPins_Debug(void)
 BOARD_InitPins_GPIO:
 - options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
 - pin_list:
-  - {pin_num: '4', peripheral: SIUL2, signal: 'GPIO, 144', pin_signal: PTE16, direction: OUTPUT}
-  - {pin_num: '5', peripheral: SIUL2, signal: 'GPIO, 143', pin_signal: PTE15, direction: OUTPUT}
   - {pin_num: '66', peripheral: SIUL2, signal: 'GPIO, 80', pin_signal: PTC16, direction: OUTPUT, initValue: state_1}
   - {pin_num: '71', peripheral: SIUL2, signal: 'GPIO, 78', pin_signal: PTC14, direction: OUTPUT, initValue: state_1}
   - {pin_num: '67', peripheral: SIUL2, signal: 'GPIO, 54', pin_signal: PTB22, direction: OUTPUT, initValue: state_1}
-  - {pin_num: '69', peripheral: SIUL2, signal: 'GPIO, 55', pin_signal: PTB23, direction: INPUT}
+  - {pin_num: '69', peripheral: SIUL2, signal: 'EIRQ, 10', pin_signal: PTB23}
   - {pin_num: '53', peripheral: SIUL2, signal: 'EIRQ, 13', pin_signal: PTD5}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
@@ -192,46 +191,6 @@ BOARD_InitPins_GPIO:
  * END ****************************************************************************************************************/
 void BOARD_InitPins_GPIO(void)
 {
-    
-    /* PTE16 (pin 4) is configured as SIUL2 GPIO, 144 */
-    const siul2_pin_settings_t BOARD_INITPINS_GPIO_TP0 =
-    {
-        .base                        = SIUL2,
-        .pinPortIdx                  = 144u,
-        .mux                         = kPORT_MUX_AS_GPIO,
-        .safeMode                    = kPORT_SAFE_MODE_DISABLED,
-        .inputFilter                 = kPORT_INPUT_FILTER_NOT_AVAILABLE,
-        .driveStrength               = kPORT_DRIVE_STRENTGTH_NOT_AVAILABLE,
-        .pullConfig                  = kPORT_INTERNAL_PULL_NOT_ENABLED,
-        .slewRateCtrlSel             = kPORT_SLEW_RATE_NOT_AVAILABLE,
-        .pullKeep                    = kPORT_PULL_KEEP_DISABLED,
-        .invert                      = kPORT_INVERT_DISABLED,
-        .inputBuffer                 = kPORT_INPUT_BUFFER_DISABLED,
-        .outputBuffer                = kPORT_OUTPUT_BUFFER_ENABLED,
-        .adcInterleaves              = { kMUX_MODE_NOT_AVAILABLE, kMUX_MODE_NOT_AVAILABLE },
-        .initValue                   = 0u
-    };
-    SIUL2_PinInit(&BOARD_INITPINS_GPIO_TP0);
-    
-    /* PTE15 (pin 5) is configured as SIUL2 GPIO, 143 */
-    const siul2_pin_settings_t BOARD_INITPINS_GPIO_TP1 =
-    {
-        .base                        = SIUL2,
-        .pinPortIdx                  = 143u,
-        .mux                         = kPORT_MUX_AS_GPIO,
-        .safeMode                    = kPORT_SAFE_MODE_DISABLED,
-        .inputFilter                 = kPORT_INPUT_FILTER_NOT_AVAILABLE,
-        .driveStrength               = kPORT_DRIVE_STRENTGTH_NOT_AVAILABLE,
-        .pullConfig                  = kPORT_INTERNAL_PULL_NOT_ENABLED,
-        .slewRateCtrlSel             = kPORT_SLEW_RATE_NOT_AVAILABLE,
-        .pullKeep                    = kPORT_PULL_KEEP_DISABLED,
-        .invert                      = kPORT_INVERT_DISABLED,
-        .inputBuffer                 = kPORT_INPUT_BUFFER_DISABLED,
-        .outputBuffer                = kPORT_OUTPUT_BUFFER_ENABLED,
-        .adcInterleaves              = { kMUX_MODE_NOT_AVAILABLE, kMUX_MODE_NOT_AVAILABLE },
-        .initValue                   = 0u
-    };
-    SIUL2_PinInit(&BOARD_INITPINS_GPIO_TP1);
     
     /* PTC16 (pin 66) is configured as SIUL2 GPIO, 80 */
     const siul2_pin_settings_t BOARD_INITPINS_GPIO_LED1 =
@@ -293,7 +252,7 @@ void BOARD_InitPins_GPIO(void)
     };
     SIUL2_PinInit(&BOARD_INITPINS_GPIO_LED2);
     
-    /* PTB23 (pin 69) is configured as SIUL2 GPIO, 55 */
+    /* PTB23 (pin 69) is configured as SIUL2 EIRQ, 10 */
     const siul2_pin_settings_t BOARD_INITPINS_GPIO_SW2 =
     {
         .base                        = SIUL2,
@@ -309,8 +268,11 @@ void BOARD_InitPins_GPIO(void)
         .inputBuffer                 = kPORT_INPUT_BUFFER_ENABLED,
         .outputBuffer                = kPORT_OUTPUT_BUFFER_DISABLED,
         .adcInterleaves              = { kMUX_MODE_NOT_AVAILABLE, kMUX_MODE_NOT_AVAILABLE },
-        .inputMux                    = {
-                                         kPORT_INPUT_MUX_NO_INIT,
+        .inputMuxReg                 = {
+                                         26u
+                                       },
+        .inputMux                    = { 
+                                         kPORT_INPUT_MUX_ALT2,
                                          kPORT_INPUT_MUX_NO_INIT,
                                          kPORT_INPUT_MUX_NO_INIT,
                                          kPORT_INPUT_MUX_NO_INIT,
@@ -378,14 +340,15 @@ void BOARD_InitPins_GPIO(void)
 /*
  * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 BOARD_eMIOSPins:
-- options: {callFromInitBoot: 'false', coreID: core0, enableClock: 'true'}
+- options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
 - pin_list:
-  - {pin_num: '7', peripheral: EMIOS_0, signal: 'EMIOS_CH, 1_G', pin_signal: PTD1, direction: OUTPUT}
-  - {pin_num: '8', peripheral: EMIOS_0, signal: 'EMIOS_CH, 2_G', pin_signal: PTD0, direction: OUTPUT}
-  - {pin_num: '9', peripheral: EMIOS_0, signal: 'EMIOS_CH, 3_G', pin_signal: PTE11, direction: OUTPUT}
+  - {pin_num: '7', peripheral: EMIOS_0, signal: 'EMIOS_CH, 1_G', pin_signal: PTD1, identifier: PWM_AT, direction: OUTPUT}
+  - {pin_num: '8', peripheral: EMIOS_0, signal: 'EMIOS_CH, 2_G', pin_signal: PTD0, identifier: PWM_AB, direction: OUTPUT}
+  - {pin_num: '9', peripheral: EMIOS_0, signal: 'EMIOS_CH, 3_G', pin_signal: PTE11, identifier: PWM_BT, direction: OUTPUT}
   - {pin_num: '112', peripheral: EMIOS_0, signal: 'EMIOS_CH, 4_G', pin_signal: PTB16, direction: OUTPUT}
   - {pin_num: '110', peripheral: EMIOS_0, signal: 'EMIOS_CH, 5_G', pin_signal: PTB17, direction: OUTPUT}
   - {pin_num: '109', peripheral: EMIOS_0, signal: 'EMIOS_CH, 6_G', pin_signal: PTA17, direction: OUTPUT}
+  - {peripheral: EMIOS_0, signal: 'OUT_DIS, 0', pin_signal: LPCMP_1_OUT}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
@@ -525,13 +488,15 @@ void BOARD_eMIOSPins(void)
     TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_ExtOut0, kTRGMUX_TriggerInput2, kTRGMUX_SourceEmios0IppDoEmiosCh1);
     /* eMIOS_0_IPP_DO_eMIOS_CH[3] is selected as SIUL2 TRGMUX_OUT1 device trigger input 1 */
     TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_ExtOut1, kTRGMUX_TriggerInput1, kTRGMUX_SourceEmios0IppDoEmiosCh3);
+    /* LPCMP_1 Comparator output is selected as eMIOS012_ODIS device trigger input 0 */
+    TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_Emios012_Odis, kTRGMUX_TriggerInput0, kTRGMUX_SourceLpcmp1);
 }
 
 /* clang-format off */
 /*
  * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 BOARD_InitPins_LCU:
-- options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
+- options: {callFromInitBoot: 'false', coreID: core0, enableClock: 'true'}
 - pin_list:
   - {pin_num: '87', peripheral: LCU_1, signal: 'LC0_OUT, 0', pin_signal: PTC23, identifier: ptc23}
   - {pin_num: '88', peripheral: LCU_1, signal: 'LC0_OUT, 1', pin_signal: PTC24, identifier: ptc24}
@@ -678,13 +643,14 @@ void BOARD_InitPins_LCU(void)
 /*
  * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 BOARD_InitPins_ADC:
-- options: {callFromInitBoot: 'false', coreID: core0, enableClock: 'true'}
+- options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
 - pin_list:
   - {pin_num: '119', peripheral: ADC_0, signal: 'IN, 43', pin_signal: PTD4}
   - {pin_num: '121', peripheral: ADC_0, signal: 'IN, 40', pin_signal: PTD2}
   - {pin_num: '123', peripheral: ADC_1, signal: 'IN, 41', pin_signal: PTA3}
   - {pin_num: '126', peripheral: ADC_0, signal: 'IN, 88', pin_signal: PTB11}
   - {pin_num: '124', peripheral: LPCMP_1, signal: 'IN, 2', pin_signal: PTA2}
+  - {pin_num: '10', peripheral: LPCMP_1, signal: OUT, pin_signal: PTE10}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
@@ -697,6 +663,8 @@ BOARD_InitPins_ADC:
  * END ****************************************************************************************************************/
 void BOARD_InitPins_ADC(void)
 {
+    /* Clock enable: Clock is turned on. */
+    CLOCK_EnableClock(kCLOCK_Trgmux);
     
     /* PTD4 (pin 119) is configured as ADC_0 IN, 43 */
     const siul2_pin_settings_t BOARD_INITPINS_ADC_PTD4 =
@@ -888,13 +856,35 @@ void BOARD_InitPins_ADC(void)
     };
     SIUL2_PinInit(&BOARD_INITPINS_ADC_PTA2);
     
+    /* PTE10 (pin 10) is configured as LPCMP_1 OUT */
+    const siul2_pin_settings_t BOARD_INITPINS_ADC_PTE10 =
+    {
+        .base                        = SIUL2,
+        .pinPortIdx                  = 138u,
+        .mux                         = kPORT_MUX_ALT7,
+        .safeMode                    = kPORT_SAFE_MODE_DISABLED,
+        .inputFilter                 = kPORT_INPUT_FILTER_NOT_AVAILABLE,
+        .driveStrength               = kPORT_DRIVE_STRENTGTH_NOT_AVAILABLE,
+        .pullConfig                  = kPORT_INTERNAL_PULL_NOT_ENABLED,
+        .slewRateCtrlSel             = kPORT_SLEW_RATE_NOT_AVAILABLE,
+        .pullKeep                    = kPORT_PULL_KEEP_DISABLED,
+        .invert                      = kPORT_INVERT_DISABLED,
+        .inputBuffer                 = kPORT_INPUT_BUFFER_DISABLED,
+        .outputBuffer                = kPORT_OUTPUT_BUFFER_ENABLED,
+        .adcInterleaves              = { kMUX_MODE_NOT_AVAILABLE, kMUX_MODE_NOT_AVAILABLE },
+        .initValue                   = 2u
+    };
+    SIUL2_PinInit(&BOARD_INITPINS_ADC_PTE10);
+    
+    /* LPCMP_1 Comparator output is selected as SIUL2 TRGMUX_OUT1 device trigger input 0 */
+    TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_ExtOut1, kTRGMUX_TriggerInput0, kTRGMUX_SourceLpcmp1);
 }
 
 /* clang-format off */
 /*
  * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 BOARD_InitPins_TRGIN:
-- options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
+- options: {callFromInitBoot: 'false', coreID: core0, enableClock: 'true'}
 - pin_list:
   - {pin_num: '1', peripheral: TRGMUX, signal: 'TRGMUX_IN, 12', pin_signal: PTA18}
   - {pin_num: '2', peripheral: TRGMUX, signal: 'TRGMUX_IN, 13', pin_signal: PTA19}
@@ -993,6 +983,167 @@ void BOARD_InitPins_TRGIN(void)
     };
     SIUL2_PinInit(&BOARD_INITPINS_TRGIN_PTA19);
     
+}
+
+/* clang-format off */
+/*
+ * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+BOARD_InitPins_LCU_aux:
+- options: {callFromInitBoot: 'false', coreID: core0, enableClock: 'true'}
+- pin_list:
+  - {pin_num: '7', peripheral: LCU_0, signal: 'LC0_OUT, 0', pin_signal: PTD1, identifier: ptd1}
+  - {pin_num: '8', peripheral: LCU_0, signal: 'LC0_OUT, 1', pin_signal: PTD0, identifier: ptd0}
+  - {pin_num: '9', peripheral: LCU_0, signal: 'LC0_OUT, 2', pin_signal: PTE11, identifier: pte11}
+  - {pin_num: '10', peripheral: LCU_0, signal: 'LC0_OUT, 3', pin_signal: PTE10}
+  - {pin_num: '4', peripheral: LCU_0, signal: 'LC1_OUT, 0', pin_signal: PTE16, identifier: pte16}
+  - {pin_num: '5', peripheral: LCU_0, signal: 'LC1_OUT, 1', pin_signal: PTE15, identifier: pte15}
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
+ */
+/* clang-format on */
+
+/* FUNCTION ************************************************************************************************************
+ *
+ * Function Name : BOARD_InitPins_LCU_aux
+ * Description   : Configures pin routing and optionally pin electrical features.
+ *
+ * END ****************************************************************************************************************/
+void BOARD_InitPins_LCU_aux(void)
+{
+    /* Clock enable: Clock is turned on. */
+    CLOCK_EnableClock(kCLOCK_Trgmux);
+    
+    /* PTD1 (pin 7) is configured as LCU_0 LC0_OUT, 0 */
+    const siul2_pin_settings_t BOARD_INITPINS_LCU_AUX_ptd1 =
+    {
+        .base                        = SIUL2,
+        .pinPortIdx                  = 97u,
+        .mux                         = kPORT_MUX_ALT7,
+        .safeMode                    = kPORT_SAFE_MODE_DISABLED,
+        .inputFilter                 = kPORT_INPUT_FILTER_NOT_AVAILABLE,
+        .driveStrength               = kPORT_DRIVE_STRENTGTH_NOT_AVAILABLE,
+        .pullConfig                  = kPORT_INTERNAL_PULL_NOT_ENABLED,
+        .slewRateCtrlSel             = kPORT_SLEW_RATE_NOT_AVAILABLE,
+        .pullKeep                    = kPORT_PULL_KEEP_DISABLED,
+        .invert                      = kPORT_INVERT_DISABLED,
+        .inputBuffer                 = kPORT_INPUT_BUFFER_DISABLED,
+        .outputBuffer                = kPORT_OUTPUT_BUFFER_ENABLED,
+        .adcInterleaves              = { kMUX_MODE_NOT_AVAILABLE, kMUX_MODE_NOT_AVAILABLE },
+        .initValue                   = 2u
+    };
+    SIUL2_PinInit(&BOARD_INITPINS_LCU_AUX_ptd1);
+    
+    /* PTD0 (pin 8) is configured as LCU_0 LC0_OUT, 1 */
+    const siul2_pin_settings_t BOARD_INITPINS_LCU_AUX_ptd0 =
+    {
+        .base                        = SIUL2,
+        .pinPortIdx                  = 96u,
+        .mux                         = kPORT_MUX_ALT7,
+        .safeMode                    = kPORT_SAFE_MODE_DISABLED,
+        .inputFilter                 = kPORT_INPUT_FILTER_NOT_AVAILABLE,
+        .driveStrength               = kPORT_DRIVE_STRENTGTH_NOT_AVAILABLE,
+        .pullConfig                  = kPORT_INTERNAL_PULL_NOT_ENABLED,
+        .slewRateCtrlSel             = kPORT_SLEW_RATE_NOT_AVAILABLE,
+        .pullKeep                    = kPORT_PULL_KEEP_DISABLED,
+        .invert                      = kPORT_INVERT_DISABLED,
+        .inputBuffer                 = kPORT_INPUT_BUFFER_DISABLED,
+        .outputBuffer                = kPORT_OUTPUT_BUFFER_ENABLED,
+        .adcInterleaves              = { kMUX_MODE_NOT_AVAILABLE, kMUX_MODE_NOT_AVAILABLE },
+        .initValue                   = 2u
+    };
+    SIUL2_PinInit(&BOARD_INITPINS_LCU_AUX_ptd0);
+    
+    /* PTE11 (pin 9) is configured as LCU_0 LC0_OUT, 2 */
+    const siul2_pin_settings_t BOARD_INITPINS_LCU_AUX_pte11 =
+    {
+        .base                        = SIUL2,
+        .pinPortIdx                  = 139u,
+        .mux                         = kPORT_MUX_ALT7,
+        .safeMode                    = kPORT_SAFE_MODE_DISABLED,
+        .inputFilter                 = kPORT_INPUT_FILTER_NOT_AVAILABLE,
+        .driveStrength               = kPORT_DRIVE_STRENTGTH_NOT_AVAILABLE,
+        .pullConfig                  = kPORT_INTERNAL_PULL_NOT_ENABLED,
+        .slewRateCtrlSel             = kPORT_SLEW_RATE_NOT_AVAILABLE,
+        .pullKeep                    = kPORT_PULL_KEEP_DISABLED,
+        .invert                      = kPORT_INVERT_DISABLED,
+        .inputBuffer                 = kPORT_INPUT_BUFFER_DISABLED,
+        .outputBuffer                = kPORT_OUTPUT_BUFFER_ENABLED,
+        .adcInterleaves              = { kMUX_MODE_NOT_AVAILABLE, kMUX_MODE_NOT_AVAILABLE },
+        .initValue                   = 2u
+    };
+    SIUL2_PinInit(&BOARD_INITPINS_LCU_AUX_pte11);
+    
+    /* PTE10 (pin 10) is configured as LCU_0 LC0_OUT, 3 */
+    const siul2_pin_settings_t BOARD_INITPINS_LCU_AUX_PTE10 =
+    {
+        .base                        = SIUL2,
+        .pinPortIdx                  = 138u,
+        .mux                         = kPORT_MUX_ALT7,
+        .safeMode                    = kPORT_SAFE_MODE_DISABLED,
+        .inputFilter                 = kPORT_INPUT_FILTER_NOT_AVAILABLE,
+        .driveStrength               = kPORT_DRIVE_STRENTGTH_NOT_AVAILABLE,
+        .pullConfig                  = kPORT_INTERNAL_PULL_NOT_ENABLED,
+        .slewRateCtrlSel             = kPORT_SLEW_RATE_NOT_AVAILABLE,
+        .pullKeep                    = kPORT_PULL_KEEP_DISABLED,
+        .invert                      = kPORT_INVERT_DISABLED,
+        .inputBuffer                 = kPORT_INPUT_BUFFER_DISABLED,
+        .outputBuffer                = kPORT_OUTPUT_BUFFER_ENABLED,
+        .adcInterleaves              = { kMUX_MODE_NOT_AVAILABLE, kMUX_MODE_NOT_AVAILABLE },
+        .initValue                   = 2u
+    };
+    SIUL2_PinInit(&BOARD_INITPINS_LCU_AUX_PTE10);
+    
+    /* PTE16 (pin 4) is configured as LCU_0 LC1_OUT, 0 */
+    const siul2_pin_settings_t BOARD_INITPINS_LCU_AUX_pte16 =
+    {
+        .base                        = SIUL2,
+        .pinPortIdx                  = 144u,
+        .mux                         = kPORT_MUX_ALT7,
+        .safeMode                    = kPORT_SAFE_MODE_DISABLED,
+        .inputFilter                 = kPORT_INPUT_FILTER_NOT_AVAILABLE,
+        .driveStrength               = kPORT_DRIVE_STRENTGTH_NOT_AVAILABLE,
+        .pullConfig                  = kPORT_INTERNAL_PULL_NOT_ENABLED,
+        .slewRateCtrlSel             = kPORT_SLEW_RATE_NOT_AVAILABLE,
+        .pullKeep                    = kPORT_PULL_KEEP_DISABLED,
+        .invert                      = kPORT_INVERT_DISABLED,
+        .inputBuffer                 = kPORT_INPUT_BUFFER_DISABLED,
+        .outputBuffer                = kPORT_OUTPUT_BUFFER_ENABLED,
+        .adcInterleaves              = { kMUX_MODE_NOT_AVAILABLE, kMUX_MODE_NOT_AVAILABLE },
+        .initValue                   = 2u
+    };
+    SIUL2_PinInit(&BOARD_INITPINS_LCU_AUX_pte16);
+    
+    /* PTE15 (pin 5) is configured as LCU_0 LC1_OUT, 1 */
+    const siul2_pin_settings_t BOARD_INITPINS_LCU_AUX_pte15 =
+    {
+        .base                        = SIUL2,
+        .pinPortIdx                  = 143u,
+        .mux                         = kPORT_MUX_ALT7,
+        .safeMode                    = kPORT_SAFE_MODE_DISABLED,
+        .inputFilter                 = kPORT_INPUT_FILTER_NOT_AVAILABLE,
+        .driveStrength               = kPORT_DRIVE_STRENTGTH_NOT_AVAILABLE,
+        .pullConfig                  = kPORT_INTERNAL_PULL_NOT_ENABLED,
+        .slewRateCtrlSel             = kPORT_SLEW_RATE_NOT_AVAILABLE,
+        .pullKeep                    = kPORT_PULL_KEEP_DISABLED,
+        .invert                      = kPORT_INVERT_DISABLED,
+        .inputBuffer                 = kPORT_INPUT_BUFFER_DISABLED,
+        .outputBuffer                = kPORT_OUTPUT_BUFFER_ENABLED,
+        .adcInterleaves              = { kMUX_MODE_NOT_AVAILABLE, kMUX_MODE_NOT_AVAILABLE },
+        .initValue                   = 2u
+    };
+    SIUL2_PinInit(&BOARD_INITPINS_LCU_AUX_pte15);
+    
+    /* LCU_0 LC0 Out_i1 is selected as SIUL2 TRGMUX_OUT0 device trigger input 1 */
+    TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_ExtOut0, kTRGMUX_TriggerInput1, kTRGMUX_SourceLcu0Lc0Out1);
+    /* LCU_0 LC0 Out_i0 is selected as SIUL2 TRGMUX_OUT0 device trigger input 2 */
+    TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_ExtOut0, kTRGMUX_TriggerInput2, kTRGMUX_SourceLcu0Lc0Out0);
+    /* LCU_0 LC0 Out_i3 is selected as SIUL2 TRGMUX_OUT1 device trigger input 0 */
+    TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_ExtOut1, kTRGMUX_TriggerInput0, kTRGMUX_SourceLcu0Lc0Out3);
+    /* LCU_0 LC0 Out_i2 is selected as SIUL2 TRGMUX_OUT1 device trigger input 1 */
+    TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_ExtOut1, kTRGMUX_TriggerInput1, kTRGMUX_SourceLcu0Lc0Out2);
+    /* LCU_0 LC1 Out_i1 is selected as SIUL2 TRGMUX_OUT1 device trigger input 2 */
+    TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_ExtOut1, kTRGMUX_TriggerInput2, kTRGMUX_SourceLcu0Lc1Out1);
+    /* LCU_0 LC1 Out_i0 is selected as SIUL2 TRGMUX_OUT1 device trigger input 3 */
+    TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_ExtOut1, kTRGMUX_TriggerInput3, kTRGMUX_SourceLcu0Lc1Out0);
 }
 /***********************************************************************************************************************
  * EOF

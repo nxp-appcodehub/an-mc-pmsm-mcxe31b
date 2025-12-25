@@ -2,22 +2,17 @@
 [<img src="https://mcuxpresso.nxp.com/static/icon/nxp-logo-color.svg" width="100"/>](https://www.nxp.com)
 
 ## AN14797: 3-Phase PMSM Field-Oriented Control Solution using MCX E31B
-This application note describes the implementation of FOC on NXP MCX E31B MCUs, including sensorless control and quadrature encoder based control. Please refer to [AN14797](https://www.nxp.com/webapp/Download?colCode=AN14797&isHTMLorPDF=HTML) for complete instructions on how to use this software.      
+This application note describes the implementation of sensorless FOC on NXP MCX E31B MCUs. Please refer to [AN14797](https://www.nxp.com/webapp/Download?colCode=AN14797&isHTMLorPDF=HTML) for complete instructions on how to use this software.      
 
-The demo code for PMSM sensorless control uses following NXP platforms:
-
-• FRDM-MCXE31B
-
-• Freedom Development Platform for Low-Voltage, 3-Phase PMSM Motor Control (FRDM-MC-LVPMSM)
-
+The demo code for PMSM sensorless control uses following NXP platforms:  
+• FRDM-MCXE31B  
+• Freedom Development Platform for Low-Voltage, 3-Phase PMSM Motor Control (FRDM-MC-LVPMSM)  
 • Motor LINIX 45ZWN24-40 or Teknic M-2310P     
-
-The document is divided into several parts. Hardware setup, processor features, and peripheral settings are described at the beginning of the document. The next part contains the PMSM project description and motor control peripheral initialization. The last part describes user interface and additional example features.
 
 #### Boards: FRDM-MCXE31B
 #### Categories: Motor Control
 #### Peripherals: ADC, PWM
-#### Toolchains: MCUXpresso IDE
+#### Toolchains: MCUXpresso IDE, VS code
 
 ## Table of Contents
 1. [Software](#step1)
@@ -29,11 +24,12 @@ The document is divided into several parts. Hardware setup, processor features, 
 7. [Release Notes](#step7)
 
 ## 1. Software<a name="step1"></a>
-- Download and install [MCUXpresso IDE V25.09 or later](https://www.nxp.com/design/design-center/software/development-software/mcuxpresso-software-and-tools-/mcuxpresso-integrated-development-environment-ide:MCUXpresso-IDE).
+- Download and install [MCUXpresso IDE V25.06 or later](https://www.nxp.com/design/design-center/software/development-software/mcuxpresso-software-and-tools-/mcuxpresso-integrated-development-environment-ide:MCUXpresso-IDE).
 - [SDK_25_09_00_FRDM-MCXE31B](https://mcuxpresso.nxp.com/zh)
 - Download and install the latest version of [FreeMASTER](https://www.nxp.com/design/software/development-software/freemaster-run-time-debugging-tool:FREEMASTER)(3.2.2.2).
-- Download the code from Git repository an-mc-pmsm-mcxe31B.  
+- Download the code from Git repository [an-mc-pmsm-mcxe31B](https://github.com/nxp-appcodehub/an-mc-pmsm-mcxe31b).  
 - MCUXpresso for Visual Studio Code: This example supports MCUXpresso for Visual Studio Code, for more information about how to use Visual Studio Code please refer [here](https://www.nxp.com/design/design-center/training/TIP-GETTING-STARTED-WITH-MCUXPRESSO-FOR-VS-CODE).
+- (Optional) Download GUI Guilder(1.8.0 GA) [here](https://www.nxp.com/design/design-center/software/development-software/gui-guider:GUI-GUIDER#downloads)
 
 ## 2. Hardware<a name="step2"></a>
 
@@ -59,8 +55,7 @@ For motor Teknic M-2310P:
 **Red wide**--phase**B**;  
 **White wide**--phase**C**.  
 
-Power the **FRDM-MC-LVPMSM** board on **J6** with a **24V** adaptor.   
-
+Power the **FRDM-MC-LVPMSM** board on **J6** with a **24V** adaptor.  
 Use a USB type-C cable to connect to the **FRDM-MCXE31B** board via **J13** connector. Download the code using debug button in tool bar after compiler. Select **CMSIS-DAP** or **J-Link** in **Debug As** according firmware in your on-board debugger.   
 
 ### 3.2 Import Project
@@ -78,19 +73,15 @@ The application contains the demo mode to demonstrate motor rotation. You can op
 
 1. The NXP development boards include a user button associated with a port interrupt (generated whenever one of the buttons is pressed). At the beginning of the ISR, a simple logic executes and the interrupt flag clears. When you press the button, the demo mode starts. When you press the same button again, the application stops and transitions back to the STOP state.  
 
-​	The user button on the development board (controlling the demo mode):FRDM-MCXE31B - SW2
-
 2. The other way to interact with the demo mode is to use the FreeMASTER tool. The FreeMASTER application consists of two parts: the PC application used for variable visualization and the set of software drivers running in the embedded application. The serial interface transfers data between the PC and the embedded application. This interface is provided by the debugger included in the boards.  
 
 ​	Remote control using FreeMASTER (Following chapter): Setting a variable in the FreeMASTER Variable Watch
 
 ### 3.4 Motor configuration
-There are two motor parameter and control parameter header file in **source** folder of the project, **"m1_pmsm_appconfig.h"** is for **LINIX 45ZWN24-40** and **"m2_pmsm_appconfig.h"** is for **Teknic M-2310P**.
-
-If use **LINIX 45ZWN24-40** , **m1_pmsm_appconfig** should be included in header file **m1_sm_snsless.h** (an-mc-pmsm-mcxe31B\motor_control\pmsm\pmsm_float\mc_state_machine) by default. 
-
-If use **Teknic M-2310P**, change the included file to **m2_pmsm_appconfig**.
-
+There are two motor parameter and control parameter header file in **source** folder of the project, **"m1_pmsm_appconfig.h"** is for **LINIX 45ZWN24-40** and **"m2_pmsm_appconfig.h"** is for **Teknic M-2310P**.  
+If use **LINIX 45ZWN24-40** , **m1_pmsm_appconfig** should be included in header file **m1_sm_snsless.h** (an-mc-pmsm-mcxe31B\motor_control\pmsm\pmsm_float\mc_state_machine) by default.  
+If use **Teknic M-2310P**, change the included file to **m2_pmsm_appconfig**.  
+Press **SW2** to RUN or STOP the mode. Press **SW3** to stop the motor.
 
 ### 3.5 Remote control using FreeMASTER  
 
@@ -106,17 +97,35 @@ Note: In MCUXpresso, the FreeMASTER application can run directly from IDE in mot
 
 2. Open the FreeMASTER project pmsm_float.pmpx 
 
-To establish the communication, click the communication button (the green "GO" button in the top left-hand corner).
+3. To establish the communication, click the communication button (the green "GO" button in the top left-hand corner).
 
-  ![](images/freemaster_go.png)
+ <!--![](images/freemaster_go.png)-->
 
 4. If the communication is established successfully, the FreeMASTER communication status in the bottom right-hand corner changes from "Not connected" to "RS-232 UART Communication; COMxx; speed=115200". Otherwise, the FreeMASTER warning pop-up window appears. as below:
 
-  ![](images/freemaster_communication.png)
+<!--![](images/freemaster_communication.png)-->
 
 6. Control the PMSM motor by writing to a control variable in a variable watch.
 
 7. If use quadrature encoder based sensor control on **Teknic M-2310P**, switch **M1 MCAT_POSE_Sensor** value to **1**(**0** by default for sensorless control) in **Variable watch** window of **3. Speed Control** watch subblock.
+
+### 3.6 UI Interface(NXP GUI Guilder Project)
+
+This demo also supports the NXP GUI Guider UI interface. It essentially uses FreeMASTER's TCP port as a relay, utilizing the local TCP data interface to visualize data on the GUI Guider interface.
+
+The GUI Guider project files are located in the ./gui_guider directory.
+
+![](./images/gui_guilder.png)
+
+The specific usage steps are as follows:
+
+1. Open and confirm that the FreeMASTER interface is fully functional and controllable. If the FreeMASTER interface is not working properly, ignore the remaining steps.
+2. Use GUI Guider 1.8.0 to open ./gui_guider/motor_control_v1.guiguider
+3. Click on FreeMASTER in the lower right corner, click Link To FreeMASTER Server, and click OK with the default parameters.
+4. Click Sync Variables to synchronize the FreeMASTER data source.
+5. Click Simulator, compile the C project, and then the GUI Guider interface will be ready to use.
+
+Note that GUI Guider does not allow any special characters (spaces, ".", "-", etc.). Please carefully check the path, otherwise the GUI Guider project will fail to compile.
 
 ## 4. Result
 The board can drive the motor and motor can run.
@@ -135,6 +144,7 @@ The board can drive the motor and motor can run.
 
 <!----- Toolchains ----->
 [![Toolchain badge](https://img.shields.io/badge/Toolchain-MCUXPRESSO%20IDE-orange)](https://mcuxpresso.nxp.com/appcodehub?toolchain=mcux)
+[![Toolchain badge](https://img.shields.io/badge/Toolchain-VS%20CODE-orange)](https://mcuxpresso.nxp.com/appcodehub?toolchain=vscode)
 
 Questions regarding the content/correctness of this example can be entered as Issues within this GitHub repository.
 
@@ -148,4 +158,5 @@ Questions regarding the content/correctness of this example can be entered as Is
 ## 7. Release Notes<a name="step7"></a>
 | Version | Description / Update                           | Date                        |
 |:-------:|------------------------------------------------|----------------------------:|
+| 1.1     | Update emios output and cmp functions          | December 31<sup>th</sup> 2025 |
 | 1.0     | Initial release on Application Code Hub        | November 26<sup>th</sup> 2025 |

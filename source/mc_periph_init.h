@@ -111,8 +111,8 @@ typedef struct _clock_setup
  ******************************************************************************/
 #define M1_MCDRV_PWM_PERIPH_INIT() (M1_InitPWM())
 #define M1_MCDRV_PWM3PH_SET(par) (MCDRV_eMIOS_PhSet(par))
-#define M1_MCDRV_PWM3PH_EN(void) (MCDRV_LCU_PhOutEn())
-#define M1_MCDRV_PWM3PH_DIS(void) (MCDRV_LCU_PhOutDis())
+#define M1_MCDRV_PWM3PH_EN(par) (MCDRV_eMIOS_PhOutEn(par))
+#define M1_MCDRV_PWM3PH_DIS(par) (MCDRV_eMIOS_PhOutDis(par))
 #define M1_MCDRV_PWM3PH_FLT_GET(par) (MCDRV_eMIOS_PhFltGet(par))
 
 /******************************************************************************

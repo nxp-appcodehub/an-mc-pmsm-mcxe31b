@@ -17,6 +17,7 @@
 #include "m1_sm_snsless_enc.h"
 #include "clock_config.h"
 #include "board.h"
+#include "fccu.h"
 
 /*******************************************************************************
  * Definitions
@@ -132,6 +133,11 @@ int main(void)
     /* SysTick initialization for CPU load measurement */
     BOARD_InitSysTick();
 
+    FCCU_Init (FCCU_MODULE_DBG_EN_BI_STABLE_IRQ_EN_NO_LOCK_CONFIG(360000, 7, 0),
+    FCCU_NCF_RECOMMENDED_CONFIG,
+    FCCU_DCM_MODULE_ALL_FAULTS_EN_CONFIG);
+    NVIC_EnableIRQ (FCCU_0_IRQn);
+
     /* Turn off application */
     M1_SetAppSwitch(FALSE);
 
@@ -142,7 +148,7 @@ int main(void)
     BCTU_EnableModule(BCTU, true);
     BCTU_EnableGlobalTrig(BCTU, true);
     
-    BCTU_EnableHardwareTrig(BCTU, kBCTU_TrigSourceEmios0Ch4, true);
+    BCTU_EnableHardwareTrig(BCTU, kBCTU_TrigSourceEmios0Ch7, true);
 
     /* Infinite loop */
     while (1)
@@ -166,13 +172,13 @@ void BCTU_IRQHandler(void)
     /* Start CPU tick number couting */
     SYSTICK_START_COUNT();    
 
-	SIUL2_PortPinWrite(SIUL2, BOARD_INITPINS_GPIO_TP0_GPIO,
-			BOARD_INITPINS_GPIO_TP0_PIN, 1);
+	//SIUL2_PortPinWrite(SIUL2, BOARD_INITPINS_GPIO_TP0_GPIO,
+	//		BOARD_INITPINS_GPIO_TP0_PIN, 1);
 
     SM_StateMachineFast(&g_sM1Ctrl);
         
-	SIUL2_PortPinWrite(SIUL2, BOARD_INITPINS_GPIO_TP0_GPIO,
-			BOARD_INITPINS_GPIO_TP0_PIN, 0);
+	//SIUL2_PortPinWrite(SIUL2, BOARD_INITPINS_GPIO_TP0_GPIO,
+	//		BOARD_INITPINS_GPIO_TP0_PIN, 0);
 
     /* Stop CPU tick number couting and store actual and maximum ticks */
     SYSTICK_STOP_COUNT(g_ui32NumberOfCycles);
@@ -201,8 +207,8 @@ void PIT0_IRQHandler(void)
 {
     static int16_t ui16i = 0;
 
-	SIUL2_PortPinWrite(SIUL2, BOARD_INITPINS_GPIO_TP1_GPIO,
-			BOARD_INITPINS_GPIO_TP1_PIN, 1);
+	//SIUL2_PortPinWrite(SIUL2, BOARD_INITPINS_GPIO_TP1_GPIO,
+	//		BOARD_INITPINS_GPIO_TP1_PIN, 1);
 
     /* Start CPU tick number couting */
     SYSTICK_START_COUNT();
@@ -258,8 +264,8 @@ void PIT0_IRQHandler(void)
     /* Call FreeMASTER recorder */
     FMSTR_Recorder(0);
 
-	SIUL2_PortPinWrite(SIUL2, BOARD_INITPINS_GPIO_TP1_GPIO,
-			BOARD_INITPINS_GPIO_TP1_PIN, 0);
+	//SIUL2_PortPinWrite(SIUL2, BOARD_INITPINS_GPIO_TP1_GPIO,
+	//		BOARD_INITPINS_GPIO_TP1_PIN, 0);
 
     /* Clear interrupt flag.*/
     PIT_ClearStatusFlags(PIT_0, kPIT_Chnl_0, kPIT_TimerFlag);
@@ -370,6 +376,26 @@ static void DemoPositionStimulator(void)
     }
 }
 
+void FCCU_0_IRQHandler (void)
+{
+	uint32_t fccu_ncf_status, fccu_dcm_faults[3];
+
+    /* Stop application */
+    M1_SetSpeed(0);
+    M1_SetAppSwitch(0);
+    bDemoModeSpeed = FALSE;
+
+
+	fccu_ncf_status = FCCU_GetNCFS();
+
+	FCCU_GetFaults(fccu_dcm_faults);
+
+	FCCU_ClrNCFS(fccu_ncf_status);
+
+	FCCU_ClrFaults(fccu_dcm_faults);
+}
+
+
 /*!
  * @brief   Port interrupt handler
  *
@@ -379,25 +405,34 @@ static void DemoPositionStimulator(void)
  */
 void SIUL2_1_IRQHandler(void)
 {
-    /* Speed demo */
-    if (bDemoModeSpeed)
-    {
-        /* Stop application */
-        M1_SetSpeed(0);
-        M1_SetAppSwitch(0);
-        bDemoModeSpeed = FALSE;
-    }
-    else
-    {
-        /* Start application */
-        M1_SetAppSwitch(1);
-        bDemoModeSpeed         = TRUE;
-        ui32SpeedStimulatorCnt = 0;
-    }
+	if((SIUL2->DISR0 & SIUL2_DISR0_EIF13_MASK) >0)
+	{
+	    /* Speed demo */
+	    if (bDemoModeSpeed)
+	    {
+	        /* Stop application */
+	        M1_SetSpeed(0);
+	        M1_SetAppSwitch(0);
+	        bDemoModeSpeed = FALSE;
+	    }
+	    else
+	    {
+	        /* Start application */
+	        M1_SetAppSwitch(1);
+	        bDemoModeSpeed         = TRUE;
+	        ui32SpeedStimulatorCnt = 0;
+	    }
 
-    /* Clear external interrupt flag. */
-    SIUL2_ClearExtDmaInterruptStatusFlags(SIUL2, 1U << BOARD_SW3_EIRQ);
-    
+	    /* Clear external interrupt flag. */
+	    SIUL2_ClearExtDmaInterruptStatusFlags(SIUL2, 1U << BOARD_SW3_EIRQ);
+	}
+	else
+	{
+        FCCU->NCFF = FCCU_NCF_7;  // NCF7 maps to SW_NCF_0
+
+        SIUL2_ClearExtDmaInterruptStatusFlags(SIUL2, 1U << BOARD_SW2_EIRQ);
+	}
+
     /* Add empty instructions for correct interrupt flag clearing */
     M1_END_OF_ISR;
   
@@ -420,6 +455,9 @@ static void BOARD_InitGPIO(void)
     /* Init input switch GPIO. */
     SIUL2_SetGlitchFilterPrescaler(SIUL2, 1U);
     SIUL2_EnableExtInterrupt(SIUL2, BOARD_SW3_EIRQ, kSIUL2_InterruptFallingEdge, 2U);
+
+    SIUL2_SetGlitchFilterPrescaler(SIUL2, 1U);
+    SIUL2_EnableExtInterrupt(SIUL2, BOARD_SW2_EIRQ, kSIUL2_InterruptFallingEdge, 2U);
     EnableIRQ(SIUL2_1_IRQn);
 
 }

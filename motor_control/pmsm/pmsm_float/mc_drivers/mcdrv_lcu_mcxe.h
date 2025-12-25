@@ -19,7 +19,6 @@
 void MCDRV_LCU_PhOutEn(void);
 void MCDRV_LCU_PhOutDis(void);
 
-
 #ifdef __cplusplus
 }
 #endif

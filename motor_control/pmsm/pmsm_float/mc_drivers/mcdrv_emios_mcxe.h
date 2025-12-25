@@ -25,6 +25,7 @@ typedef struct _mcdrv_pwm3ph_emios_t
 {
     GMCLIB_3COOR_T_F16 *psUABC;    /* pointer to the 3-phase pwm duty cycles */
     EMIOS_Type *pui32PwmBaseAddress; /* PWMA base address */
+    uint16_t ui16DeadTimeCnt;
 //    uint16_t ui16PhASubNum;        /* PWMA phase A sub-module number */
 //    uint16_t ui16PhBSubNum;        /* PWMA phase B sub-module number */
 //    uint16_t ui16PhCSubNum;        /* PWMA phase C sub-module number */
@@ -36,7 +37,9 @@ void MCDRV_eMIOS_PhSet(mcdrv_pwm3ph_emios_t *this);
 
 bool_t MCDRV_eMIOS_PhFltGet(mcdrv_pwm3ph_emios_t *this);
 
-   
+void MCDRV_eMIOS_PhOutEn(mcdrv_pwm3ph_emios_t *this);
+
+void MCDRV_eMIOS_PhOutDis(mcdrv_pwm3ph_emios_t *this);
 
 #ifdef __cplusplus
 }

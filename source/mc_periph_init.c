@@ -126,7 +126,71 @@ void InitClock(void)
 static void InitEMIOS(void)
 {
     CLOCK_EnableClock(kCLOCK_Emios0);
-       
+
+#if 1
+    /* Ch1-Ch6 are used for PWMA-PWMC signal generation */
+    EMIOS_0->UC[1U].C |= EMIOS_C_MODE(0x60U | 0x00U) | EMIOS_C_EDPOL(1U) | EMIOS_C_EDSEL(0U) | EMIOS_C_BSL(1U)| EMIOS_C_UCPRE(0U);
+    EMIOS_0->UC[1U].C2 |= EMIOS_C2_UCRELDEL_INT(0U) | EMIOS_C2_UCPRECLK(0U) | EMIOS_C2_UCEXTPRE(0U);
+    EMIOS_0->UC[1U].ALTA = EMIOS_ALTA_ALTA(1U);
+    EMIOS_0->UC[1U].CNT |= EMIOS_CNT_C(0U);
+
+    EMIOS_0->UC[2U].C |= EMIOS_C_MODE(0x60U | 0x00U) | EMIOS_C_EDPOL(0U) | EMIOS_C_EDSEL(0U) | EMIOS_C_BSL(1U)| EMIOS_C_UCPRE(0U);
+    EMIOS_0->UC[2U].C2 |= EMIOS_C2_UCRELDEL_INT(0U) | EMIOS_C2_UCPRECLK(0U) | EMIOS_C2_UCEXTPRE(0U);
+    EMIOS_0->UC[2U].ALTA = EMIOS_ALTA_ALTA(1U);
+    EMIOS_0->UC[2U].CNT |= EMIOS_CNT_C(0U);
+
+    EMIOS_0->UC[3U].C |=  EMIOS_C_MODE(0x60U | 0x00U) | EMIOS_C_EDPOL(1U) | EMIOS_C_EDSEL(0U) | EMIOS_C_BSL(1U)| EMIOS_C_UCPRE(0U);
+    EMIOS_0->UC[3U].C2 |= EMIOS_C2_UCRELDEL_INT(0U) | EMIOS_C2_UCPRECLK(0U) | EMIOS_C2_UCEXTPRE(0U);
+    EMIOS_0->UC[3U].ALTA = EMIOS_ALTA_ALTA(1U);
+    EMIOS_0->UC[3U].CNT |= EMIOS_CNT_C(0U);
+
+	EMIOS_0->UC[4U].C |=  EMIOS_C_MODE(0x60U | 0x00U) | EMIOS_C_EDPOL(0U) | EMIOS_C_EDSEL(0U) | EMIOS_C_BSL(1U)| EMIOS_C_UCPRE(0U);
+    EMIOS_0->UC[4U].C2 |= EMIOS_C2_UCRELDEL_INT(0U) | EMIOS_C2_UCPRECLK(0U) | EMIOS_C2_UCEXTPRE(0U);
+    EMIOS_0->UC[4U].ALTA = EMIOS_ALTA_ALTA(1U);
+    EMIOS_0->UC[4U].CNT |= EMIOS_CNT_C(0U);
+
+    EMIOS_0->UC[5U].C |= EMIOS_C_MODE(0x60U | 0x00U) | EMIOS_C_EDPOL(1U) | EMIOS_C_EDSEL(0U) | EMIOS_C_BSL(1U)| EMIOS_C_UCPRE(0U);
+    EMIOS_0->UC[5U].C2 |= EMIOS_C2_UCRELDEL_INT(0U) | EMIOS_C2_UCPRECLK(0U) | EMIOS_C2_UCEXTPRE(0U);
+    EMIOS_0->UC[5U].ALTA = EMIOS_ALTA_ALTA(1U);
+    EMIOS_0->UC[5U].CNT |= EMIOS_CNT_C(0U);
+
+    EMIOS_0->UC[6U].C |= EMIOS_C_MODE(0x60U | 0x00U) | EMIOS_C_EDPOL(0U) | EMIOS_C_EDSEL(0U) | EMIOS_C_BSL(1U)| EMIOS_C_UCPRE(0U);
+    EMIOS_0->UC[6U].C2 |= EMIOS_C2_UCRELDEL_INT(0U) | EMIOS_C2_UCPRECLK(0U) | EMIOS_C2_UCEXTPRE(0U);
+    EMIOS_0->UC[6U].ALTA = EMIOS_ALTA_ALTA(1U);
+    EMIOS_0->UC[6U].CNT |= EMIOS_CNT_C(0U);
+
+    /* Ch0 is used for time base and reload signal generation */
+    EMIOS_0->UC[0U].C |= EMIOS_C_MODE(0x50U) | EMIOS_C_EDPOL(0U) | EMIOS_C_EDSEL(0U) | EMIOS_C_BSL(3U)| EMIOS_C_UCPRE(0U);
+    EMIOS_0->UC[0U].C2 |= EMIOS_C2_UCRELDEL_INT(0U) | EMIOS_C2_UCPRECLK(1U) | EMIOS_C2_UCEXTPRE(0U);
+    EMIOS_0->UC[0U].A = EMIOS_A_A(g_sClockSetup.ui16M1PwmModulo);
+    EMIOS_0->UC[0U].B = EMIOS_B_B(0U);
+    EMIOS_0->UC[0U].ALTA = EMIOS_ALTA_ALTA(0U);
+    EMIOS_0->UC[0U].CNT |= EMIOS_CNT_C(0x0001U);
+
+    /*Ch7 is used for ADC triggering through BCTU */
+    EMIOS_0->UC[7U].C |= EMIOS_C_MODE(0x60U | 0x00U) | EMIOS_C_EDPOL(1U) | EMIOS_C_EDSEL(0U) | EMIOS_C_BSL(1U)| EMIOS_C_UCPRE(0U);
+    EMIOS_0->UC[7U].C2 |= EMIOS_C2_UCRELDEL_INT(0U) | EMIOS_C2_UCPRECLK(0U) | EMIOS_C2_UCEXTPRE(0U);
+    EMIOS_0->UC[7U].A = EMIOS_A_A(1U);
+    EMIOS_0->UC[7U].B = EMIOS_B_B(96);
+    EMIOS_0->UC[7U].ALTA = EMIOS_ALTA_ALTA(0U);
+    EMIOS_0->UC[7U].CNT |= EMIOS_CNT_C(0x0U);
+
+    EMIOS_0->UC[1U].C |= EMIOS_C_ODIS_MASK;
+    EMIOS_0->UC[2U].C |= EMIOS_C_ODIS_MASK;
+    EMIOS_0->UC[3U].C |= EMIOS_C_ODIS_MASK;
+    EMIOS_0->UC[4U].C |= EMIOS_C_ODIS_MASK;
+    EMIOS_0->UC[5U].C |= EMIOS_C_ODIS_MASK;
+    EMIOS_0->UC[6U].C |= EMIOS_C_ODIS_MASK;
+
+    //EMIOS_EnableUpdate(EMIOS0, EMIOS_CH1|EMIOS_CH2|EMIOS_CH3|EMIOS_CH4);
+    EMIOS_0->OUDIS |= EMIOS_OUDIS_OU1(1U);
+    EMIOS_0->OUDIS |= EMIOS_OUDIS_OU2(1U);
+    EMIOS_0->OUDIS |= EMIOS_OUDIS_OU3(1U);
+    EMIOS_0->OUDIS |= EMIOS_OUDIS_OU4(1U);
+    EMIOS_0->OUDIS |= EMIOS_OUDIS_OU5(1U);
+    EMIOS_0->OUDIS |= EMIOS_OUDIS_OU6(1U);
+
+#else
     /* Ch1-Ch3 are used for PWMA-PWMC signal generation */
     // EMIOS_Init(EMIOS0,EMIOS_CH1,EMIOS_MODE_OPWMB_TB(EMIOS_BUS_BCDE,EMIOS_B1M_F,EMIOS_EDPOL_OUT_A_SET_B_CLR,APP_OPWMB_A_DC_0,APP_OPWMB_B_DC_0));
     EMIOS_0->UC[1U].C |= EMIOS_C_MODE(0x60U | 0x00U) | EMIOS_C_EDPOL(1U) | EMIOS_C_EDSEL(0U) | EMIOS_C_BSL(1U)| EMIOS_C_UCPRE(0U);
@@ -175,15 +239,17 @@ static void InitEMIOS(void)
     EMIOS_0->OUDIS |= EMIOS_OUDIS_OU2(0U);
     EMIOS_0->OUDIS |= EMIOS_OUDIS_OU3(0U);
     EMIOS_0->OUDIS |= EMIOS_OUDIS_OU4(0U);
-  
+
+#endif
 //    EMIOS_Enable(EMIOS0, EMIOS_CH0|EMIOS_CH23);
     EMIOS_0->UC[0].C |= EMIOS_C_UCPREN(1U);
 
 //    EMIOS_EnablePrescaler(EMIOS0, 1u);
     EMIOS_0->MCR |= EMIOS_MCR_GTBE_MASK | EMIOS_MCR_GPREN_MASK | EMIOS_MCR_GPRE(1U);
-    
+
     /* Initialize MC driver */
     g_sM1Pwm3ph.pui32PwmBaseAddress = (EMIOS_Type *)EMIOS_0;
+    g_sM1Pwm3ph.ui16DeadTimeCnt = g_sClockSetup.ui16M1PwmDeadTime;
 
 }
 
@@ -228,7 +294,7 @@ static void InitBCTU(void)
     config.writeProtect = kBCTU_ProtectDis_Permanent;
     BCTU_Init(BCTU, &config);
     
-    trigConfig.trigIndex = kBCTU_TrigSourceEmios0Ch4; //DEMO_BCTU_TRIGGER_INDEX;
+    trigConfig.trigIndex = kBCTU_TrigSourceEmios0Ch7; //DEMO_BCTU_TRIGGER_INDEX;
     trigConfig.chanAddr = 0U; //DEMO_BCTU_TRIG_CHAN_ADDR;
     trigConfig.dataDest = kBCTU_DataDest_Fifo1;
     trigConfig.enableLoop = false;
@@ -252,7 +318,7 @@ static void InitLCU(void)
     lcu_output_config_t outputConfig;
 
     /* Init pit module. */
-    LCU_Init(LCU_1);
+    LCU_Init(LCU_0);
 
     /* Get LCU output default configuration. */
     LCU_GetOutputDefaultConfig(&outputConfig);
@@ -267,40 +333,40 @@ static void InitLCU(void)
     outputConfig.lutValue = 0xAAAAU;
 
     /* Init LCU output. */
-    LCU_OutputInit(LCU_1, kLCU_Lc0Output0, &outputConfig);
+    LCU_OutputInit(LCU_0, kLCU_Lc0Output0, &outputConfig);
 
     outputConfig.lutValue = 0x5555U;
 
     /* Init LCU output. */
-    LCU_OutputInit(LCU_1, kLCU_Lc0Output1, &outputConfig);
+    LCU_OutputInit(LCU_0, kLCU_Lc0Output1, &outputConfig);
 
     outputConfig.lutValue = 0xCCCCU;
 
     /* Init LCU output. */
-    LCU_OutputInit(LCU_1, kLCU_Lc0Output2, &outputConfig);
+    LCU_OutputInit(LCU_0, kLCU_Lc0Output2, &outputConfig);
 
     outputConfig.lutValue = 0x3333U;
 
     /* Init LCU output. */
-    LCU_OutputInit(LCU_1, kLCU_Lc2Output1, &outputConfig);
+    LCU_OutputInit(LCU_0, kLCU_Lc0Output3, &outputConfig);
 
-    outputConfig.lutValue = 0xF0F0U;
+    outputConfig.lutValue = 0xAAAAU;
   
     /* Init LCU output. */
-    LCU_OutputInit(LCU_1, kLCU_Lc0Output3, &outputConfig);
+    LCU_OutputInit(LCU_0, kLCU_Lc1Output0, &outputConfig);
 
-    outputConfig.lutValue = 0x0F0FU;
+    outputConfig.lutValue = 0x5555U;
 
     /* Init LCU output. */
-    LCU_OutputInit(LCU_1, kLCU_Lc2Output0, &outputConfig);
+    LCU_OutputInit(LCU_0, kLCU_Lc1Output1, &outputConfig);
 
-    LCU_MuxSelect(LCU_1, kLCU_Lc0Input0, kLCU_MuxSelInput0);
-    LCU_MuxSelect(LCU_1, kLCU_Lc0Input1, kLCU_MuxSelInput1);
-    LCU_MuxSelect(LCU_1, kLCU_Lc0Input2, kLCU_MuxSelInput2);
+    LCU_MuxSelect(LCU_0, kLCU_Lc0Input0, kLCU_MuxSelInput0);
+    LCU_MuxSelect(LCU_0, kLCU_Lc0Input1, kLCU_MuxSelInput1);
+    //LCU_MuxSelect(LCU_0, kLCU_Lc0Input2, kLCU_MuxSelInput2);
 
-    LCU_MuxSelect(LCU_1, kLCU_Lc2Input0, kLCU_MuxSelInput0);
-    LCU_MuxSelect(LCU_1, kLCU_Lc2Input1, kLCU_MuxSelInput1);
-    LCU_MuxSelect(LCU_1, kLCU_Lc2Input2, kLCU_MuxSelInput2);
+    //LCU_MuxSelect(LCU_0, kLCU_Lc1Input0, kLCU_MuxSelInput0);
+    //LCU_MuxSelect(LCU_0, kLCU_Lc1Input1, kLCU_MuxSelInput1);
+    LCU_MuxSelect(LCU_0, kLCU_Lc1Input0, kLCU_MuxSelInput2);
 
 }
 
@@ -354,12 +420,12 @@ static void InitTRGMUX(void)
 {
     CLOCK_EnableClock(kCLOCK_Trgmux);   
 
-    TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_ExtOut0, kTRGMUX_TriggerInput1, kTRGMUX_SourceEmios0IppDoEmiosCh4);
+    //TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_ExtOut0, kTRGMUX_TriggerInput1, kTRGMUX_SourceEmios0IppDoEmiosCh4);
     
     // LCU1
-    TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_Lcu1_0, kTRGMUX_TriggerInput0, kTRGMUX_SourceEmios0IppDoEmiosCh1);
-    TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_Lcu1_0, kTRGMUX_TriggerInput1, kTRGMUX_SourceEmios0IppDoEmiosCh2);
-    TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_Lcu1_0, kTRGMUX_TriggerInput2, kTRGMUX_SourceEmios0IppDoEmiosCh3);
+    TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_Lcu0_0, kTRGMUX_TriggerInput0, kTRGMUX_SourceEmios0IppDoEmiosCh1);
+    TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_Lcu0_0, kTRGMUX_TriggerInput1, kTRGMUX_SourceEmios0IppDoEmiosCh2);
+    TRGMUX_SetTriggerSource(TRGMUX, kTRGMUX_Lcu0_0, kTRGMUX_TriggerInput2, kTRGMUX_SourceEmios0IppDoEmiosCh3);
 
 }
 
@@ -419,12 +485,15 @@ static void InitCMP(void)
     /* Init the LPCMP module. */
     LPCMP_Init(LPCMP_1, &mLpcmpConfigStruct);
 
-    mLpcmpDacConfigStruct.referenceVoltageSource = kLPCMP_VrefSourceVin2;
-    mLpcmpDacConfigStruct.DACValue =
-        ((LPCMP_DCR_DAC_DATA_MASK >> LPCMP_DCR_DAC_DATA_SHIFT) >> 1U); /* Half of reference voltage. */
+    //LPCMP_1->CCR1 |= LPCMP_CCR1_SAMPLE_EN_MASK;
+    //LPCMP_1->CCR1 |= LPCMP_CCR1_FILT_PER(1);
+    //LPCMP_1->CCR1 |= LPCMP_CCR1_FILT_CNT(1);
+
+    mLpcmpDacConfigStruct.referenceVoltageSource = kLPCMP_VrefSourceVin1;
+    mLpcmpDacConfigStruct.DACValue = 220U;
     LPCMP_SetDACConfig(LPCMP_1, &mLpcmpDacConfigStruct);
 
-    LPCMP_SetInputChannels(LPCMP_1, 0U, 2U);
+    LPCMP_SetInputChannels(LPCMP_1, 2U, 0U);
     
 }
 #endif /* M1_FAULT_ENABLE */

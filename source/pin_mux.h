@@ -54,36 +54,6 @@ void BOARD_InitBootPins(void);
  */
 void BOARD_InitPins_Debug(void);
 
-/*! @name PTE16 (number 4), TP0
-  @{ */
-
-/* Symbols to be used with SIUL2 driver */
-#define BOARD_INITPINS_GPIO_TP0_SIUL2_BASE SIUL2          /*!<@brief SIUL2 peripheral base pointer */
-#define BOARD_INITPINS_GPIO_TP0_GPIO kSIUL2_PTE           /*!<@brief GPIO peripheral port */
-#define BOARD_INITPINS_GPIO_TP0_INIT_GPIO_VALUE 0U        /*!<@brief GPIO output initial state */
-#define BOARD_INITPINS_GPIO_TP0_GPIO_PIN_MASK (1U << 144U) /*!<@brief GPIO pin mask */
-
-/* Defined symbols */
-#define BOARD_INITPINS_GPIO_TP0_PORT PTE                  /*!<@brief PORT peripheral base pointer */
-#define BOARD_INITPINS_GPIO_TP0_PIN 16U                   /*!<@brief PORT pin number */
-#define BOARD_INITPINS_GPIO_TP0_PIN_MASK (1U << 16U)      /*!<@brief PORT pin mask */
-                                                          /* @} */
-
-/*! @name PTE15 (number 5), TP1
-  @{ */
-
-/* Symbols to be used with SIUL2 driver */
-#define BOARD_INITPINS_GPIO_TP1_SIUL2_BASE SIUL2          /*!<@brief SIUL2 peripheral base pointer */
-#define BOARD_INITPINS_GPIO_TP1_GPIO kSIUL2_PTE           /*!<@brief GPIO peripheral port */
-#define BOARD_INITPINS_GPIO_TP1_INIT_GPIO_VALUE 0U        /*!<@brief GPIO output initial state */
-#define BOARD_INITPINS_GPIO_TP1_GPIO_PIN_MASK (1U << 143U) /*!<@brief GPIO pin mask */
-
-/* Defined symbols */
-#define BOARD_INITPINS_GPIO_TP1_PORT PTE                  /*!<@brief PORT peripheral base pointer */
-#define BOARD_INITPINS_GPIO_TP1_PIN 15U                   /*!<@brief PORT pin number */
-#define BOARD_INITPINS_GPIO_TP1_PIN_MASK (1U << 15U)      /*!<@brief PORT pin mask */
-                                                          /* @} */
-
 /*! @name PTC16 (number 66), LED1
   @{ */
 
@@ -131,11 +101,6 @@ void BOARD_InitPins_Debug(void);
 
 /*! @name PTB23 (number 69), SW2
   @{ */
-
-/* Symbols to be used with SIUL2 driver */
-#define BOARD_INITPINS_GPIO_SW2_SIUL2_BASE SIUL2          /*!<@brief SIUL2 peripheral base pointer */
-#define BOARD_INITPINS_GPIO_SW2_GPIO kSIUL2_PTB           /*!<@brief GPIO peripheral port */
-#define BOARD_INITPINS_GPIO_SW2_GPIO_PIN_MASK (1U << 55U) /*!<@brief GPIO pin mask */
 
 /* Defined symbols */
 #define BOARD_INITPINS_GPIO_SW2_PORT PTB                  /*!<@brief PORT peripheral base pointer */
@@ -289,6 +254,57 @@ void BOARD_InitPins_ADC(void);
  *
  */
 void BOARD_InitPins_TRGIN(void);
+
+/*! @name PTD1 (number 7), PWM_AT
+  @{ */
+
+/* Defined symbols */
+#define BOARD_INITPINS_LCU_AUX_ptd1_PORT PTD                 /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_LCU_AUX_ptd1_PIN 1U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_LCU_AUX_ptd1_PIN_MASK (1U << 1U)      /*!<@brief PORT pin mask */
+                                                             /* @} */
+
+/*! @name PTD0 (number 8), PWM_AB
+  @{ */
+
+/* Defined symbols */
+#define BOARD_INITPINS_LCU_AUX_ptd0_PORT PTD                 /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_LCU_AUX_ptd0_PIN 0U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_LCU_AUX_ptd0_PIN_MASK (1U << 0U)      /*!<@brief PORT pin mask */
+                                                             /* @} */
+
+/*! @name PTE11 (number 9), PWM_BT
+  @{ */
+
+/* Defined symbols */
+#define BOARD_INITPINS_LCU_AUX_pte11_PORT PTE                  /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_LCU_AUX_pte11_PIN 11U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_LCU_AUX_pte11_PIN_MASK (1U << 11U)      /*!<@brief PORT pin mask */
+                                                               /* @} */
+
+/*! @name PTE16 (number 4), PWM_CT
+  @{ */
+
+/* Defined symbols */
+#define BOARD_INITPINS_LCU_AUX_pte16_PORT PTE                  /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_LCU_AUX_pte16_PIN 16U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_LCU_AUX_pte16_PIN_MASK (1U << 16U)      /*!<@brief PORT pin mask */
+                                                               /* @} */
+
+/*! @name PTE15 (number 5), PWM_CB
+  @{ */
+
+/* Defined symbols */
+#define BOARD_INITPINS_LCU_AUX_pte15_PORT PTE                  /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_LCU_AUX_pte15_PIN 15U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_LCU_AUX_pte15_PIN_MASK (1U << 15U)      /*!<@brief PORT pin mask */
+                                                               /* @} */
+
+/*!
+ * @brief Configures pin routing and optionally pin electrical features.
+ *
+ */
+void BOARD_InitPins_LCU_aux(void);
 
 #if defined(__cplusplus)
 }

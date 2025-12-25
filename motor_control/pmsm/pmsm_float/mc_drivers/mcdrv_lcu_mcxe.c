@@ -36,12 +36,12 @@
 void MCDRV_LCU_PhOutEn(void)
 {
   
-    LCU_EnableOutput(LCU_1, (1 << kLCU_Lc0Output0), true);
-    LCU_EnableOutput(LCU_1, (1 << kLCU_Lc0Output1), true);
-    LCU_EnableOutput(LCU_1, (1 << kLCU_Lc0Output2), true);
-    LCU_EnableOutput(LCU_1, (1 << kLCU_Lc0Output3), true);
-    LCU_EnableOutput(LCU_1, (1 << kLCU_Lc2Output0), true);
-    LCU_EnableOutput(LCU_1, (1 << kLCU_Lc2Output1), true);
+    LCU_EnableOutput(LCU_0, (1 << kLCU_Lc0Output0), true);
+    LCU_EnableOutput(LCU_0, (1 << kLCU_Lc0Output1), true);
+    LCU_EnableOutput(LCU_0, (1 << kLCU_Lc0Output2), true);
+    LCU_EnableOutput(LCU_0, (1 << kLCU_Lc0Output3), true);
+    LCU_EnableOutput(LCU_0, (1 << kLCU_Lc1Output0), true);
+    LCU_EnableOutput(LCU_0, (1 << kLCU_Lc1Output1), true);
   
 }
 
@@ -54,11 +54,11 @@ void MCDRV_LCU_PhOutEn(void)
  */
 void MCDRV_LCU_PhOutDis(void)
 {
-    LCU_EnableOutput(LCU_1, (1 << kLCU_Lc0Output0), false);
-    LCU_EnableOutput(LCU_1, (1 << kLCU_Lc0Output1), false);
-    LCU_EnableOutput(LCU_1, (1 << kLCU_Lc0Output2), false);
-    LCU_EnableOutput(LCU_1, (1 << kLCU_Lc0Output3), false);
-    LCU_EnableOutput(LCU_1, (1 << kLCU_Lc2Output0), false);
-    LCU_EnableOutput(LCU_1, (1 << kLCU_Lc2Output1), false);
+    LCU_EnableOutput(LCU_0, (1 << kLCU_Lc0Output0), false);
+    LCU_EnableOutput(LCU_0, (1 << kLCU_Lc0Output1), false);
+    LCU_EnableOutput(LCU_0, (1 << kLCU_Lc0Output2), false);
+    LCU_EnableOutput(LCU_0, (1 << kLCU_Lc0Output3), false);
+    LCU_EnableOutput(LCU_0, (1 << kLCU_Lc1Output0), false);
+    LCU_EnableOutput(LCU_0, (1 << kLCU_Lc1Output1), false);
 
 }

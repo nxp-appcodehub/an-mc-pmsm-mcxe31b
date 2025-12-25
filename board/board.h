@@ -114,6 +114,7 @@
 #endif
 
 #define BOARD_SW3_EIRQ        13U
+#define BOARD_SW2_EIRQ        10U
 
 /* @Brief Board accelerator sensor configuration */
 #define BOARD_ACCEL_I2C_BASEADDR LPI2C_0
